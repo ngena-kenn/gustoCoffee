@@ -1,0 +1,93 @@
+@import "../context/thems.scss";
+
+@mixin base_global_footer($bg-color) {
+  width: 100%;
+  height: fit-content;
+  background-color: $bg-color;
+}
+
+.global_footer {
+  @include base_global_footer($white-mode);
+  background-color: #E3DCDC;
+  margin-top: 10%;
+  @include sm {
+    margin-top: 20%;
+  }
+}
+
+.sub {
+  @include sm {
+    padding-top: 15%;
+  }
+  padding-top: 8%;
+}
+
+.grille {
+  max-width: 1400px;
+  display: grid;
+  justify-content: center;
+  grid-gap: 1%;
+  margin: 6% auto 4%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  @include lg {
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid_item {
+    overflow: hidden;
+    width: 90%;
+    justify-self: center;
+    cursor: pointer;
+  }
+}
+
+.ffooter {
+  height: 8%;
+  font-size: 18px;
+  place-content: center;
+  padding: 15px 1%;
+  @media (max-width: 900px) {
+    align-items: center;
+  }
+  @include lg {
+    font-size: 14px;
+  }
+  @include md {
+    font-size: 14px;
+  }
+  @include sm {
+    font-size: 12px;
+  }
+  @include xs {
+    font-size: 8px;
+  }
+}
+
+.main_divider {
+  @include sm {
+    display: none;
+  }
+  display: block;
+  margin: 5% 0 0 !important;
+}
+
+.ul {
+  padding-inline-start: 13px;
+}
+
+.social {
+  max-width: 400px;
+  margin: auto;
+  a {
+    max-width: 24%;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  @include sm {
+    max-width: 200px;
+    a img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
