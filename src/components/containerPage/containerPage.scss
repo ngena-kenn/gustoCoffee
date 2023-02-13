@@ -17,21 +17,23 @@
       height: 480px;
       border-radius: 35px;
       background: white;
-      box-shadow: 1px 1px 4px rgba($color: #000000, $alpha: .25);
+      box-shadow: 1px 1px 4px rgba($color: #000000, $alpha: 0.25);
       cursor: pointer;
       overflow: hidden;
       transition: all 0.5s;
       position: relative;
       .price {
-        background-color: #DFE6E9;
+        background-color: #dfe6e9;
         padding: 7px 15px;
         border-radius: 20px;
       }
     }
+    .grid-item:hover {
+      transform: scale(1.04);
+      transition: all 0.5s;
+    }
   }
 }
-
-
 
 // .grid-item:hover {
 //   border: 6px solid rgb(238, 71, 71);

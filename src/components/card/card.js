@@ -15,7 +15,7 @@ const CustomizeCard = ({ image, title, description, price }) => {
           image={image}
           alt="green iguana"
         />
-        <CardContent>
+        <CardContent style={{ height: '165px' }}>
           <Typography gutterBottom variant="h5" component="div">
             {title}
           </Typography>
@@ -24,7 +24,7 @@ const CustomizeCard = ({ image, title, description, price }) => {
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions style={{height: '40px', position: 'absolute', width: '100%', justifyContent: 'center'}}>
+      <CardActions style={{ height: '40px', position: 'absolute', width: '100%', justifyContent: 'center' }}>
         <div className='price'>
           {price}
         </div>
