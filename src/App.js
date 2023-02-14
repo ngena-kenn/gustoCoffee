@@ -1,21 +1,21 @@
-import React from 'react';
-import ContainerPage from './components/containerPage/containerPage';
-import Footer from './components/Footer/footer';
-import { desserts } from './data';
+ 
+import'./css/page.css';
+import React, {Component} from 'react';
+import  Navigation from './body/Navigation';
+import Home from './body/Home'
 import{ Routes, Route} from "react-router-dom";
-
+ 
 function App() {
   return (
-  <div >
-     <body>
-        
+    <body>
+        <Navigation />
         <Routes>
-          <Route path="/" element={<div />} />
-          <Route path="/Home" element={<div />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/Home" element={<Home />} />
         </Routes>
     </body>
-  </div>
-  )
+    
+  );
 }
 
 export default App;
