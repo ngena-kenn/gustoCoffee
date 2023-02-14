@@ -12,6 +12,8 @@
 .logo{
     padding-right: 70px;
     background-position: right;
+    height: 70px;
+    
 }
 .header a{
     list-style-type: none;
@@ -25,11 +27,121 @@
 }
 .connect a{
     color: white;
-    background:rgb(165, 16, 68);  
+    background:rgb(105, 186, 76);  
     border-radius: 15px / 10px; 
 }
 .connect a:hover {
-    color:brown;
+    color:rgb(119, 200, 84);
     background: white;
     box-shadow: 6px 6px 6px gray ;
 }
+.another a{
+    color: rgb(105, 186, 76);
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    margin-top: 30px;
+    background-attachment:fixed;
+    flex-wrap: wrap;
+}
+.aligne-center{
+    margin: 30px ;
+    text-align: center;
+}
+.text{
+    padding-top: 20px;
+}
+.formules{
+    background: url(../image/formule.png);
+    background-size: cover;
+    min-width: 200px;
+    min-height: 100px ;
+    background-position: right;
+    background-repeat: no-repeat;
+    border-radius: 15px / 10px;
+    padding-bottom: 70px;
+}
+.gamme_chaude{
+    background: url(../image/image1.png);
+    background-size: cover;
+    min-width: 200px;
+    min-height: 100px ;
+    background-position: right;
+    background-repeat: no-repeat;
+    border-radius: 15px / 10px;
+    padding-bottom: 70px;
+}
+.poké_creation{
+    background: url(../image/image2.png);
+    background-size: cover;
+    min-width: 200px;
+    min-height: 100px ;
+    background-position: right;
+    background-repeat: no-repeat;
+    border-radius: 15px / 10px;
+    padding-bottom: 70px;
+}
+.sides{
+    background: url(../image/image3.png);
+    background-size: cover;
+    min-width: 200px;
+    min-height: 100px ;
+    background-position: right;
+    background-repeat: no-repeat;
+    border-radius: 15px / 10px;
+    padding-bottom: 70px;
+}
+.healthy_bowls{
+    background: url(../image/pokabox.jpeg);
+    background-size: cover;
+    min-width: 200px;
+    min-height: 100px ;
+    background-position: right;
+    background-repeat: no-repeat;
+    border-radius: 15px / 10px;
+    padding-bottom: 70px;
+}
+.desserts{
+    background: url(../image/DESSERT.jpeg);
+    background-size: cover;
+    min-width: 200px;
+    min-height: 100px ;
+    background-position: right;
+    background-repeat: no-repeat;
+    border-radius: 15px / 10px;
+    padding-bottom: 70px;
+}
+.boissons_chaudes{
+    background: url(../image/chaude1.jpg);
+    background-size: cover;
+    min-width: 200px;
+    min-height: 100px ;
+    background-position: right;
+    background-repeat: no-repeat;
+    border-radius: 15px / 10px;
+    padding-bottom: 70px;
+}
+.bubble_tea{
+    background: url(../image/chaude.jpg);
+    background-size: cover;
+    min-width: 200px;
+    min-height: 100px ;
+    background-position: left;
+    background-repeat: no-repeat;
+    border-radius: 15px / 10px;
+    padding-bottom: 70px;
+}
+.boissons{
+    background: url(../image/boisson.jpg);
+    background-size: cover;
+    min-width: 200px;
+    min-height: 100px ;
+    background-position: right;
+    background-repeat: no-repeat;
+    border-radius: 15px / 10px;
+    padding-bottom: 70px;
+}
+
