@@ -1,5 +1,6 @@
 import React,{Component} from "react";
 import '../css/page.css';
+import { Link } from 'react-router-dom';
 
 class Home_page extends Component{
     render(){
@@ -30,7 +31,7 @@ class Home_page extends Component{
                 </div>
                 <div>
                     <div class="desserts aligne-center"></div>
-                    <div class="text">Desserts</div>
+                    <Link class="text" to={'/home/desserts'}>Desserts</Link>
                 </div>
                 <div>
                 <div class="boissons_chaudes aligne-center"></div>
