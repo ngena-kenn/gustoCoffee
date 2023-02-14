@@ -3,7 +3,7 @@ import '../css/page.css';
 
 class Home_page extends Component{
     render(){
-        return(
+        return( 
             <div>
             <div class="titre" >notre carte</div>
               <div class="menu">

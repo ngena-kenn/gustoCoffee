@@ -7,7 +7,7 @@
 
 .header div{
     display: flex;
-    list-style: none;
+    list-style:  none;
 }
 .logo{
     padding-right: 70px;
