@@ -1,10 +1,10 @@
 import'./css/page.css';
-import React, {Component} from 'react';
+import React from 'react';
 import  Navigation from './body/Navigation';
 import Home from './body/Home'
 import{ Routes, Route} from "react-router-dom";
-import Desserts from './components/containerPage/containerPage';
-import { boissons, boissons_chaude, boissons_tea, desserts, formule, gamme_chaude, healty_bowls, poke_creation, sides } from './data';
+import { Dessert, Formule, GammeChaude, HealtyBowls, PokeCreation, Sides, Boissons, BoissonsChaude, BoissonsTea } from './components/global/globalPage';
+import Footer from './components/Footer/footer';
  
 function App() {
   return (
@@ -13,16 +13,17 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/home/desserts" element={<Desserts data={desserts} />} />
-          <Route path="/home/formule" element={<Desserts data={formule} />} />
-          <Route path="/home/gamme_chaude" element={<Desserts data={gamme_chaude} />} />
-          <Route path="/home/poke_creation" element={<Desserts data={poke_creation} />} />
-          <Route path="/home/sides" element={<Desserts data={sides} />} />
-          <Route path="/home/healty_bowls" element={<Desserts data={healty_bowls} />} />
-          <Route path="/home/boissons" element={<Desserts data={boissons} />} />
-          <Route path="/home/boissons_chaude" element={<Desserts data={boissons_chaude} />} />
-          <Route path="/home/boissons_tea" element={<Desserts data={boissons_tea} />} />
+          <Route path="/home/desserts" element={<Dessert />} />
+          <Route path="/home/formules" element={<Formule />} />
+          <Route path="/home/gamme_chaude" element={<GammeChaude />} />
+          <Route path="/home/poke_creation" element={<PokeCreation />} />
+          <Route path="/home/sides" element={<Sides />} />
+          <Route path="/home/healty_bowls" element={<HealtyBowls />} />
+          <Route path="/home/boissons" element={ <Boissons/>} />
+          <Route path="/home/boissons_chaudes" element={ <BoissonsChaude/>} />
+          <Route path="/home/bubble_tea" element={ <BoissonsTea/>} />
         </Routes>
+        <Footer />
     </>
     
   );
