@@ -1,53 +1,52 @@
-import React,{Component} from "react";
+import React, { Component } from "react";
 import '../css/page.css';
 import { Link } from 'react-router-dom';
 
-class Home_page extends Component{
-    render(){
-        return( 
-            <div>
-            <div class="titre" >notre carte</div>
-              <div class="menu">
-                
-                <div>
-                    <div class="formules aligne-center"></div>
-                    <div class="text" >Formules</div>
-                </div>
-                <div>
-                    <div class="gamme_chaude aligne-center"></div>
-                    <div class="text" >Gammes Chaudes</div>
-                </div>
-                <div>
-                    <div class="poké_creation aligne-center"></div>
-                    <div class="text">Poké Creation</div>
-                </div>
-                <div>
-                    <div class="sides aligne-center"></div>
-                    <div class="text">Sides</div>  
-                </div>
-                <div>
-                    <div class="healthy_bowls aligne-center"></div>
-                    <div class="text">Healthy Bowls</div> 
-                </div>
-                <div>
-                    <div class="desserts aligne-center"></div>
-                    <Link class="text" to={'/home/desserts'}>Desserts</Link>
-                </div>
-                <div>
-                <div class="boissons_chaudes aligne-center"></div>
-                    <div class="text">Boissons Chaudes</div>
-                </div>
-                <div>
-                    <div class="bubble_tea aligne-center"></div>
-                    <div class="text">Bubble Tea</div> 
-                </div>
-                <div>
-                    <div class="boissons aligne-center"></div>
-                    <div class="text">Boissons</div>  
-                </div>
-            </div>
+class Home_page extends Component {
+  render() {
+    return (
+      <div>
+        <div className="titre" >notre carte</div>
+        <div className="menu">
+          <div>
+            <div className="formules aligne-center"></div>
+            <Link className="text" to={'/home/formules'}>Formules</Link>
+          </div>
+          <div>
+            <div className="gamme_chaude aligne-center"></div>
+            <Link className="text" to={'/home/gamme_chaude'}>Gammes Chaudes</Link>
+          </div>
+          <div>
+            <div className="poké_creation aligne-center"></div>
+            <Link className="text" to={'/home/poke_creation'}>Poké Creation</Link>
+          </div>
+          <div>
+            <div className="sides aligne-center"></div>
+            <Link className="text" to={'/home/sides'}>Sides</Link>
+          </div>
+          <div>
+            <div className="healthy_bowls aligne-center"></div>
+            <Link className="text" to={'/home/healty_bowls'}>Healthy Bowls</Link>
+          </div>
+          <div>
+            <div className="desserts aligne-center"></div>
+            <Link className="text" to={'/home/desserts'}>Desserts</Link>
+          </div>
+          <div>
+            <div className="boissons_chaudes aligne-center"></div>
+            <Link className="text" to={'/home/boissons_chaudes'}>Boissons Chaudes</Link>
+          </div>
+          <div>
+            <div className="bubble_tea aligne-center"></div>
+            <Link className="text" to={'/home/bubble_tea'}>Bubble Tea</Link>
+          </div>
+          <div>
+            <div className="boissons aligne-center"></div>
+            <Link className="text" to={'/home/boissons'}>Boissons</Link>
+          </div>
         </div>
-        )
-    }
+      </div>
+    )
+  }
 }
 export default Home_page;
