@@ -1,10 +1,9 @@
-
 import'./css/page.css';
 import React, {Component} from 'react';
 import  Navigation from './body/Navigation';
 import Home from './body/Home'
 import{ Routes, Route} from "react-router-dom";
-
+ 
 function App() {
   return (
     <body>
