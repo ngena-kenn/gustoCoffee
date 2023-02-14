@@ -1,12 +1,11 @@
 import { Stack, Divider, Box } from '@mui/material'
-import { div } from "react-router-dom"
 import SocialMedia from "./SocialMedia/social_media"
 import  './footer.scss'
 // import "../../App.scss"
 import { infoLinksFooter } from '../../utils/data'
 
 const Footer = () => {
- 
+
   const infoFooter = infoLinksFooter?.map((box, idx) =>
     <Box key={idx} className={'grid_item midia_text'}>
       <div className={'item_content'}>
@@ -22,7 +21,7 @@ const Footer = () => {
   return (
     <div className={ 'global_footer'}>
       <div className={'regular_text grid'}>
-        <div className={'grille'}>
+        <div className={'grille-footer'}>
           {infoFooter}
         </div>
       </div> 

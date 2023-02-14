@@ -17,7 +17,7 @@ export const infoLinksFooter = [
     ]
   },
   {
-    title: "Informations sur FFY", list: [
+    title: "Informations sur Dark-kitchen", list: [
       { name: "one", to: "" },
       { name: "two", to:  ""},
       { name: "three", to: "" },

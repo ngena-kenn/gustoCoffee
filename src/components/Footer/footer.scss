@@ -22,7 +22,7 @@
   padding-top: 8%;
 }
 
-.grille {
+.grille-footer {
   max-width: 1400px;
   display: grid;
   justify-content: center;
@@ -34,7 +34,7 @@
   }
   .grid_item {
     overflow: hidden;
-    width: 90%;
+    width: 80%;
     justify-self: center;
     cursor: pointer;
   }
