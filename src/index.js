@@ -14,12 +14,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './css/page.css';
-import Page1 from './Page1';
+import App from './App';
 import {BrowserRouter} from "react-router-dom";
  
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    <Page1 />
+    <App />
   </BrowserRouter>
 );
