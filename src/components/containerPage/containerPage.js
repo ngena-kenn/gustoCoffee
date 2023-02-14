@@ -13,7 +13,7 @@ const ContainerPage = ({ data }) => {
   );
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
-      <div style={{ backgroundColor: 'yellow', fontSize: '35px', textAlign: 'center', padding: 10, margin: 10 }}>
+      <div style={{ fontSize: '35px', textAlign: 'center', padding: 10, margin: 10 }}>
         {data?.title}
       </div>
       <div className='grid'>
