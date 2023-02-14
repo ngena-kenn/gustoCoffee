@@ -1,4 +1,3 @@
- 
 import'./css/page.css';
 import React, {Component} from 'react';
 import  Navigation from './body/Navigation';
