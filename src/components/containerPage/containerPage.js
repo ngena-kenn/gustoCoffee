@@ -4,7 +4,8 @@ import './containerPage.scss'
 
 const ContainerPage = ({ data }) => {
   const cards = data?.data?.map((value, index) =>
-    <CustomizeCard 
+    <CustomizeCard
+      key={index}
       image={value?.picture}
       title={value?.title}
       description={value?.description}
