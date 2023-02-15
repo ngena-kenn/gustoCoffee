@@ -25,7 +25,7 @@ const CustomizeCard = ({id, image, title, description, price, commande,setProduc
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions style={{ height: '40px', position: 'absolute', width: '100%', justifyContent: 'center' }}>
+      <CardActions style={{ height: '40px', position: 'absolute', bottom: 15, width: '100%', justifyContent: 'center' }}>
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-around', width: '100%'}}>
         <div className='price'>
           {price}
