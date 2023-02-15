@@ -7,7 +7,8 @@ import{ Routes, Route} from "react-router-dom";
 import { Dessert, Formule, GammeChaude, HealtyBowls, PokeCreation, Sides, Boissons, BoissonsChaude, BoissonsTea } from './components/global/globalPage';
 import Footer from './components/Footer/footer';
 import Login from './body/commande/Authentification';
-import Connect from './body/Connexionn'
+import Connect from './body/Connexionn';
+import A_propos from './body/A_propos';
  
 function App() {
   return (
@@ -26,7 +27,9 @@ function App() {
           <Route path="/home/boissons_chaudes" element={ <BoissonsChaude/>} />
           <Route path="/home/bubble_tea" element={ <BoissonsTea/>} />
           <Route path="/login" element={ <Login/>} />
+          <Route path="/a_propos" element={ <A_propos/>} />
           <Route path="/connect" element={ <Connect/>} />
+
 
         </Routes>
         <Footer />

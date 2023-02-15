@@ -16,7 +16,7 @@ export const infoLinksFooter = [
     ]
   },
   {
-    title: "Informations sur Dark-kitchen", list: [
+    title: "Informations sur Poke Bio", list: [
       { name: "aide", to: "" },
       { name: "sécurité et confiance", to:  ""},
       { name: "comment ca marche", to: "" },
@@ -26,8 +26,8 @@ export const infoLinksFooter = [
   {
     title: "Contact", list: [
       { name: "(+33) 6 77 88 99 88", to: "" },
-      { name: "contact@dark-kitchen.fr", to: "" },
-      { name: "1, rue dark kitchen 34544", to: "" },
+      { name: "contact@poke_bio.fr", to: "" },
+      { name: "1, rue poke bio 34544", to: "" },
 
     ]
   },

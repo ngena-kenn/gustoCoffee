@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import '../css/page.css';
-import logo from '../image/Logo.png';
+import logo from '../image/logo.jpeg';
 import { Link } from 'react-router-dom';
 
 
@@ -29,7 +29,7 @@ class Navigation extends Component {
           </div>
         </div>
         <div className="connect">
-            <Link to='/login'>connection<br></br>/inscription</Link>
+            <Link to='/login'>connection</Link>
           </div>
         <div className="connect">
           <Link to='/commander'>commander</Link>
