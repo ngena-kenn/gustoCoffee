@@ -1,0 +1,87 @@
+
+.container{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    padding: 30px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+.inscription{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row-reverse;
+    
+}
+.inscription .right{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: column;
+    align-items: center;
+    gap: 30px;
+    width: 60%;
+    background: grey;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+}
+.inscription .left{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: column;
+    align-items: center;
+    gap: 30px;
+    width: 40%;
+    background:#9e5613;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.form input{
+    width:350px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background: white;
+    padding: 0 10px;
+}
+.right button{
+    border: 1px solid white;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 30px;
+    background:transparent;
+    background: #9e5613;
+    padding:  10px 30px;
+}
+.right button:hover {
+    border:1px solid #9e5613  ;
+    color: white;
+    background: transparent;
+}
+.taggle1{
+    border: 1px solid white;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 30px;
+    background:transparent;
+    background: #9e5613;
+    padding:  10px 30px;
+}
+.taggle1:hover {
+    color: #9e5613;
+    background: white;
+}
+

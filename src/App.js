@@ -1,10 +1,13 @@
 import'./css/page.css';
+import './body/commande/style.css'
 import React from 'react';
 import  Navigation from './body/Navigation';
 import Home from './body/Home'
 import{ Routes, Route} from "react-router-dom";
 import { Dessert, Formule, GammeChaude, HealtyBowls, PokeCreation, Sides, Boissons, BoissonsChaude, BoissonsTea } from './components/global/globalPage';
 import Footer from './components/Footer/footer';
+import Login from './body/commande/Authentification';
+import Connect from './body/Connexionn'
  
 function App() {
   return (
@@ -22,6 +25,9 @@ function App() {
           <Route path="/home/boissons" element={ <Boissons/>} />
           <Route path="/home/boissons_chaudes" element={ <BoissonsChaude/>} />
           <Route path="/home/bubble_tea" element={ <BoissonsTea/>} />
+          <Route path="/login" element={ <Login/>} />
+          <Route path="/connect" element={ <Connect/>} />
+
         </Routes>
         <Footer />
     </>
