@@ -12,6 +12,7 @@ import Footer from './components/Footer/footer';
 import FormDialog from './components/dialog';
 import ViewProduct from './components/viewProduct/viewProduct';
 import Login from './body/commande/Authentification';
+import A_propos from './body/A_propos';
 import Connect from './body/Connexionn'
 
 const App = () => {
@@ -95,6 +96,7 @@ const App = () => {
         <Route path="/home/bubble_tea" element={
           <BoissonsTea handleAddProduct={handleAddProduct} setProducts={setProducts} commande={commande} />}
         />
+         <Route path="/a_propos" element={ <A_propos/>} />
         <Route path="/login" element={ <Login/>} />
           <Route path="/connect" element={ <Connect/>} />
       </Routes>

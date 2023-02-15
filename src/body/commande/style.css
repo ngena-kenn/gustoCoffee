@@ -81,6 +81,7 @@
   background: white;
   padding: 0 10px;
 }
+
 .right button {
   border: 1px solid white;
   color: white;
@@ -106,6 +107,7 @@
   background: #9e5613;
   padding: 10px 30px;
 }
+
 .taggle1:hover {
   color: #9e5613;
   background: white;

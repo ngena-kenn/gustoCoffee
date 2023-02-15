@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import './style.css';
 import { Link } from 'react-router-dom';
 import { Button } from "@mui/material";
-
 class Authentification extends Component {
   render() {
     return (
