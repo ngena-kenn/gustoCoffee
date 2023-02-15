@@ -29,6 +29,9 @@ class Navigation extends Component {
           </div>
         </div>
         <div className="connect">
+            <Link to='/login'>connection<br></br>/inscription</Link>
+          </div>
+        <div className="connect">
           <Link to='/commander'>commander</Link>
         </div>
       </nav>

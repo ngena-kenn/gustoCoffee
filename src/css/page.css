@@ -1,5 +1,4 @@
 .header{
-    /*background:url(../image/);*/
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -47,8 +46,31 @@
     background-attachment:fixed;
     flex-wrap: wrap;
 }
+.text{
+    text-align: center;
+    list-style-type: none;
+    text-decoration: none;
+    display: block;
+    background:rgb(105, 186, 76);
+    background-size: 30px; 
+    border-radius: 15px / 10px;
+    color: white; 
+    background-position: center;
+    font-size: 20px;
+    padding: 10px;
+    margin-left: 50px
+}
+.text:hover{
+    color:rgb(119, 200, 84);
+    background: white;
+    box-shadow: 6px 6px 6px gray ;
+ 
+}
 .titre{
     text-align: center;
+    font-size: 50px;
+    padding-top: 20px
+
     ;
 }
 .text{

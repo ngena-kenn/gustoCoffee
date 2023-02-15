@@ -1,27 +1,26 @@
 
 export const infoLinksFooter = [
   {
-    title: "Section 1", list: [
-      { name: "one", to: "" },
-      { name: "two", to:  ""},
-      { name: "three", to: "" },
-      { name: "taf tad", to: "" },
+    title: "Compagnie", list: [
+      { name: "A propos de nous", to: "" },
+      { name: "témoignages", to:  ""},
+      { name: "détails de l'entreprise", to: "" },
+      { name: "podcast", to: "" },
+      { name: "blog", to: "" },
     ]
   },
   {
-    title: "Section 2", list: [
-      { name: "one", to: "" },
-      { name: "two", to:  ""},
-      { name: "three", to: "" },
-      { name: "taf tad", to: "" },
+    title: "intimité", list: [
+      { name: "Politique de confidentialité", to: "" },
+      { name: "condition d'utilisation", to:  ""},
     ]
   },
   {
     title: "Informations sur Dark-kitchen", list: [
-      { name: "one", to: "" },
-      { name: "two", to:  ""},
-      { name: "three", to: "" },
-      { name: "taf tad", to: "" },
+      { name: "aide", to: "" },
+      { name: "sécurité et confiance", to:  ""},
+      { name: "comment ca marche", to: "" },
+      { name: "contactez nous", to: "" },
     ]
   },
   {
