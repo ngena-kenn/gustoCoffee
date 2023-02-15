@@ -75,14 +75,13 @@
 }
 .text{
     text-align: center;
+    padding-top: 2px;
 }
 .aligne-center{
     margin: 30px ;
     text-align: center;
 }
-.text{
-    padding-top: 2px;
-}
+
 .formules{
     background: url(../image/formule.png);
     background-size: cover;

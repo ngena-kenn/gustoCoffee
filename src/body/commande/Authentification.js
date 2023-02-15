@@ -13,7 +13,7 @@ class Authentification extends Component{
                         <p>Connectez-vous avec votre compte<br></br> pour nous rejoindre !</p> 
                         <button class="taggle1"><a href="./connect">se connecter</a></button>
                     </div>
-                    <div>
+                    <div class="right">
                         <h1>Créer un compte</h1> 
                         <div class="social_media">
                             <i class="fa-brands fa-facebook-f"></i> 
