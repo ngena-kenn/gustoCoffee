@@ -4,7 +4,7 @@ import { boissonsPagedata, boissons_chaudePagedata, boissons_teaPagedata, desser
 import ContainerPage from "../containerPage/containerPage"
 import { boissons, boissons_chaude, boissons_tea, desserts, formule, gamme_chaude, healty_bowls, poke_creation, sides } from "../../data";
 
-export const Dessert = () => {
+export const Dessert = ({commande, setProducts, handleAddProduct}) => {
   return (<>
     <Helmet>
       <meta name="title" content={dessertsPagedata?.metaTitle} data-react-helmet="true" />
@@ -17,7 +17,12 @@ export const Dessert = () => {
       <link rel="canonical" href={dessertsPagedata?.metaLink} />
       <title>{dessertsPagedata?.titePage}</title>
     </Helmet>
-    <ContainerPage data={desserts} />
+    <ContainerPage 
+      handleAddProduct={handleAddProduct}
+      data={desserts} 
+      commande={commande} 
+      setProducts={setProducts}
+    />
   </>);
 }
 export const Formule = () => {
