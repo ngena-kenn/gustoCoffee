@@ -23,8 +23,15 @@ const Navigation = ({ commande, setcommande, countProduct, setViewProduct }) => 
         <div>
           <Link to='/restaurant'>restaurant</Link>
         </div>
+
         <div>
           <Link to='/a_propos'>a propos</Link>
+          </div>
+        <div className="connect">
+            <Link to='/login'>connection<br></br>/inscription</Link>
+          </div>
+        <div className="connect">
+          <Link to='/commander'>commander</Link>
         </div>
         <div>
           <Link to='/actualite'>actualité</Link>

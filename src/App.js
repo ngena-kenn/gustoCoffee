@@ -1,6 +1,7 @@
 import './css/page.css';
 import React, { useState } from 'react';
 import Navigation from './body/Navigation';
+import './body/commande/style.css'
 import Home from './body/Home'
 import { Routes, Route } from "react-router-dom";
 import {
@@ -10,6 +11,8 @@ import {
 import Footer from './components/Footer/footer';
 import FormDialog from './components/dialog';
 import ViewProduct from './components/viewProduct/viewProduct';
+import Login from './body/commande/Authentification';
+import Connect from './body/Connexionn'
 
 const App = () => {
   const [commande, setcommande] = useState(false)
@@ -92,6 +95,8 @@ const App = () => {
         <Route path="/home/bubble_tea" element={
           <BoissonsTea handleAddProduct={handleAddProduct} setProducts={setProducts} commande={commande} />}
         />
+        <Route path="/login" element={ <Login/>} />
+          <Route path="/connect" element={ <Connect/>} />
       </Routes>
       <Footer />
     </>
