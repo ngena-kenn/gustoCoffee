@@ -9,6 +9,7 @@ import { Divider } from '@mui/material';
 
 const ViewProduct = (props) => {
   console.log("open ", props.products);
+  const cmdPresent = props?.products?.length > 0
   let total = 0
   const produits = props.products?.map((value, index) => {
   total += parseFloat(value?.price) 
@@ -32,12 +33,15 @@ const ViewProduct = (props) => {
           props.setViewProduct((prev) => !prev)
          }}
       >
-        <DialogTitle>Liste des produits commandés</DialogTitle>
+        <DialogTitle color='green'>Liste des produits commandés</DialogTitle>
         <DialogContent style={{ height: '300px', width: '500px' }}>
           <DialogContentText>
           </DialogContentText>
-            <div style={{width: '100%', height: '100%', display: 'flex', flexDirection: 'column'}}>
-              {produits}
+            <div style={{width: '100%', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
+              {cmdPresent ? produits : 
+             <div style={{fontSize: 30, textAlign: 'center'}}>
+              Vous n'avez pas encore fait de commandes
+             </div>  }
             </div>
         </DialogContent>
             <div style={{display: 'flex', padding: '5px 25px', justifyContent: 'space-between'}}>
@@ -45,8 +49,13 @@ const ViewProduct = (props) => {
               <p>{total.toFixed(2)} €</p>
             </div>
         <DialogActions>
-          <Button variant='outlined' onClick={() => {}}>Confirmer</Button>
-          <Button onClick={() => { }}>Agree</Button>
+          <Button variant='outlined' color='success' disabled={!cmdPresent} onClick={() => {
+            props.confirmCommande()
+            props.setViewProduct((prev) => !prev)
+          }}>Confirmer</Button>
+          <Button variant='outlined' color='success' disabled={!cmdPresent} onClick={() => {
+            props.cancelCommande()
+          }}>Annuler</Button>
         </DialogActions>
       </Dialog>
     </div>
