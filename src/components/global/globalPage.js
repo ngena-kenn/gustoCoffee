@@ -4,7 +4,7 @@ import { boissonsPagedata, boissons_chaudePagedata, boissons_teaPagedata, desser
 import ContainerPage from "../containerPage/containerPage"
 import { boissons, boissons_chaude, boissons_tea, desserts, formule, gamme_chaude, healty_bowls, poke_creation, sides } from "../../data";
 
-export const Dessert = () => {
+export const Dessert = ({ commande, setProducts, handleAddProduct }) => {
   return (<>
     <Helmet>
       <meta name="title" content={dessertsPagedata?.metaTitle} data-react-helmet="true" />
@@ -17,10 +17,15 @@ export const Dessert = () => {
       <link rel="canonical" href={dessertsPagedata?.metaLink} />
       <title>{dessertsPagedata?.titePage}</title>
     </Helmet>
-    <ContainerPage data={desserts} />
+    <ContainerPage
+      handleAddProduct={handleAddProduct}
+      data={desserts}
+      commande={commande}
+      setProducts={setProducts}
+    />
   </>);
 }
-export const Formule = () => {
+export const Formule = ({ commande, setProducts, handleAddProduct }) => {
   return (<>
     <Helmet>
       <meta name="title" content={formulePagedata?.metaTitle} data-react-helmet="true" />
@@ -33,10 +38,15 @@ export const Formule = () => {
       <link rel="canonical" href={formulePagedata?.metaLink} />
       <title>{formulePagedata?.titePage}</title>
     </Helmet>
-    <ContainerPage data={formule} />
+    <ContainerPage
+      data={formule}
+      handleAddProduct={handleAddProduct}
+      commande={commande}
+      setProducts={setProducts}
+    />
   </>);
 }
-export const GammeChaude = () => {
+export const GammeChaude = ({ commande, setProducts, handleAddProduct }) => {
   return (<>
     <Helmet>
       <meta name="title" content={gamme_chaudePagedata?.metaTitle} data-react-helmet="true" />
@@ -49,10 +59,14 @@ export const GammeChaude = () => {
       <link rel="canonical" href={gamme_chaudePagedata?.metaLink} />
       <title>{gamme_chaudePagedata?.titePage}</title>
     </Helmet>
-    <ContainerPage data={gamme_chaude} />
+    <ContainerPage data={gamme_chaude}
+      handleAddProduct={handleAddProduct}
+      commande={commande}
+      setProducts={setProducts}
+    />
   </>);
 }
-export const PokeCreation = () => {
+export const PokeCreation = ({ commande, setProducts, handleAddProduct }) => {
   return (<>
     <Helmet>
       <meta name="title" content={poke_creationPagedata?.metaTitle} data-react-helmet="true" />
@@ -65,10 +79,14 @@ export const PokeCreation = () => {
       <link rel="canonical" href={poke_creationPagedata?.metaLink} />
       <title>{poke_creationPagedata?.titePage}</title>
     </Helmet>
-    <ContainerPage data={poke_creation} />
+    <ContainerPage data={poke_creation}
+      handleAddProduct={handleAddProduct}
+      commande={commande}
+      setProducts={setProducts}
+    />
   </>);
 }
-export const Sides = () => {
+export const Sides = ({ commande, setProducts, handleAddProduct }) => {
   return (<>
     <Helmet>
       <meta name="title" content={sidesPagedata?.metaTitle} data-react-helmet="true" />
@@ -81,10 +99,14 @@ export const Sides = () => {
       <link rel="canonical" href={sidesPagedata?.metaLink} />
       <title>{sidesPagedata?.titePage}</title>
     </Helmet>
-    <ContainerPage data={sides} />
+    <ContainerPage
+      handleAddProduct={handleAddProduct}
+      data={sides} commande={commande}
+      setProducts={setProducts}
+    />
   </>);
 }
-export const HealtyBowls = () => {
+export const HealtyBowls = ({ commande, setProducts, handleAddProduct }) => {
   return (<>
     <Helmet>
       <meta name="title" content={healty_bowlsPagedata?.metaTitle} data-react-helmet="true" />
@@ -97,10 +119,13 @@ export const HealtyBowls = () => {
       <link rel="canonical" href={healty_bowlsPagedata?.metaLink} />
       <title>{healty_bowlsPagedata?.titePage}</title>
     </Helmet>
-    <ContainerPage data={healty_bowls} />
+    <ContainerPage handleAddProduct={handleAddProduct}
+      data={healty_bowls} commande={commande}
+      setProducts={setProducts}
+    />
   </>);
 }
-export const Boissons = () => {
+export const Boissons = ({ commande, setProducts, handleAddProduct }) => {
   return (<>
     <Helmet>
       <meta name="title" content={boissonsPagedata?.metaTitle} data-react-helmet="true" />
@@ -113,10 +138,11 @@ export const Boissons = () => {
       <link rel="canonical" href={boissonsPagedata?.metaLink} />
       <title>{boissonsPagedata?.titePage}</title>
     </Helmet>
-    <ContainerPage data={boissons} />
+    <ContainerPage data={boissons} handleAddProduct={handleAddProduct} commande={commande}
+      setProducts={setProducts} />
   </>);
 }
-export const BoissonsChaude = () => {
+export const BoissonsChaude = ({ commande, setProducts, handleAddProduct }) => {
   return (<>
     <Helmet>
       <meta name="title" content={boissons_chaudePagedata?.metaTitle} data-react-helmet="true" />
@@ -129,10 +155,11 @@ export const BoissonsChaude = () => {
       <link rel="canonical" href={boissons_chaudePagedata?.metaLink} />
       <title>{boissons_chaudePagedata?.titePage}</title>
     </Helmet>
-    <ContainerPage data={boissons_chaude} />
+    <ContainerPage data={boissons_chaude} handleAddProduct={handleAddProduct} commande={commande}
+      setProducts={setProducts} />
   </>);
 }
-export const BoissonsTea = () => {
+export const BoissonsTea = ({ commande, setProducts, handleAddProduct }) => {
   return (<>
     <Helmet>
       <meta name="title" content={boissons_teaPagedata?.metaTitle} data-react-helmet="true" />
@@ -145,6 +172,7 @@ export const BoissonsTea = () => {
       <link rel="canonical" href={boissons_teaPagedata?.metaLink} />
       <title>{boissons_teaPagedata?.titePage}</title>
     </Helmet>
-    <ContainerPage data={boissons_tea} />
+    <ContainerPage data={boissons_tea} handleAddProduct={handleAddProduct} commande={commande}
+      setProducts={setProducts} />
   </>);
 }
