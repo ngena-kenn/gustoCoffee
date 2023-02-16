@@ -1,6 +1,7 @@
 import React from 'react'
 import CustomizeCard from '../card/card'
 import './containerPage.scss'
+import '../../css/page.css'
 
 const ContainerPage = ({ data, commande, setProducts, handleAddProduct }) => {
   const cards = data?.data?.map((value, index) =>
@@ -17,8 +18,8 @@ const ContainerPage = ({ data, commande, setProducts, handleAddProduct }) => {
     />
   );
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', marginTop: 50 }}>
-      <div style={{ fontSize: '35px', textAlign: 'center', padding: 10, margin: 10 }}>
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <div className='titre' style={{ fontSize: '35px', textAlign: 'center', padding: 10,  }}>
         {data?.title}
       </div>
       <div className='grid'>

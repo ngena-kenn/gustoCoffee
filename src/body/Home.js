@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import '../css/page.css';
 import '../components/containerPage/containerPage.scss'
 import { Link } from 'react-router-dom';
-import { Button } from "@mui/material";
 
 class Home_page extends Component {
   render() {
     return (
-      <div className="grid" style={{marginTop: 50}}>
+      <div className="grid" style={{paddingTop: 0}}>
         <div className="titre" >Decouvrir</div>
+        
         <div className="grille">
           <div>
             <div className="formules aligne-center" style={{height: 165}}></div>
