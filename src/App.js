@@ -14,6 +14,8 @@ import ViewProduct from './components/viewProduct/viewProduct';
 import Login from './body/commande/Authentification';
 import A_propos from './body/A_propos';
 import Connect from './body/Connexionn'
+import Franchise from './body/Franchise';
+import Actualite from './body/Actualite'
 
 const App = () => {
   const [commande, setcommande] = useState(false)
@@ -97,6 +99,8 @@ const App = () => {
           <BoissonsTea handleAddProduct={handleAddProduct} setProducts={setProducts} commande={commande} />}
         />
          <Route path="/a_propos" element={ <A_propos/>} />
+         <Route path="/franchise" element={ <Franchise/>} />
+         <Route path="/actualite" element={ <Actualite/>} />
         <Route path="/login" element={ <Login/>} />
           <Route path="/connect" element={ <Connect/>} />
       </Routes>

@@ -1,7 +1,6 @@
 import logo from '../image/logo.jpeg';
 import { Link } from 'react-router-dom';
 import React from "react";
-import logo from '../image/Logo.png';
 import '../css/page.css';
 import { Button } from '@mui/material';
 import Badge from '@mui/material/Badge';
