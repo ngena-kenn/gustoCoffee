@@ -1,8 +1,9 @@
+
 import { Stack, Divider, Box } from '@mui/material'
 import SocialMedia from "./SocialMedia/social_media"
 import  './footer.scss'
-// import "../../App.scss"
 import { infoLinksFooter } from '../../utils/data'
+import React, {Component} from 'react'
 
 const Footer = () => {
 

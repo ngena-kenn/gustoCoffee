@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import React from "react";
 // import ContainerPage from "../containerPage/containerPage";
 import { boissonsPagedata, boissons_chaudePagedata, boissons_teaPagedata, dessertsPagedata, formulePagedata, gamme_chaudePagedata, healty_bowlsPagedata, poke_creationPagedata, sidesPagedata } from "./globalConfig";
 import ContainerPage from "../containerPage/containerPage"

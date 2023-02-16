@@ -9,33 +9,96 @@ import Footer from './components/Footer/footer';
 import Login from './body/commande/Authentification';
 import Connect from './body/Connexionn';
 import A_propos from './body/A_propos';
-import Actualites from './body/Actualite';
+import Connect from './body/Connexionn'
 import Franchise from './body/Franchise';
- 
-function App() {
+import Actualite from './body/Actualite'
+
+const App = () => {
+  const [commande, setcommande] = useState(false)
+  const [open, setOpen] = useState(false)
+  const [viewProduct, setViewProduct] = useState(false)
+  const [prodducts, setProducts] = useState([])
+  const [cmd, setcmd] = useState(false)
+
+  const handleAddProduct = () => {
+    console.log(prodducts);
+    console.log(Object.keys(prodducts).length);
+  }
+
+  const handleCommande = () => {
+    setcommande(!commande)
+    setcmd(true)
+    !commande && handleAddProduct()
+  }
+
+  const validateCommande = () => {
+    setOpen(true)
+  }
+
+  const cancelCommande = () => {
+    setViewProduct(false)
+    setcommande(false)
+    setcmd(false)
+    setProducts([])
+  }
+  
+  const confirmCommande = () => {
+    setcmd(false)
+  }
+
+  const getCountProduct = () => {
+    return Object.keys(prodducts).length
+  }
+
   return (
     <>
-        <Navigation />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/home/desserts" element={<Dessert />} />
-          <Route path="/home/formules" element={<Formule />} />
-          <Route path="/home/gamme_chaude" element={<GammeChaude />} />
-          <Route path="/home/poke_creation" element={<PokeCreation />} />
-          <Route path="/home/sides" element={<Sides />} />
-          <Route path="/home/healty_bowls" element={<HealtyBowls />} />
-          <Route path="/home/boissons" element={ <Boissons/>} />
-          <Route path="/home/boissons_chaudes" element={ <BoissonsChaude/>} />
-          <Route path="/home/bubble_tea" element={ <BoissonsTea/>} />
-          <Route path="/login" element={ <Login/>} />
-          <Route path="/a_propos" element={ <A_propos/>} />
+      <Navigation setViewProduct={setViewProduct} countProduct={getCountProduct()}
+        commande={commande} setcommande={handleCommande} cmd={cmd} validateCommande={validateCommande}
+        openAdress={open} setOpen={setOpen} />
+      <FormDialog
+        title={"Coordonnées de livraison"}
+        text={"Veuillez entrer votre adresse s'il vous plait"}
+        open={open}
+        setOpen={setOpen}
+        cancelCommande={cancelCommande}
+      />
+      <ViewProduct products={prodducts} cancelCommande={cancelCommande} confirmCommande={confirmCommande}
+        viewProduct={viewProduct} setViewProduct={setViewProduct} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/home/desserts" element={
+          <Dessert handleAddProduct={handleAddProduct} setProducts={setProducts} commande={commande} />}
+        />
+        <Route path="/home/formules" element={
+          <Formule handleAddProduct={handleAddProduct} setProducts={setProducts} commande={commande} />}
+        />
+        <Route path="/home/gamme_chaude" element={
+          <GammeChaude handleAddProduct={handleAddProduct} setProducts={setProducts} commande={commande} />}
+        />
+        <Route path="/home/poke_creation" element={
+          <PokeCreation handleAddProduct={handleAddProduct} setProducts={setProducts} commande={commande} />}
+        />
+        <Route path="/home/sides" element={
+          <Sides handleAddProduct={handleAddProduct} setProducts={setProducts} commande={commande} />}
+        />
+        <Route path="/home/healty_bowls" element={
+          <HealtyBowls handleAddProduct={handleAddProduct} setProducts={setProducts} commande={commande} />}
+        />
+        <Route path="/home/boissons" element={
+          <Boissons handleAddProduct={handleAddProduct} setProducts={setProducts} commande={commande} />}
+        />
+        <Route path="/home/boissons_chaudes" element={
+          <BoissonsChaude handleAddProduct={handleAddProduct} setProducts={setProducts} commande={commande} />}
+        />
+        <Route path="/home/bubble_tea" element={
+          <BoissonsTea handleAddProduct={handleAddProduct} setProducts={setProducts} commande={commande} />}
+        />
+         <Route path="/a_propos" element={ <A_propos/>} />
+         <Route path="/franchise" element={ <Franchise/>} />
+         <Route path="/actualite" element={ <Actualite/>} />
+        <Route path="/login" element={ <Login/>} />
           <Route path="/connect" element={ <Connect/>} />
-          <Route path="/actualite" element={ <Actualites/>} />
-          <Route path="/franchise" element={ <Franchise/>} />
-
-
-
         </Routes>
         <Footer />
     </>
