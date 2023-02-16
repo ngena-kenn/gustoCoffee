@@ -1,17 +1,13 @@
-import './css/page.css';
-import React, { useState } from 'react';
-import Navigation from './body/Navigation';
+import'./css/page.css';
 import './body/commande/style.css'
+import React from 'react';
+import  Navigation from './body/Navigation';
 import Home from './body/Home'
-import { Routes, Route } from "react-router-dom";
-import {
-  Dessert, Formule, GammeChaude, HealtyBowls, PokeCreation,
-  Sides, Boissons, BoissonsChaude, BoissonsTea
-} from './components/global/globalPage';
+import{ Routes, Route} from "react-router-dom";
+import { Dessert, Formule, GammeChaude, HealtyBowls, PokeCreation, Sides, Boissons, BoissonsChaude, BoissonsTea } from './components/global/globalPage';
 import Footer from './components/Footer/footer';
-import FormDialog from './components/dialog';
-import ViewProduct from './components/viewProduct/viewProduct';
 import Login from './body/commande/Authentification';
+import Connect from './body/Connexionn';
 import A_propos from './body/A_propos';
 import Connect from './body/Connexionn'
 import Franchise from './body/Franchise';
@@ -103,9 +99,10 @@ const App = () => {
          <Route path="/actualite" element={ <Actualite/>} />
         <Route path="/login" element={ <Login/>} />
           <Route path="/connect" element={ <Connect/>} />
-      </Routes>
-      <Footer />
+        </Routes>
+        <Footer />
     </>
+    
   );
 }
 
