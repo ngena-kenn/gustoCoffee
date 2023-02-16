@@ -36,203 +36,301 @@
 .another a {
   color: rgb(105, 186, 76);
 }
-.another a:hover {
-  color: black;
+
+
+.another a:hover{
+    color:black;
+    
 }
-.menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 60px;
-  margin-top: 30px;
-  background-attachment: fixed;
-  flex-wrap: wrap;
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    margin-top: 30px;
+    background-attachment:fixed;
+    flex-wrap: wrap;
 }
-.text {
-  text-align: center;
-  list-style-type: none;
-  text-decoration: none;
-  display: block;
-  background: rgb(105, 186, 76);
-  background-size: 30px;
-  border-radius: 15px / 10px;
-  color: white;
-  background-position: center;
-  font-size: 20px;
-  padding: 10px;
-  margin-left: 50px;
-  padding-top: 20px;
+.text{
+    text-align: center;
+    list-style-type: none;
+    text-decoration: none;
+    display: block;
+    background:rgb(105, 186, 76);
+    background-size: 30px; 
+    border-radius: 15px / 10px;
+    color: white; 
+    background-position: center;
+    font-size: 20px;
+    padding: 10px;
+    margin-left: 50px;
+    padding-top: 20px;
 }
-.text:hover {
-  color: rgb(119, 200, 84);
-  background: white;
-  box-shadow: 6px 6px 6px gray;
+.text:hover{
+    color:rgb(119, 200, 84);
+    background: white;
+    box-shadow: 6px 6px 6px gray ;
+ 
 }
-.titre {
-  text-align: center;
-  font-size: 50px;
-  background: url(../image/image1.png);
-  width: 100%;
-  height: 400px;
-  background-repeat: no-repeat;
-  background-size: cover;
+.titre{
+    text-align: center;
+    font-size: 50px;
+    padding-top: 20px;
 }
 
-.aligne-center {
-  margin: 30px;
-  text-align: center;
+.aligne-center{
+    margin: 30px ;
+    text-align: center;
 }
-.formules {
-  background: url(../image/formule.png);
-  background-size: cover;
-  min-width: 200px;
-  min-height: 100px;
-  background-position: right;
-  background-repeat: no-repeat;
-  border-radius: 15px / 10px;
-  padding-bottom: 70px;
+
+.formules{
+    background: url(../image/formule.png);
+    background-size: cover;
+    min-width: 200px;
+    min-height: 100px ;
+    background-position: right;
+    background-repeat: no-repeat;
+    border-radius: 15px / 10px;
+    padding-bottom: 70px;
 }
-.gamme_chaude {
-  background: url(../image/image1.png);
-  background-size: cover;
-  min-width: 200px;
-  min-height: 100px;
-  background-position: right;
-  background-repeat: no-repeat;
-  border-radius: 15px / 10px;
-  padding-bottom: 70px;
+.gamme_chaude{
+    background: url(../image/image1.png);
+    background-size: cover;
+    min-width: 200px;
+    min-height: 100px ;
+    background-position: right;
+    background-repeat: no-repeat;
+    border-radius: 15px / 10px;
+    padding-bottom: 70px;
 }
-.poké_creation {
-  background: url(../image/image2.png);
-  background-size: cover;
-  min-width: 200px;
-  min-height: 100px;
-  background-position: right;
-  background-repeat: no-repeat;
-  border-radius: 15px / 10px;
-  padding-bottom: 70px;
+.poké_creation{
+    background: url(../image/image2.png);
+    background-size: cover;
+    min-width: 200px;
+    min-height: 100px ;
+    background-position: right;
+    background-repeat: no-repeat;
+    border-radius: 15px / 10px;
+    padding-bottom: 70px;
 }
-.sides {
-  background: url(../image/image3.png);
-  background-size: cover;
-  min-width: 200px;
-  min-height: 100px;
-  background-position: right;
-  background-repeat: no-repeat;
-  border-radius: 15px / 10px;
-  padding-bottom: 70px;
+.sides{
+    background: url(../image/image3.png);
+    background-size: cover;
+    min-width: 200px;
+    min-height: 100px ;
+    background-position: right;
+    background-repeat: no-repeat;
+    border-radius: 15px / 10px;
+    padding-bottom: 70px;
 }
-.healthy_bowls {
-  background: url(../image/pokabox.jpeg);
-  background-size: cover;
-  min-width: 200px;
-  min-height: 100px;
-  background-position: right;
-  background-repeat: no-repeat;
-  border-radius: 15px / 10px;
-  padding-bottom: 70px;
+.healthy_bowls{
+    background: url(../image/pokabox.jpeg);
+    background-size: cover;
+    min-width: 200px;
+    min-height: 100px ;
+    background-position: right;
+    background-repeat: no-repeat;
+    border-radius: 15px / 10px;
+    padding-bottom: 70px;
 }
-.desserts {
-  background: url(../image/DESSERT.jpeg);
-  background-size: cover;
-  min-width: 200px;
-  min-height: 100px;
-  background-position: right;
-  background-repeat: no-repeat;
-  border-radius: 15px / 10px;
-  padding-bottom: 70px;
+.desserts{
+    background: url(../image/DESSERT.jpeg);
+    background-size: cover;
+    min-width: 200px;
+    min-height: 100px ;
+    background-position: right;
+    background-repeat: no-repeat;
+    border-radius: 15px / 10px;
+    padding-bottom: 70px;
 }
-.boissons_chaudes {
-  background: url(../image/chaude1.jpg);
-  background-size: cover;
-  min-width: 200px;
-  min-height: 100px;
-  background-position: right;
-  background-repeat: no-repeat;
-  border-radius: 15px / 10px;
-  padding-bottom: 70px;
+.boissons_chaudes{
+    background: url(../image/chaude1.jpg);
+    background-size: cover;
+    min-width: 200px;
+    min-height: 100px ;
+    background-position: right;
+    background-repeat: no-repeat;
+    border-radius: 15px / 10px;
+    padding-bottom: 70px;
 }
-.bubble_tea {
-  background: url(../image/chaude.jpg);
-  background-size: cover;
-  min-width: 200px;
-  min-height: 100px;
-  background-position: left;
-  background-repeat: no-repeat;
-  border-radius: 15px / 10px;
-  padding-bottom: 70px;
+.bubble_tea{
+    background: url(../image/chaude.jpg);
+    background-size: cover;
+    min-width: 200px;
+    min-height: 100px ;
+    background-position: left;
+    background-repeat: no-repeat;
+    border-radius: 15px / 10px;
+    padding-bottom: 70px;
 }
-.boissons {
-  background: url(../image/boisson.jpg);
-  background-size: cover;
-  min-width: 200px;
-  min-height: 100px;
-  background-position: right;
-  background-repeat: no-repeat;
-  border-radius: 15px / 10px;
-  padding-bottom: 70px;
+.boissons{
+    background: url(../image/boisson.jpg);
+    background-size: cover;
+    min-width: 200px;
+    min-height: 100px ;
+    background-position: right;
+    background-repeat: no-repeat;
+    border-radius: 15px / 10px;
+    padding-bottom: 70px;
 }
-.forme {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-attachment: fixed;
-  flex-wrap: wrap;
+.forme{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment:fixed;
+    flex-wrap: wrap;
+   
 }
-.forme .aligne {
-  margin-top: 60px;
-  margin-left: 30px;
+.forme .aligne{
+    margin-top: 60px;
+    margin-left: 30px
+    
 }
-.valeur1 {
-  background: url(../image/NOS-VALEURS-BACKGROUND.webp);
-  background-size: cover;
-  min-width: 200px;
-  height: 270px;
-  background-position: right;
-  background-repeat: no-repeat;
+.valeur1{
+    background:url(../image/NOS-VALEURS-BACKGROUND.webp);
+    margin-top: 80px;
+    background-size: cover;
+    min-width: 200px;
+    min-height: 100px ;
+    background-position: right;
+    background-repeat: no-repeat;
+
 }
-.valeur2 {
-  background: url(../image/NOS-VALEURS-1.jpeg);
-  background-size: cover;
-  min-width: 400px;
-  min-height: 300px;
-  background-position: right;
-  background-repeat: no-repeat;
-  border-radius: 25px / 20px;
+.valeur2{
+    background: url(../image/NOS-VALEURS-1.jpeg);
+    background-size: cover;
+    min-width: 400px;
+    min-height: 300px ;
+    background-position: right;
+    background-repeat: no-repeat;
+    border-radius: 25px / 20px; 
+    
+
 }
-.valeur3 {
-  background: url(../image/NOS-VALEURS-2.jpeg);
-  background-size: cover;
-  min-width: 400px;
-  min-height: 300px;
-  background-position: right;
-  background-repeat: no-repeat;
-  border-radius: 25px / 20px;
+.valeur3{
+    background: url(../image/NOS-VALEURS-2.jpeg);
+    background-size: cover;
+    min-width: 400px;
+    min-height: 300px ;
+    background-position: right;
+    background-repeat: no-repeat;
+    border-radius: 25px / 20px; 
+    
+
 }
-.valeur4 {
-  background: url(../image/NOS-VALEURS-3.jpeg);
-  background-size: cover;
-  min-width: 400px;
-  min-height: 300px;
-  background-position: right;
-  background-repeat: no-repeat;
-  border-radius: 25px / 20px;
+.valeur4{
+    background:url(../image/NOS-VALEURS-3.jpeg);
+    background-size: cover;
+    min-width: 400px;
+    min-height: 300px ;
+    background-position: right;
+    background-repeat: no-repeat;
+    border-radius: 25px / 20px; 
+    
 }
-.text1 {
-  text-align: center;
-  display: block;
-  background-position: center;
-  font-size: 50px;
-  color: #468f27;
-  padding: 10px;
-  margin-left: 30px;
-  padding-top: 20px;
+.text1{
+    text-align: center;
+    display: block; 
+    background-position: center;
+    font-size: 50px;
+    color: #468F27;
+    padding: 10px;
+    margin-left: 30px;
+    padding-top: 20px;
+
 }
-.text2 {
-  text-align: center;
-  display: block;
-  font-size: 20px;
-  font-family: "Times New Roman", Times, serif;
+.text2{
+    text-align: center;
+    display: block; 
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+
 }
-.text3 {
+.actu_bg{
+    background: url(../image/ACTUALITÉS-BACKGROUND.jpeg);
+    margin-top: 80px;
+    background-size: cover;
+    min-width: 200px;
+    min-height: 100px ;
+    background-position: right;
+    background-repeat: no-repeat;
 }
+.actu1{
+    background: url(../image/actualité6.PNG);
+    background-size: cover;
+    height: 400px;
+    width: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 25px / 20px;
+    
+}
+.actu2{
+    background: url(../image/actualité5.PNG);
+    background-size: cover;
+    height: 400px;
+    width: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 25px / 20px;
+     
+}
+.actu3{
+    background: url(../image/actualité4.PNG);
+    background-size: cover;
+    height: 400px;
+    width: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 25px / 20px;
+    
+}
+.actu4{
+    background: url(../image/actualité3.PNG);
+    background-size: cover;
+    width: 350px;
+    height: 400px ;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 25px / 20px; 
+}
+.actu5{
+    background: url(../image/actualité2.PNG);
+    background-size: cover;
+    width: 350px;
+    height: 400px ;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 25px / 20px; 
+}
+.actu6{
+    background: url(../image/actualité1.PNG);
+    background-size: cover;
+    width: 350px;
+    height: 400px ;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 25px / 20px; 
+}
+
+.text4{
+    text-align: center;
+    display: block; 
+    font-size: 12px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px;
+
+}
+
+#background-video {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    }
+
