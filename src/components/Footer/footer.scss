@@ -8,7 +8,7 @@
 
 .global_footer {
   @include base_global_footer($white-mode);
-  background-color: #E3DCDC;
+  background-color: #dfe6e9;
   margin-top: 10%;
   @include sm {
     margin-top: 20%;
