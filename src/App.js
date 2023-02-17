@@ -80,8 +80,8 @@ const App = () => {
 
   return (
     <>
-      {pathname !== '/login' && pathname !== '/'&& pathname !== '/@key=AIzaSyAUYsJuillokUbWvzzc-G2qebJLDhpPBHE'
-       && <Navigation setViewProduct={setViewProduct} countProduct={getCountProduct()}
+      {pathname !== '/login' &&
+       <Navigation setViewProduct={setViewProduct} countProduct={getCountProduct()}
         commande={commande} setcommande={handleCommande} cmd={cmd} validateCommande={validateCommande}
         openAdress={open} setOpen={setOpen} />}
       <FormDialog
@@ -96,7 +96,7 @@ const App = () => {
       <Alert severity="success">Si vous créez un compte vous aurez un cadeau de plus </Alert>
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<Acceuil />} />
         <Route path="/home" element={<Acceuil />} />
         <Route path="/menu" element={<Home />} />
         <Route path="/home/desserts" element={
@@ -129,12 +129,15 @@ const App = () => {
         <Route path="/a_propos" element={<Apropos />} />
         <Route path="/franchise" element={<Franchise title={'NOTRE FRANCHISE'} />} />
         <Route path="/actualite" element={<Actualite />} />
-        <Route path="*" element={<Login />} />
+        <Route path="*" element={<Acceuil />} />
 
       </Routes>
-      {pathname !== '/login' && pathname !== '/' && pathname !== '/@key=AIzaSyAUYsJuillokUbWvzzc-G2qebJLDhpPBHE' && <Footer />}
+      {pathname !== '/login' &&
+      <Footer />}
     </>
   );
 }
 
 export default App;
+
+// pathname !== '/' && pathname !== '/@key=AIzaSyAUYsJuillokUbWvzzc-G2qebJLDhpPBHE' && 
