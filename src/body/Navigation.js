@@ -69,7 +69,7 @@ const Navigation = ({ commande, setcommande, countProduct, setViewProduct, cmd, 
                 </div>
               </li> */}
               <li class="nav-item">
-                <div style={{position: 'absolute', right:10, paddingLeft: 10, paddingBottom: 10}}>
+                <div style={{ paddingLeft: 10, paddingBottom: 10}}>
                   <Button onClick={() => {
                     navigate('/login')
                   }} variant='outlined' color='success'  

@@ -7,7 +7,7 @@ class Home_page extends Component {
   render() {
     return (
       <div className="grid" style={{paddingTop: 80}}>
-        <div className="titre" >Découvrir</div>
+        <div className="titre" >Notre menu</div>
         <div className="grille">
           <div>
             <Link to={'/home/formules'}><div className="formules aligne-center" style={{height: 165}}></div></Link>
@@ -18,6 +18,18 @@ class Home_page extends Component {
               justifyContent: 'center',
               color: 'black'
             }} to={'/home/formules'}>Formules</Link>
+          </div>
+          <div>
+            <Link to={'/home/desserts'}>
+            <div className="desserts aligne-center" style={{height: 165}}></div>
+            </Link>
+            <Link style={{
+              textDecoration: 'none',
+              fontSize: 27,
+              display: 'flex',
+              justifyContent: 'center',
+              color: 'black'
+            }} to={'/home/desserts'}>Desserts</Link>
           </div>
           <div>
           <Link to={'/home/gamme_chaude'}>
@@ -67,18 +79,7 @@ class Home_page extends Component {
               color: 'black'
             }} to={'/home/healty_bowls'}>Healthy Bowls</Link>
           </div>
-          <div>
-            <Link to={'/home/desserts'}>
-            <div className="desserts aligne-center" style={{height: 165}}></div>
-            </Link>
-            <Link style={{
-              textDecoration: 'none',
-              fontSize: 27,
-              display: 'flex',
-              justifyContent: 'center',
-              color: 'black'
-            }} to={'/home/desserts'}>Desserts</Link>
-          </div>
+          
           <div>
             <Link to={'/home/boissons_chaudes'}>
             <div className="boissons_chaudes aligne-center" style={{height: 165}}></div>

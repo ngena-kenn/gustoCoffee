@@ -41,6 +41,7 @@ const Authentification = () => {
       }, (error) => {
         console.log(error.text);
       });
+    navigate('/home')
   };
 
   return (

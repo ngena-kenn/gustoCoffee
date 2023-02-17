@@ -18,6 +18,7 @@ import Franchise from './body/Franchise';
 import Actualite from './body/Actualite'
 import Acceuil from './components/acceuil/acceuil';
 import Swal from 'sweetalert2'
+import Alert from '../node_modules/@mui/material/Alert';
 
 const App = () => {
   const [firstConnexion, setfirstConnexion] = useState(false)
@@ -42,8 +43,6 @@ const App = () => {
   useEffect(() => {
     console.log(pathname);
     if(pathname === '/@key=AIzaSyAUYsJuillokUbWvzzc-G2qebJLDhpPBHE') {
-      // setfirstConnexion(true)
-      // firstConnexion &&
        Swal.fire({
         title: 'Bravo!',
         text: `Vous avez gagnez ${coupon[Math.floor(Math.random() * 3)]}`,
@@ -52,7 +51,7 @@ const App = () => {
       })
     }
     setfirstConnexion(false)
-  }, [firstConnexion])
+  }, [])
 
   const handleCommande = () => {
     setcommande(!commande)
@@ -94,6 +93,7 @@ const App = () => {
       />
       <ViewProduct products={prodducts} cancelCommande={cancelCommande} confirmCommande={confirmCommande}
         viewProduct={viewProduct} setViewProduct={setViewProduct} />
+      <Alert severity="success">Si vous créez un compte vous aurez un cadeau de plus </Alert>
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Login />} />
