@@ -1,0 +1,7 @@
+@import '../context/thems.scss';
+
+.left-block {
+    @include sm {
+        flex-direction: column;
+    }
+}

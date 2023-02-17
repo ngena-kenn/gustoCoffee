@@ -1,29 +1,58 @@
-import'./css/page.css';
+import './css/page.css';
 import './body/commande/style.css'
-import React from 'react';
-import  Navigation from './body/Navigation';
+import React, { useEffect, useState } from 'react';
+import Navigation from './body/Navigation';
 import Home from './body/Home'
-import{ Routes, Route} from "react-router-dom";
-import { Dessert, Formule, GammeChaude, HealtyBowls, PokeCreation, Sides, Boissons, BoissonsChaude, BoissonsTea } from './components/global/globalPage';
+import { Routes, Route } from "react-router-dom";
+import { useLocation } from 'react-router'
+import {
+  Dessert, Formule, GammeChaude, HealtyBowls, PokeCreation, Sides, Boissons, BoissonsChaude,
+  BoissonsTea
+} from './components/global/globalPage';
 import Footer from './components/Footer/footer';
+import FormDialog from './components/dialog';
+import ViewProduct from './components/viewProduct/viewProduct';
 import Login from './body/commande/Authentification';
-import Connect from './body/Connexionn';
-import A_propos from './body/A_propos';
-import Connect from './body/Connexionn'
+import Apropos from './body/A_propos';
 import Franchise from './body/Franchise';
 import Actualite from './body/Actualite'
+import Acceuil from './components/acceuil/acceuil';
+import Swal from 'sweetalert2'
 
 const App = () => {
+  const [firstConnexion, setfirstConnexion] = useState(false)
   const [commande, setcommande] = useState(false)
   const [open, setOpen] = useState(false)
   const [viewProduct, setViewProduct] = useState(false)
   const [prodducts, setProducts] = useState([])
   const [cmd, setcmd] = useState(false)
+  const { pathname } = useLocation();
 
   const handleAddProduct = () => {
     console.log(prodducts);
     console.log(Object.keys(prodducts).length);
   }
+
+  const coupon = [
+    "un menu de 35 euros gratuit",
+    "50% de réduction sur le 2nd menu acheté",
+    "10% de réduction sur ta commande dès 30 euros",
+  ]
+
+  useEffect(() => {
+    console.log(pathname);
+    if(pathname === '/@key=AIzaSyAUYsJuillokUbWvzzc-G2qebJLDhpPBHE') {
+      // setfirstConnexion(true)
+      // firstConnexion &&
+       Swal.fire({
+        title: 'Bravo!',
+        text: `Vous avez gagnez ${coupon[Math.floor(Math.random() * 3)]}`,
+        icon: 'success',
+        confirmButtonText: 'Cool'
+      })
+    }
+    setfirstConnexion(false)
+  }, [firstConnexion])
 
   const handleCommande = () => {
     setcommande(!commande)
@@ -41,7 +70,7 @@ const App = () => {
     setcmd(false)
     setProducts([])
   }
-  
+
   const confirmCommande = () => {
     setcmd(false)
   }
@@ -52,9 +81,10 @@ const App = () => {
 
   return (
     <>
-      <Navigation setViewProduct={setViewProduct} countProduct={getCountProduct()}
+      {pathname !== '/login' && pathname !== '/'&& pathname !== '/@key=AIzaSyAUYsJuillokUbWvzzc-G2qebJLDhpPBHE'
+       && <Navigation setViewProduct={setViewProduct} countProduct={getCountProduct()}
         commande={commande} setcommande={handleCommande} cmd={cmd} validateCommande={validateCommande}
-        openAdress={open} setOpen={setOpen} />
+        openAdress={open} setOpen={setOpen} />}
       <FormDialog
         title={"Coordonnées de livraison"}
         text={"Veuillez entrer votre adresse s'il vous plait"}
@@ -65,8 +95,10 @@ const App = () => {
       <ViewProduct products={prodducts} cancelCommande={cancelCommande} confirmCommande={confirmCommande}
         viewProduct={viewProduct} setViewProduct={setViewProduct} />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/home" element={<Acceuil />} />
+        <Route path="/menu" element={<Home />} />
         <Route path="/home/desserts" element={
           <Dessert handleAddProduct={handleAddProduct} setProducts={setProducts} commande={commande} />}
         />
@@ -94,15 +126,14 @@ const App = () => {
         <Route path="/home/bubble_tea" element={
           <BoissonsTea handleAddProduct={handleAddProduct} setProducts={setProducts} commande={commande} />}
         />
-         <Route path="/a_propos" element={ <A_propos/>} />
-         <Route path="/franchise" element={ <Franchise/>} />
-         <Route path="/actualite" element={ <Actualite/>} />
-        <Route path="/login" element={ <Login/>} />
-          <Route path="/connect" element={ <Connect/>} />
-        </Routes>
-        <Footer />
+        <Route path="/a_propos" element={<Apropos />} />
+        <Route path="/franchise" element={<Franchise title={'NOTRE FRANCHISE'} />} />
+        <Route path="/actualite" element={<Actualite />} />
+        <Route path="*" element={<Login />} />
+
+      </Routes>
+      {pathname !== '/login' && pathname !== '/' && pathname !== '/@key=AIzaSyAUYsJuillokUbWvzzc-G2qebJLDhpPBHE' && <Footer />}
     </>
-    
   );
 }
 

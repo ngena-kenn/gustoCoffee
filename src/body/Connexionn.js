@@ -18,11 +18,15 @@ class Connexionn extends Component {
               <input type="email" placeholder="EmaiL" required ></input>
               <input type="password" placeholder="Mot de passe"></input>
             </form>
-            <Button variant="outlined" style={{textDecoration: 'none', color: 'black'}} color="primary"  className="taggle1">
-              <Link href="/home">se connecter</Link></Button>
+            <Link to="/home">
+              <Button variant="outlined" style={{textDecoration: 'none', color: 'black'}} color="primary"  className="taggle1">
+                se connecter
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
+      
     );
   }
 

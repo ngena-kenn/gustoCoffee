@@ -6,45 +6,114 @@ import { Link } from 'react-router-dom';
 class Home_page extends Component {
   render() {
     return (
-      <div className="grid" style={{paddingTop: 0}}>
-        <div className="titre" >Decouvrir</div>
-        
+      <div className="grid" style={{paddingTop: 80}}>
+        <div className="titre" >Découvrir</div>
         <div className="grille">
           <div>
-            <div className="formules aligne-center" style={{height: 165}}></div>
-            <Link className="text" to={'/home/formules'}>Formules</Link>
+            <Link to={'/home/formules'}><div className="formules aligne-center" style={{height: 165}}></div></Link>
+            <Link style={{
+              textDecoration: 'none',
+              fontSize: 27,
+              display: 'flex',
+              justifyContent: 'center',
+              color: 'black'
+            }} to={'/home/formules'}>Formules</Link>
           </div>
           <div>
+          <Link to={'/home/gamme_chaude'}>
             <div className="gamme_chaude aligne-center" style={{height: 165}}></div>
-            <Link className="text" to={'/home/gamme_chaude'}>Gammes Chaudes</Link>
+          </Link>
+            <Link style={{
+              textDecoration: 'none',
+              fontSize: 27,
+              display: 'flex',
+              justifyContent: 'center',
+              color: 'black'
+            }} to={'/home/gamme_chaude'}>Gamme Chaude</Link>
           </div>
           <div>
-            <div className="poké_creation aligne-center" style={{height: 165}}></div>
-            <Link className="text" to={'/home/poke_creation'}>Poké Creation</Link>
+            <Link to={'/home/poke_creation'}>
+             <div className="poké_creation aligne-center" style={{height: 165}}></div>
+            </Link>
+            <Link style={{
+              textDecoration: 'none',
+              fontSize: 27,
+              display: 'flex',
+              justifyContent: 'center',
+              color: 'black'
+            }} to={'/home/poke_creation'}>Poké Création</Link>
           </div>
           <div>
-            <div className="sides aligne-center" style={{height: 165}}></div>
-            <Link className="text" to={'/home/sides'}>Sides</Link>
+            <Link to={'/home/sides'}>
+             <div className="sides aligne-center" style={{height: 165}}></div>
+            </Link>
+            <Link style={{
+              textDecoration: 'none',
+              fontSize: 27,
+              display: 'flex',
+              justifyContent: 'center',
+              color: 'black'
+            }} to={'/home/sides'}>Sides</Link>
           </div>
           <div>
+            <Link to={'/home/healty_bowls'}>
             <div className="healthy_bowls aligne-center" style={{height: 165}}></div>
-            <Link className="text" to={'/home/healty_bowls'}>Healthy Bowls</Link>
+            </Link>
+            <Link style={{
+              textDecoration: 'none',
+              fontSize: 27,
+              display: 'flex',
+              justifyContent: 'center',
+              color: 'black'
+            }} to={'/home/healty_bowls'}>Healthy Bowls</Link>
           </div>
           <div>
+            <Link to={'/home/desserts'}>
             <div className="desserts aligne-center" style={{height: 165}}></div>
-            <Link className="text" to={'/home/desserts'}>Desserts</Link>
+            </Link>
+            <Link style={{
+              textDecoration: 'none',
+              fontSize: 27,
+              display: 'flex',
+              justifyContent: 'center',
+              color: 'black'
+            }} to={'/home/desserts'}>Desserts</Link>
           </div>
           <div>
+            <Link to={'/home/boissons_chaudes'}>
             <div className="boissons_chaudes aligne-center" style={{height: 165}}></div>
-            <Link className="text" to={'/home/boissons_chaudes'}>Boissons Chaudes</Link>
+            </Link>
+            <Link style={{
+              textDecoration: 'none',
+              fontSize: 27,
+              display: 'flex',
+              justifyContent: 'center',
+              color: 'black'
+            }} to={'/home/boissons_chaudes'}>Boissons Chaudes</Link>
           </div>
           <div>
+            <Link to={'/home/bubble_tea'}>
             <div className="bubble_tea aligne-center" style={{height: 165}}></div>
-            <Link className="text" to={'/home/bubble_tea'}>Bubble Tea</Link>
+            </Link>
+            <Link style={{
+              textDecoration: 'none',
+              fontSize: 27,
+              display: 'flex',
+              justifyContent: 'center',
+              color: 'black'
+            }} to={'/home/bubble_tea'}>Bubble Tea</Link>
           </div>
           <div>
+            <Link to={'/home/boissons'}>
             <div className="boissons aligne-center" style={{height: 165}}></div>
-            <Link className="text" to={'/home/boissons'}>Boissons</Link>
+            </Link>
+            <Link style={{
+              textDecoration: 'none',
+              fontSize: 27,
+              display: 'flex',
+              justifyContent: 'center',
+              color: 'black'
+            }} to={'/home/boissons'}>Boissons</Link>
           </div>
         </div>
       </div>

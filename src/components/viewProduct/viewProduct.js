@@ -34,7 +34,7 @@ const ViewProduct = (props) => {
          }}
       >
         <DialogTitle color='green'>Liste des produits commandés</DialogTitle>
-        <DialogContent style={{ height: '300px', width: '500px' }}>
+        <DialogContent style={{ height: '300px', width: '500px', paddingTop: 15 }}>
           <DialogContentText>
           </DialogContentText>
             <div style={{width: '100%', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>

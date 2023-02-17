@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { CardActionArea, CardActions } from '@mui/material';
+import { Badge, CardActionArea, CardActions } from '@mui/material';
 import LocalGroceryStoreOutlinedIcon from '@mui/icons-material/LocalGroceryStoreOutlined';
 
 const CustomizeCard = ({id, image, title, description, price, commande,setProducts, handleAddProduct }) => {
+  const [count, setcount] = useState(0)
+
   return (
     <Card sx={{ maxWidth: 345 }} className={'grid-item'}>
       <CardActionArea>
@@ -32,9 +34,13 @@ const CustomizeCard = ({id, image, title, description, price, commande,setProduc
         </div>
         {commande &&  <div onClick={() => {
             setProducts((prev) => ([...prev, {product: title, price: price}]))
+            setcount((prev) => prev+1)
             handleAddProduct()
           }}>
+            <Badge badgeContent={count} style={{ cursor: "pointer" }} color="success">
             <LocalGroceryStoreOutlinedIcon />
+
+            </Badge>
           </div>}
         </div>
       </CardActions>

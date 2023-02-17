@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 class Actualites extends Component {
   render() {
     return (
-      <div>
+      <div style={{paddingTop: 120}}>
         <div className="titre" >Actualités</div>
         <div className="actu_bg"></div>
         <div className="forme">

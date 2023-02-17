@@ -1,0 +1,28 @@
+@import "../../components/context/thems.scss";
+
+
+.login {
+  background-image: url('../../image/image3.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.myform {
+  width: 50%;
+  border-radius: 10px;
+  box-shadow: 1px 3px 15px 3px rgba(255, 255, 255, 0.877);
+  @include md {
+    width: 70%;
+    .action-btn {
+      flex-direction: column;
+      justify-content: space-between;
+      .new-compte {
+        margin-bottom: 20px;
+        
+      }
+    }
+  }
+  @include sm {
+    width: 90%;
+  }
+}

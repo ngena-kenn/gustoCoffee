@@ -1,5 +1,5 @@
-import logo from '../image/logo.jpeg';
-import { Link } from 'react-router-dom';
+import logo from '../image/logo.png';
+import { Link, useNavigate } from 'react-router-dom';
 import React from "react";
 import '../css/page.css';
 import { Button } from '@mui/material';
@@ -8,12 +8,13 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 
 const Navigation = ({ commande, setcommande, countProduct, setViewProduct, cmd, validateCommande }) => {
-  const handleclose = () => {
-    return false
-  }
+ const navigate = useNavigate()
   return (
     <>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav style={{
+      boxShadow: '0 0 5px rgba(0, 0, 0, 0.753)', position: 'fixed',
+      width: '100%', zIndex: 99999, top: 0, backgroundColor: 'white', marginBottom: 50
+    }} class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <div className="navbar-brand"  style={{padding: 0}}>
             <Link to={"/home"}>
@@ -26,19 +27,19 @@ const Navigation = ({ commande, setcommande, countProduct, setViewProduct, cmd, 
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <Link to='/home' class="nav-link active">home</Link>
+                <Link to='/home' class="nav-link active">Accueil</Link>
               </li>
               <li class="nav-item">
-                <Link to='/restaurant' class="nav-link">restaurant</Link>
+                <Link to='/menu' class="nav-link">Menu</Link>
               </li>
               <li class="nav-item">
-                <Link to='/a_propos' class="nav-link" >a propos</Link>
+                <Link to='/a_propos' class="nav-link" >A propos</Link>
               </li>
               <li class="nav-item">
-                <Link to='/actualite' class="nav-link">actualité</Link>
+                <Link to='/actualite' class="nav-link">Actualité</Link>
               </li>
               <li class="nav-item">
-                <Link to='/franchise' class="nav-link">franchise</Link>
+                <Link to='/franchise' class="nav-link">Franchise</Link>
               </li>
 
               <li class="nav-item">
@@ -50,13 +51,29 @@ const Navigation = ({ commande, setcommande, countProduct, setViewProduct, cmd, 
                   </Badge>
                 </div>
               </li>
-              <li class="nav-item">
-                <div >
+              <li class="nav-item" style={{paddingBottom: 10}}>
+                <div style={{paddingLeft: 10,}}>
                   <Button variant='outlined' color='success' disabled={cmd} onClick={() => {
                     commande ? validateCommande() :
                       setcommande()
                   }}
                   >{commande ? 'Valider' : 'Commander'} </Button>
+                </div>
+              </li>
+              {/* <li class="nav-item">
+                <div style={{paddingLeft: 10, paddingBottom: 10}}>
+                  <Button onClick={() => {
+                    navigate('/connect')
+                  }} variant='outlined' color='success'  
+                  >Connexion </Button>
+                </div>
+              </li> */}
+              <li class="nav-item">
+                <div style={{position: 'absolute', right:10, paddingLeft: 10, paddingBottom: 10}}>
+                  <Button onClick={() => {
+                    navigate('/login')
+                  }} variant='outlined' color='success'  
+                  >Connexion</Button>
                 </div>
               </li>
             </ul>

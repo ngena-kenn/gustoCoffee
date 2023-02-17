@@ -18,7 +18,7 @@ const ContainerPage = ({ data, commande, setProducts, handleAddProduct }) => {
     />
   );
   return (
-    <div style={{ display: 'flex', flexDirection: 'column' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', paddingTop: 100 }}>
       <div className='titre' style={{ fontSize: '35px', textAlign: 'center', padding: 10,  }}>
         {data?.title}
       </div>
