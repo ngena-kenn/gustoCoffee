@@ -12,10 +12,10 @@ const Navigation = ({ commande, setcommande, countProduct, setViewProduct, cmd, 
   return (
     <>
       <nav style={{
-      boxShadow: '0 0 5px rgba(0, 0, 0, 0.753)', position: 'fixed',
+      boxShadow: '0 0 5px rgba(0, 0, 0, 0.753)', position: 'fixed', justifyContent: 'center',
       width: '100%', zIndex: 99999, top: 0, backgroundColor: 'white', marginBottom: 50
     }} class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
+        <div class="container-fluid" >
           <div className="navbar-brand"  style={{padding: 0}}>
             <Link to={"/home"}>
               <img src={logo} className="logo" alt="logo" />
@@ -24,7 +24,7 @@ const Navigation = ({ commande, setcommande, countProduct, setViewProduct, cmd, 
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <div class="collapse navbar-collapse" style={{justifyContent: 'center'}} id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item">
                 <Link to='/home' class="nav-link active">Accueil</Link>
