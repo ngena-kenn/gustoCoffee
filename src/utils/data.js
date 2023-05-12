@@ -1,34 +1,95 @@
+const menuItems = [
+    {
+      image:"https://cdn-s-www.leprogres.fr/images/D58EA013-A78B-491B-A774-995CAF133E90/NW_raw/title-1648377298.jpg",
+      id: 1,
+      label: "Salon de 6 places",
+      submenu: [
+        {
+          path:"/espaces/grand_salon/GS1",
+          name:"Salon 1",
+          image:"https://cdn-s-www.leprogres.fr/images/D58EA013-A78B-491B-A774-995CAF133E90/NW_raw/title-1648377298.jpg",
+          id: 11,
+        },
+        {
+          path:"/espaces/grand_salon/GS2",
+          name:"Salon 2",
+          image:"https://cdn-s-www.leprogres.fr/images/D58EA013-A78B-491B-A774-995CAF133E90/NW_raw/title-1648377298.jpg",
+          id: 12,
+        }, 
+        {
+            path:"/espaces/grand_salon/GS3",
+            name:"Salon 2",
+            image:"https://cdn-s-www.leprogres.fr/images/D58EA013-A78B-491B-A774-995CAF133E90/NW_raw/title-1648377298.jpg",
+            id: 13,
+          }, 
+          {
+            path:"/espaces/grand_salon/GS4",
+            name:"Salon 2",
+            image:"https://cdn-s-www.leprogres.fr/images/D58EA013-A78B-491B-A774-995CAF133E90/NW_raw/title-1648377298.jpg",
+            id: 14,
+          }, 
+          {
+            path:"/espaces/grand_salon/GS5",
+            name:"Salon 2",
+            image:"https://cdn-s-www.leprogres.fr/images/D58EA013-A78B-491B-A774-995CAF133E90/NW_raw/title-1648377298.jpg",
+            id: 15,
+          }, 
+      ],
+    },
+    {
+      image:"https://cdn-s-www.leprogres.fr/images/D58EA013-A78B-491B-A774-995CAF133E90/NW_raw/title-1648377298.jpg",
+      id: 2,
+      label: "Salon de 4 places",
+      submenu: [
+        {
+          path:"/espaces/petit_salon/PS1",
+          name:"Salon de 4 places",
+          image:"https://cdn-s-www.leprogres.fr/images/D58EA013-A78B-491B-A774-995CAF133E90/NW_raw/title-1648377298.jpg",
+          id: 21,
+        },
+        {
+            path:"/espaces/petit_salon/PS2",
+            name:"Salon de 4 places",
+            image:"https://cdn-s-www.leprogres.fr/images/D58EA013-A78B-491B-A774-995CAF133E90/NW_raw/title-1648377298.jpg",
+            id: 22,
+        },
+        {
+            path:"/espaces/petit_salon/PS3",
+            name:"Salon de 4 places",
+            image:"https://cdn-s-www.leprogres.fr/images/D58EA013-A78B-491B-A774-995CAF133E90/NW_raw/title-1648377298.jpg",
+            id: 23,
+        },
+        {
+            path:"/espaces/petit_salon/PS4",
+            name:"Salon de 4 places",
+            image:"https://cdn-s-www.leprogres.fr/images/D58EA013-A78B-491B-A774-995CAF133E90/NW_raw/title-1648377298.jpg",
+            id: 24,
+        },
 
-export const infoLinksFooter = [
-  {
-    title: "Compagnie", list: [
-      { name: "A propos de nous", to: "" },
-      { name: "témoignages", to:  ""},
-      { name: "détails de l'entreprise", to: "" },
-      { name: "podcast", to: "" },
-      { name: "blog", to: "" },
-    ]
-  },
-  {
-    title: "intimité", list: [
-      { name: "Politique de confidentialité", to: "" },
-      { name: "condition d'utilisation", to:  ""},
-    ]
-  },
-  {
-    title: "Informations sur Poke Bio", list: [
-      { name: "aide", to: "" },
-      { name: "sécurité et confiance", to:  ""},
-      { name: "comment ca marche", to: "" },
-      { name: "contactez nous", to: "" },
-    ]
-  },
-  {
-    title: "Contact", list: [
-      { name: "(+33) 6 77 88 99 88", to: "" },
-      { name: "contact@poke_bio.fr", to: "" },
-      { name: "1, rue poke bio 34544", to: "" },
-
-    ]
-  },
-]
+        {
+          path:"/espaces/grand_salon/GS5",
+          name:"Salon de 4 places",
+          image:"https://cdn-s-www.leprogres.fr/images/D58EA013-A78B-491B-A774-995CAF133E90/NW_raw/title-1648377298.jpg",
+          id: 25,
+        },
+      ],
+    },
+    {
+        image:"https://cdn-s-www.leprogres.fr/images/D58EA013-A78B-491B-A774-995CAF133E90/NW_raw/title-1648377298.jpg",
+        id: 3,
+        label: "espace individuel",
+        submenu: [
+          {
+            path:"/espaces/petit_salon/EI",
+            name:"espace individuel",
+            image:"https://cdn-s-www.leprogres.fr/images/D58EA013-A78B-491B-A774-995CAF133E90/NW_raw/title-1648377298.jpg",
+            id: 21,
+            label: "Submenu Item 3",
+            link: "/submenu-item-3",
+          },
+        ],
+      },
+    
+  ];
+export default menuItems;
+ 

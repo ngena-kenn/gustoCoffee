@@ -54,7 +54,8 @@ const ViewProduct = (props) => {
             props.setViewProduct((prev) => !prev)
           }}>Confirmer</Button>
           <Button variant='outlined' color='success' disabled={!cmdPresent} onClick={() => {
-            props.cancelCommande()
+            props.cancelCommande() 
+            window.location.reload();
           }}>Annuler</Button>
         </DialogActions>
       </Dialog>

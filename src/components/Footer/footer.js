@@ -1,43 +1,63 @@
 
-import { Stack, Divider, Box } from '@mui/material'
-import SocialMedia from "./SocialMedia/social_media"
 import  './footer.scss'
-import { infoLinksFooter } from '../../utils/data'
+import logo from '../../image/logo.png'
 import React, {Component} from 'react'
 
 const Footer = () => {
 
-  const infoFooter = infoLinksFooter?.map((box, idx) =>
-    <Box key={idx} className={'grid_item midia_text'}>
-      <div className={'item_content'}>
-        <div className={'title'} >{box.title}</div>
-        <ul className={'ul'}>
-          {box?.list?.map((item, idx) => <li key={item.name}>
-            <div className={'midia_text'} to={item.to}> {item.name}</div></li>)}
-        </ul>
-      </div>
-    </Box>
-  )
-
   return (
-    <div className={ 'global_footer'}>
-      <div className={'regular_text grid'}>
-        <div className={'grille-footer'}>
-          {infoFooter}
+    <section id="footer" class=" d-none d-md-block">
+        <div class="container ">
+            <div class="row">
+                <div class="espace col mt-5">
+                    <div class="mb-4">
+                        <img src={logo} className="logo-footer" alt="La Sacem"/>
+                    </div>
+                    <p class="address-footer ">
+                        10 rue des lilas 94200 Créteil<br />
+                        Sarl au capital de 10000€<br/> 
+                
+                        01 47 15 47 15
+                    </p>
+                    <br/>
+                    <ul class="networks list-inline">
+                        <li class="list-inline-item logo-reseau-socio"><a target="_blank" href="https://www.facebook.com/pages/Sacem/208663865818206?fref=ts"><i class="fab fa-facebook"></i></a></li>
+                        <li class="list-inline-item logo-reseau-socio"><a target="_blank" href="https://twitter.com/sacem"><i class="fab fa-twitter"></i></a></li>
+                        <li class="list-inline-item logo-reseau-socio"><a target="_blank" href="https://www.youtube.com/user/sacem"><i class="fab fa-youtube"></i></a></li>
+                        <li class="list-inline-item logo-reseau-socio"><a target="_blank" href="http://instagram.com/sacem"><i class="fab fa-instagram"></i></a></li>
+                        <li class="list-inline-item logo-reseau-socio"><a target="_blank" href="https://www.tiktok.com/@sacem"><i class="fab fa-tiktok "></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="col mt-5">
+                    <div class="title-footer">Autres informations</div>
+                    <ul class="list-unstyled mt-4 subtitle-footer">
+                        <li><a>Aide et Contact</a></li>
+                        <li><a >Ressources et documents</a></li>
+                        <li><a>Adhérer à Gusto Coffee</a></li>
+                        <li><a>Gusto Coffee en région</a></li>
+                        <li><a>Ressources et presse</a></li>
+                        <li><a>Mentions légales et CGU</a></li>
+                        <li><a>Politique de confidentialité et cookies</a></li>
+                    </ul>
+                </div>
+
+                <div class="pr col mt-5">
+                    <div class="title-footer">Autres sites</div>
+                    <ul class="list-unstyled mt-4 subtitle-footer">
+                        <li><a>Clients Utilisateurs</a></li>
+                        <li><a>GUSTO</a></li>
+                        <li><a>Aide aux Projets</a></li>
+                        <li><a>achat en ligne</a></li>
+                        <li><a target="_blank">Emplois &amp; carrières</a></li>
+                        <li><a target="_blank" href="http://www.monprojetmusique.fr/">Mon projet paternair</a></li>
+                        <li><a target="_blank" href="http://electronicmusicfactory.com/">Electronic Factory</a></li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
-      </div> 
-      <SocialMedia />
-      <Divider className={'main_divider'}></Divider>
-      <Stack direction={{ xs: "column", sm: "column", md: "row" }} spacing={{ sm: 1, md: 6 }}
-         className={'ffooter'}>
-        <Box>© Dark-kitchen 2023</Box>
-        <Box><div to={""}>Conditions générales de vente</div></Box>
-        <Box><div to={""}>Confidentialité</div></Box>
-        <Box><div to={""}>Mentions légales</div></Box>
-      </Stack>
-      <div style={{ backgroundColor: "white" }} className={'divider'}></div>
-      <div className={'empty'}></div>
-    </div>
+    </section>
   )
 }
 

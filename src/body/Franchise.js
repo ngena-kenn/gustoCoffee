@@ -1,23 +1,26 @@
 import React from "react";
-import '../css/page.css';
+import '../components/acceuil/acceuil.scss';
+import { Link} from 'react-router-dom';
 
 const  Franchise = ({title}) => {
     return (
-      <div style={{paddingTop: 90}}>
+      <div style={{paddingTop: 50}}>
         <div className="titre">{title} </div>
         <div className="forme">
-          <div className="valeur2 aligne"></div>
-          <div className="aligne">
-            <div className="text1">Fresh food everyday</div>
-            <div className="text2">LORSQUE BIO RIME AVEC QUALITÉ</div>
-            <div className="text3" style={{padding: 15}}>
-              <p>Nous sélectionnons des produits frais et de qualité pour vous
-                <br></br>proposer les meilleurs pokés ! Notre poisson est livré
-                <br></br>et préparé tous les matins dans chacune de nos cuisines.</p>
-              <p>De plus, nos légumes et nos fruits tropicaux sont choisis
-                <br></br>avec soin afin de ravir les papilles de nos Pokawaïens.</p>
-              <p>Chaque poké est préparé à la minute, devant vos yeux. Et puis,
-                <br></br> c'est bien meilleur quand tout est fraîchement préparé !</p></div>
+          <div className=" ">
+            <p class="text_produit">Nos salons de <br/> 6 places </p>
+            <div className="produit1 aligne"></div>
+          <Link to='/a_propos' class="link " >Decouvrir</Link>
+          </div>
+          <div className="">
+          <div class="text_produit">Nos salons de <br/> 4 places </div>
+          <div className="produit2 aligne"></div>
+          <Link to='/a_propos' class="link" >Decouvrir</Link>
+          </div>
+          <div className="">
+          <div class="text_produit">Nos places <br/> individuelles </div>
+          <div className="produit3 aligne"></div>
+          <Link to='/a_propos' class="link" >Decouvrir</Link>
           </div>
         </div>
       </div>

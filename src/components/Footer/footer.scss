@@ -1,93 +1,60 @@
 @import "../context/thems.scss";
 
-@mixin base_global_footer($bg-color) {
-  width: 100%;
-  height: fit-content;
-  background-color: $bg-color;
+
+#footer {
+  box-shadow: 0 -8px 24px 0 rgba(0, 0, 0, 0.04);
+  height: 356px;
+  background-color: #fff;
+  padding-left:6em;
 }
 
-.global_footer {
-  @include base_global_footer($white-mode);
-  background-color: #dfe6e9;
-  margin-top: 10%;
-  @include sm {
-    margin-top: 20%;
-  }
+#footer .networks,
+i {
+  font-size: 27px;
+  color: #918f8f;
 }
 
-.sub {
-  @include sm {
-    padding-top: 15%;
-  }
-  padding-top: 8%;
+#footer .address-footer {
+  width: 203px;
+  height: 75px;
+  font-family: galano-grotesque-light;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2;
+  letter-spacing: normal;
+  text-align: left;
+  color: #666;
 }
 
-.grille-footer {
-  max-width: 1400px;
-  display: grid;
-  justify-content: center;
-  grid-gap: 1%;
-  margin: 6% auto 4%;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  @include lg {
-    grid-template-columns: 1fr 1fr;
-  }
-  .grid_item {
-    overflow: hidden;
-    width: 80%;
-    justify-self: center;
-    cursor: pointer;
-  }
+#footer .title-footer {
+  font-family: galano-grotesque-SemiBold;
+  font-size: 16px;
+  line-height: .75;
+  letter-spacing: -.16px;
+  text-align: left;
+  color: #242021;
 }
 
-.ffooter {
-  height: 8%;
-  font-size: 18px;
-  place-content: center;
-  padding: 15px 1%;
-  @media (max-width: 900px) {
-    align-items: center;
-  }
-  @include lg {
-    font-size: 14px;
-  }
-  @include md {
-    font-size: 14px;
-  }
-  @include sm {
-    font-size: 12px;
-  }
-  @include xs {
-    font-size: 8px;
-  }
+#footer .subtitle-footer a {
+  font-family: galano-grotesque-light;
+  font-size: 14px;
+  line-height: 2;
+  letter-spacing: normal;
+  text-align: left;
+  color: #666;
+}
+.espace {
+  margin-right: 20em;
+}
+.pr{
+  margin-left: 5em;
+}
+.logo-footer {
+  background-position: left;
+  height: 90px;
+  width:15em;
+  padding-right: 3em;
 }
 
-.main_divider {
-  @include sm {
-    display: none;
-  }
-  display: block;
-  margin: 5% 0 0 !important;
-}
-
-.ul {
-  padding-inline-start: 13px;
-}
-
-.social {
-  max-width: 400px;
-  margin: auto;
-  a {
-    max-width: 24%;
-    width: 100%;
-    margin: auto;
-    text-align: center;
-  }
-  @include sm {
-    max-width: 200px;
-    a img {
-      width: 30px;
-      height: 30px;
-    }
-  }
-}

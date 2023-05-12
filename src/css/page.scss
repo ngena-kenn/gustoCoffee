@@ -1,0 +1,80 @@
+.sidebar {
+    width: 500px;
+    height: 100%;
+    background-color: #f0f0f0;
+    padding: 100px;
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        ul {
+            display: block;
+            margin-left: 20px;
+          }
+      }
+      a {
+        display: block;
+        color: #333;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      li {
+        margin-bottom: 10px;
+        &:hover ul {
+            display: block;
+          }
+      }
+  }
+  
+  .infoVid{
+    width : 65%;
+    position:absolute;
+    top: 38em;
+    left : 30%;
+    padding : 2rem 1.5rem;
+    text-align: center;
+    color : white;
+    background: rgba(0, 0, 0, 0.5);
+    .title_Info{
+      margin: 0.8rem 0 1rem 0;
+    }
+        
+  }
+  .navbar{
+    background-color:rgb(95, 43, 3)!important;
+  }
+  .MuiSvgIcon-colorAction{
+    color:  rgba(243, 237, 232, 0.583)!important;
+  }
+  
+  .nav-item {
+    .nav-link{
+      color:white !important;
+      font-family: 'Times New Roman', Times, serif;
+        &:hover {
+        color:  rgb(241, 175, 121)  !important;
+      }
+     
+    }
+    .active{
+      color:  rgb(241, 175, 121) !important;
+      
+    }
+    div button{
+    color:white;
+    background: rgb(174, 104, 47) ;
+    border: 1px solid white ;
+        &:hover {
+          color:  rgb(174, 104, 47);
+          background:white ;
+          box-shadow: 6px 6px 6px gray;
+          border: 1px solid rgb(174, 104, 47) ;
+    }
+}
+}
+
+
+  
+  
+  

@@ -2,7 +2,7 @@ import './css/page.css';
 import './body/commande/style.css'
 import React, { useEffect, useState } from 'react';
 import Navigation from './body/Navigation';
-import Home from './body/Home'
+import Restaurant from './body/Restaurant'
 import { Routes, Route } from "react-router-dom";
 import { useLocation } from 'react-router'
 import {
@@ -13,7 +13,7 @@ import Footer from './components/Footer/footer';
 import FormDialog from './components/dialog';
 import ViewProduct from './components/viewProduct/viewProduct';
 import Login from './body/commande/Authentification';
-import Apropos from './body/A_propos';
+import Apropos from './body/Tarifs';
 import Franchise from './body/Franchise';
 import Actualite from './body/Actualite'
 import Acceuil from './components/acceuil/acceuil';
@@ -32,6 +32,11 @@ const App = () => {
   const handleAddProduct = () => {
     console.log(prodducts);
     console.log(Object.keys(prodducts).length);
+  }
+  const handledestroyProduct =()=> {
+    setcommande(false)
+    setcmd(false)
+    setProducts([])
   }
 
   const coupon = [
@@ -77,6 +82,7 @@ const App = () => {
   const getCountProduct = () => {
     return Object.keys(prodducts).length
   }
+ 
 
   return (
     <>
@@ -84,6 +90,7 @@ const App = () => {
        <Navigation setViewProduct={setViewProduct} countProduct={getCountProduct()}
         commande={commande} setcommande={handleCommande} cmd={cmd} validateCommande={validateCommande}
         openAdress={open} setOpen={setOpen} />}
+        
       <FormDialog
         title={"Coordonnées de livraison"}
         text={"Veuillez entrer votre adresse s'il vous plait"}
@@ -98,24 +105,27 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Acceuil />} />
         <Route path="/home" element={<Acceuil />} />
-        <Route path="/menu" element={<Home />} />
-        <Route path="/home/desserts" element={
-          <Dessert handleAddProduct={handleAddProduct} setProducts={setProducts} commande={commande} />}
+        <Route path="/espaces" element={<Restaurant />}/>
+          
+        
+        <Route path="/espaces/grand_salon/GS1" element={
+            <Dessert handleAddProduct={handleAddProduct} setProducts={setProducts} commande={setcommande} />}
         />
-        <Route path="/home/formules" element={
-          <Formule handleAddProduct={handleAddProduct} setProducts={setProducts} commande={commande} />}
+        
+        <Route path="/espaces/petit_salon" element={
+          <Formule handleAddProduct={handleAddProduct} setProducts={setProducts} commande={setcommande} />}
         />
         <Route path="/home/gamme_chaude" element={
-          <GammeChaude handleAddProduct={handleAddProduct} setProducts={setProducts} commande={commande} />}
+          <GammeChaude handleAddProduct={handleAddProduct} setProducts={setProducts} commande={setcommande} />}
         />
         <Route path="/home/poke_creation" element={
-          <PokeCreation handleAddProduct={handleAddProduct} setProducts={setProducts} commande={commande} />}
+          <PokeCreation handleAddProduct={handleAddProduct} setProducts={setProducts} commande={setcommande} />}
         />
         <Route path="/home/sides" element={
-          <Sides handleAddProduct={handleAddProduct} setProducts={setProducts} commande={commande} />}
+          <Sides handleAddProduct={handleAddProduct} setProducts={setProducts} commande={setcommande} />}
         />
         <Route path="/home/healty_bowls" element={
-          <HealtyBowls handleAddProduct={handleAddProduct} setProducts={setProducts} commande={commande} />}
+          <HealtyBowls handleAddProduct={handleAddProduct} setProducts={setProducts} commande={setcommande} />}
         />
         <Route path="/home/boissons" element={
           <Boissons handleAddProduct={handleAddProduct} setProducts={setProducts} commande={commande} />}

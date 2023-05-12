@@ -7,6 +7,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import './css/page.css';
 import './body/commande/style.css';
+import Espace from'./body/Espace'
  
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,3 +17,4 @@ root.render(
   </BrowserRouter>
 </HelmetProvider>
 );
+

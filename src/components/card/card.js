@@ -3,22 +3,18 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 import { Badge, CardActionArea, CardActions } from '@mui/material';
 import LocalGroceryStoreOutlinedIcon from '@mui/icons-material/LocalGroceryStoreOutlined';
 
-const CustomizeCard = ({id, image, title, description, price, commande,setProducts, handleAddProduct }) => {
+const CustomizeCard = ({id, image, image1, image2, title, description, price, commande,setProducts, handleAddProduct }) => {
   const [count, setcount] = useState(0)
 
   return (
     <Card sx={{ maxWidth: 345 }} className={'grid-item'}>
       <CardActionArea>
-        <CardMedia
-          component="img"
-          height="222"
-          image={image}
-          alt="green iguana"
-        />
-        <CardContent style={{ height: '165px' }}>
+      <CardContent style={{ height: '165px' }}>
           <Typography gutterBottom variant="h5" component="div">
             {title}
           </Typography>
@@ -26,6 +22,11 @@ const CustomizeCard = ({id, image, title, description, price, commande,setProduc
             {description}
           </Typography>
         </CardContent>
+      <Carousel autoPlay interval={1000} infiniteLoop showIndicators={false}showStatus={false} showThumbs={false}>
+        <CardMedia component="img" height="222" image={image} />
+        <CardMedia component="img" height="222" image={image1}/>
+        <CardMedia component="img"height="222" image={image2} />
+      </Carousel>
       </CardActionArea>
       <CardActions style={{ height: '40px', position: 'absolute', bottom: 15, width: '100%', justifyContent: 'center' }}>
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-around', width: '100%'}}>

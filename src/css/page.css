@@ -1,4 +1,7 @@
 
+body{
+  background:#F2E8DF;
+}
 .header {
   display: flex;
   justify-content: space-around;
@@ -21,22 +24,8 @@
   display: block;
   background-position: left;
 }
-.connect {
-  padding-left: 20px;
-}
-.connect a {
-  color: white;
-  background: rgb(105, 186, 76);
-  border-radius: 15px / 10px;
-}
-.connect a:hover {
-  color: rgb(119, 200, 84);
-  background: white;
-  box-shadow: 6px 6px 6px gray;
-}
-.another a {
-  color: rgb(105, 186, 76);
-}
+
+
 
 .another a:hover {
   color: black;
@@ -71,116 +60,9 @@
   background: white;
   box-shadow: 6px 6px 6px gray;
 }
-.titre {
-  text-align: center;
-  font-size: 50px;
-  padding-top: 20px;
-}
 
-.aligne-center {
-  margin: 30px;
-  text-align: center;
-}
 
-.formules {
-  background: url(../image/formule.png);
-  cursor: pointer;
-  background-size: cover;
-  min-width: 200px;
-  min-height: 100px;
-  background-position: right;
-  background-repeat: no-repeat;
-  border-radius: 15px / 10px;
-  padding-bottom: 70px;
-}
-.gamme_chaude {
-  background: url(../image/image1.png);
-  cursor: pointer;
-  background-size: cover;
-  min-width: 200px;
-  min-height: 100px;
-  background-position: right;
-  background-repeat: no-repeat;
-  border-radius: 15px / 10px;
-  padding-bottom: 70px;
-}
-.poké_creation {
-  background: url(../image/image2.png);
-  cursor: pointer;
-  background-size: cover;
-  min-width: 200px;
-  min-height: 100px;
-  background-position: right;
-  background-repeat: no-repeat;
-  border-radius: 15px / 10px;
-  padding-bottom: 70px;
-}
-.sides {
-  background: url(../image/image3.png);
-  cursor: pointer;
-  background-size: cover;
-  min-width: 200px;
-  min-height: 100px;
-  background-position: right;
-  background-repeat: no-repeat;
-  border-radius: 15px / 10px;
-  padding-bottom: 70px;
-}
-.healthy_bowls {
-  background: url(../image/pokabox.jpeg);
-  cursor: pointer;
-  background-size: cover;
-  min-width: 200px;
-  min-height: 100px;
-  background-position: right;
-  background-repeat: no-repeat;
-  border-radius: 15px / 10px;
-  padding-bottom: 70px;
-}
-.desserts {
-  background: url(../image/DESSERT.jpeg);
-  cursor: pointer;
-  background-size: cover;
-  min-width: 200px;
-  min-height: 100px;
-  background-position: right;
-  background-repeat: no-repeat;
-  border-radius: 15px / 10px;
-  padding-bottom: 70px;
-}
-.boissons_chaudes {
-  background: url(../image/chaude1.jpg);
-  cursor: pointer;
-  background-size: cover;
-  min-width: 200px;
-  min-height: 100px;
-  background-position: right;
-  background-repeat: no-repeat;
-  border-radius: 15px / 10px;
-  padding-bottom: 70px;
-}
-.bubble_tea {
-  background: url(../image/chaude.jpg);
-  cursor: pointer;
-  background-size: cover;
-  min-width: 200px;
-  min-height: 100px;
-  background-position: left;
-  background-repeat: no-repeat;
-  border-radius: 15px / 10px;
-  padding-bottom: 70px;
-}
-.boissons {
-  background: url(../image/boisson.jpg);
-  cursor: pointer;
-  background-size: cover;
-  min-width: 200px;
-  min-height: 100px;
-  background-position: right;
-  background-repeat: no-repeat;
-  border-radius: 15px / 10px;
-  padding-bottom: 70px;
-}
+
 .forme {
   display: flex;
   justify-content: center;
@@ -188,30 +70,9 @@
   background-attachment: fixed;
   flex-wrap: wrap;
 }
-.forme .aligne {
-  margin-top: 60px;
-  /* margin-left: 30px; */
-}
-.valeur1 {
-  background: url(../image/NOS-VALEURS-BACKGROUND.webp);
-  margin-top: 80px;
-  background-size: cover;
-  min-width: 200px;
-  min-height: 100px;
-  background-position: right;
-  background-repeat: no-repeat;
-}
-.valeur2 {
-  background: url(../image/NOS-VALEURS-1.jpeg);
-  background-size: cover;
-  /* min-width: 400px; */
-  height: 400px;
-  width: 450px;
-  min-height: 300px;
-  background-position: right;
-  background-repeat: no-repeat;
-  border-radius: 25px;
-}
+
+
+
 
 @media (max-width: 500px) {
   .valeur2 {
@@ -223,51 +84,10 @@
   }
 }
 
-.valeur3 {
-  background: url(../image/NOS-VALEURS-2.jpeg);
-  background-size: cover;
-  min-width: 400px;
-  min-height: 300px;
-  background-position: right;
-  background-repeat: no-repeat;
-  border-radius: 25px / 20px;
-}
-.valeur4 {
-  background: url(../image/NOS-VALEURS-3.jpeg);
-  background-size: cover;
-  min-width: 400px;
-  min-height: 300px;
-  background-position: right;
-  background-repeat: no-repeat;
-  border-radius: 25px / 20px;
-}
-.text1 {
-  text-align: center;
-  display: block;
-  background-position: center;
-  font-size: 50px;
-  color: #468f27;
-  padding: 10px;
-  padding-top: 20px;
-}
-.text2 {
-  text-align: center;
-  display: block;
-  font-size: 20px;
-  font-family: "Times New Roman", Times, serif;
-}
 
-.actu_bg {
-  background: url(../image/ACTUALITÉS-BACKGROUND.jpeg);
-  margin: 30px 0;
-  background-size: cover;
-  /* min-width: 200px; */
-  /* min-height: 100px; */
-  width: 100%;
-  height: 300px;
-  background-position: right;
-  background-repeat: no-repeat;
-}
+
+
+
 .actu1 {
   background: url(../image/actualité6.PNG);
   background-size: cover;
@@ -323,34 +143,67 @@
   border-radius: 25px / 20px;
 }
 
-.text4 {
-  text-align: center;
+/*
+main{
+  width: 100%;
+  padding: 20px;
+}
+.sidebar{
+  background: #000;
+  color: #fff;
+  height: 100vh;
+  width: 200px;
+  transition: all 0.5s;
+}
+
+
+.lien{
+  display: flex;
+  color: #fff;
+  padding: 10px 15px;
+  gap: 15px;
+  transition: all 0.5s;
+}
+.lien:hover{
+  background:lightskyblue;
+  color: #000;
+  transition: all 0.5s;
+}
+.act{
+  background: lightskyblue;
+  color: #000;
+}
+*/
+.sidebar {
+  width: 500px;
+  height: 100%;
+  background-color: #f0f0f0;
+  padding: 100px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
   display: block;
-  font-size: 12px;
-  font-family: "Times New Roman", Times, serif;
-  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-#background-video {
-  height: 100vh;
-  width: 100vw;
-  object-fit: cover;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -1;
+.sidebar ul ul {
+  display: block;
+  margin-left: 20px;
 }
 
-#background-video {
-  height: 100vh;
-  width: 100vw;
-  object-fit: cover;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -1;
+.sidebar li:hover ul {
+  display: block;
 }
+
