@@ -1,8 +1,7 @@
 import React from 'react'
 import CustomizeCard from '../card/card'
-import './containerPage.scss'
+import '../../css/containerPage.scss'
 import '../../css/page.css'
-import CardMedia from '@mui/material/CardMedia';
 import SideBar from '../../body/Espaces'
 
 const ContainerPage = ({ data, commande, setProducts, handleAddProduct }) => {

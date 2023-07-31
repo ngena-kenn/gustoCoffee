@@ -1,5 +1,5 @@
 
-import  './footer.scss'
+import  '../../css/footer.scss'
 import logo from '../../image/logo.png'
 import React, {Component} from 'react'
 
@@ -7,7 +7,7 @@ const Footer = () => {
 
   return (
     <section id="footer" class=" d-none d-md-block">
-        <div class="container ">
+        <div class="container mrg ">
             <div class="row">
                 <div class="espace col mt-5">
                     <div class="mb-4">

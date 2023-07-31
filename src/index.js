@@ -6,14 +6,15 @@ import {BrowserRouter} from "react-router-dom";
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import './css/page.css';
-import './body/commande/style.css';
-import Espace from'./body/Espace'
- 
+import './css/style.css';
+
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 <HelmetProvider >
   <BrowserRouter>
-    <App />
+      <App />
   </BrowserRouter>
 </HelmetProvider>
 );

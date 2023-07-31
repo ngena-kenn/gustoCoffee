@@ -4,7 +4,7 @@ import CardCover from '@mui/joy/CardCover';
 import CardContent from '@mui/joy/CardContent';
 import Typography from '@mui/joy/Typography';
 import video from '../../image/videoAcc.mp4'
-import './acceuil.scss'
+import '../../css/acceuil.scss'
 import Franchise from '../../body/Franchise';
 import Carousel from '../carousel/Sliders';
 import Tarifs from '../../body/Tarifs';

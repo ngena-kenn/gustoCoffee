@@ -1,10 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import './style.css';
 import { Button } from "@mui/material";
 import emailjs from '@emailjs/browser';
 import TextField from '@mui/material/TextField';
 import './form.scss'
 import { useNavigate } from 'react-router-dom';
+
 
 
 const Authentification = () => {
@@ -139,6 +140,9 @@ const Authentification = () => {
 
       </div>
     </div>
+    )
+}
+export default Authentification;
     // <div className="container">
     //   <div className="inscription">
     //     <div className="left">
@@ -171,8 +175,4 @@ const Authentification = () => {
     //   </div>
     // </div>
 
-  )
-}
-
-
-export default Authentification;
+  

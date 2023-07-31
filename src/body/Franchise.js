@@ -1,5 +1,5 @@
 import React from "react";
-import '../components/acceuil/acceuil.scss';
+import '../css/acceuil.scss';
 import { Link} from 'react-router-dom';
 
 const  Franchise = ({title}) => {

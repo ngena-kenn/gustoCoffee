@@ -1,6 +1,6 @@
 import logo from '../image/logo.png';
 import { Link, useNavigate } from 'react-router-dom';
-import React from "react";
+import React, {useContext} from "react";
 import '../css/page.css';
 import '../css/page.scss';
 import { Button } from '@mui/material';
@@ -10,6 +10,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 const Navigation = ({ commande, setcommande, countProduct, setViewProduct, cmd, validateCommande }) => {
  const navigate = useNavigate()
+
   return (
     <>
       <nav style={{
@@ -51,7 +52,7 @@ const Navigation = ({ commande, setcommande, countProduct, setViewProduct, cmd, 
                   </Badge>
                 </div>
               </li>
-              <li class="nav-item" style={{paddingBottom: 10}}>
+             {/* <li class="nav-item" style={{paddingBottom: 10}}>
                 <div style={{paddingLeft: 10,}}>
                   <Button variant='outlined' color='success' disabled={cmd} onClick={() => {
                     commande ? validateCommande() :
@@ -60,7 +61,7 @@ const Navigation = ({ commande, setcommande, countProduct, setViewProduct, cmd, 
                   >{commande ? 'Valider' : 'Commander'} </Button>
                 </div>
               </li>
-              {/* <li class="nav-item">
+               <li class="nav-item">
                 <div style={{paddingLeft: 10, paddingBottom: 10}}>
                   <Button onClick={() => {
                     navigate('/connect')
@@ -74,6 +75,14 @@ const Navigation = ({ commande, setcommande, countProduct, setViewProduct, cmd, 
                     navigate('/login')
                   }} variant='outlined' color='success'  
                   >Connexion</Button>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div style={{ paddingLeft: 10, paddingBottom: 10}}>
+                  <Button onClick={() => {
+                    navigate('/inscript')
+                  }} variant='outlined' color='success'  
+                  >Inscription</Button>
                 </div>
               </li>
             </ul>

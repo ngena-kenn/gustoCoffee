@@ -1,184 +1,219 @@
 import { Helmet } from "react-helmet-async";
 import React from "react";
 // import ContainerPage from "../containerPage/containerPage";
-import { boissonsPagedata, boissons_chaudePagedata, boissons_teaPagedata, dessertsPagedata, formulePagedata, gamme_chaudePagedata, healty_bowlsPagedata, poke_creationPagedata, sidesPagedata } from "./globalConfig";
+import { salon7Pagedata, salon8Pagedata, salon9Pagedata, salon1Pagedata, salon2Pagedata, salon3Pagedata, salon6Pagedata, salon4Pagedata, salon5Pagedata , salon10Pagedata, salon11Pagedata } from "./globalConfig";
 import ContainerPage from "../containerPage/containerPage"
-import { boissons, boissons_chaude, boissons_tea, desserts, formule, gamme_chaude, healty_bowls, poke_creation, sides } from "../../data";
+import { salon1,salon2,salon3,salon4,salon5,salon6,salon7,salon8,salon9,salon10,salon11 } from "../../utils/dataProd";
 
 
 
-export const Dessert = ({ commande, setProducts, handleAddProduct, cancelCommande }) => {
+export const Gsalon1 = ({ commande, setProducts, handleAddProduct, cancelCommande }) => {
   return (<>
     
     <Helmet>
-      <meta name="title" content={dessertsPagedata?.metaTitle} data-react-helmet="true" />
-      <meta name="description" content={dessertsPagedata?.metaDescription} data-react-helmet="true" />
-      <meta property="og:title" content={dessertsPagedata?.metaOgTitle} data-react-helmet="true" />
-      <meta property="og:description" content={dessertsPagedata?.metaOgDescription} data-react-helmet="true" />
-      {/* <meta property="og:image" content={dessertsPagedata?.metaOgImage} data-react-helmet="true" /> */}
-      <meta name="robots" content={dessertsPagedata?.metaRobots} />
-      <meta name="keywords" content={dessertsPagedata?.metaKeywords} />
-      <link rel="canonical" href={dessertsPagedata?.metaLink} />
-      <title>{dessertsPagedata?.titePage}</title>
+      <meta name="title" content={salon1Pagedata?.metaTitle} data-react-helmet="true" />
+      <meta name="description" content={salon1Pagedata?.metaDescription} data-react-helmet="true" />
+      <meta property="og:title" content={salon1Pagedata?.metaOgTitle} data-react-helmet="true" />
+      <meta property="og:description" content={salon1Pagedata?.metaOgDescription} data-react-helmet="true" />
+      {/* <meta property="og:image" content={salon1Pagedata?.metaOgImage} data-react-helmet="true" /> */}
+      <meta name="robots" content={salon1Pagedata?.metaRobots} />
+      <meta name="keywords" content={salon1Pagedata?.metaKeywords} />
+      <link rel="canonical" href={salon1Pagedata?.metaLink} />
+      <title>{salon1Pagedata?.titePage}</title>
     </Helmet>
     
     <ContainerPage
       handleAddProduct={handleAddProduct}
-      data={desserts}
+      data={salon1}
       commande={commande}
       setProducts={setProducts}
     />
   </>);
 }
-export const Formule = ({ commande, setProducts, handleAddProduct }) => {
+export const Gsalon2 = ({ commande, setProducts, handleAddProduct }) => {
   return (<>
     <Helmet>
-      <meta name="title" content={formulePagedata?.metaTitle} data-react-helmet="true" />
-      <meta name="description" content={formulePagedata?.metaDescription} data-react-helmet="true" />
-      <meta property="og:title" content={formulePagedata?.metaOgTitle} data-react-helmet="true" />
-      <meta property="og:description" content={formulePagedata?.metaOgDescription} data-react-helmet="true" />
-      {/* <meta property="og:image" content={formulePagedata?.metaOgImage} data-react-helmet="true" /> */}
-      <meta name="robots" content={formulePagedata?.metaRobots} />
-      <meta name="keywords" content={formulePagedata?.metaKeywords} />
-      <link rel="canonical" href={formulePagedata?.metaLink} />
-      <title>{formulePagedata?.titePage}</title>
+      <meta name="title" content={salon2Pagedata?.metaTitle} data-react-helmet="true" />
+      <meta name="description" content={salon2Pagedata?.metaDescription} data-react-helmet="true" />
+      <meta property="og:title" content={salon2Pagedata?.metaOgTitle} data-react-helmet="true" />
+      <meta property="og:description" content={salon2Pagedata?.metaOgDescription} data-react-helmet="true" />
+      {/* <meta property="og:image" content={salon2Pagedata?.metaOgImage} data-react-helmet="true" /> */}
+      <meta name="robots" content={salon2Pagedata?.metaRobots} />
+      <meta name="keywords" content={salon2Pagedata?.metaKeywords} />
+      <link rel="canonical" href={salon2Pagedata?.metaLink} />
+      <title>{salon2Pagedata?.titePage}</title>
     </Helmet>
     <ContainerPage
-      data={formule}
+      data={salon2}
       handleAddProduct={handleAddProduct}
       commande={commande}
       setProducts={setProducts}
     />
   </>);
 }
-export const GammeChaude = ({ commande, setProducts, handleAddProduct }) => {
+export const Gsalon3 = ({ commande, setProducts, handleAddProduct }) => {
   return (<>
     <Helmet>
-      <meta name="title" content={gamme_chaudePagedata?.metaTitle} data-react-helmet="true" />
-      <meta name="description" content={gamme_chaudePagedata?.metaDescription} data-react-helmet="true" />
-      <meta property="og:title" content={gamme_chaudePagedata?.metaOgTitle} data-react-helmet="true" />
-      <meta property="og:description" content={gamme_chaudePagedata?.metaOgDescription} data-react-helmet="true" />
-      {/* <meta property="og:image" content={gamme_chaudePagedata?.metaOgImage} data-react-helmet="true" /> */}
-      <meta name="robots" content={gamme_chaudePagedata?.metaRobots} />
-      <meta name="keywords" content={gamme_chaudePagedata?.metaKeywords} />
-      <link rel="canonical" href={gamme_chaudePagedata?.metaLink} />
-      <title>{gamme_chaudePagedata?.titePage}</title>
+      <meta name="title" content={salon3Pagedata?.metaTitle} data-react-helmet="true" />
+      <meta name="description" content={salon3Pagedata?.metaDescription} data-react-helmet="true" />
+      <meta property="og:title" content={salon3Pagedata?.metaOgTitle} data-react-helmet="true" />
+      <meta property="og:description" content={salon3Pagedata?.metaOgDescription} data-react-helmet="true" />
+      {/* <meta property="og:image" content={salon3Pagedata?.metaOgImage} data-react-helmet="true" /> */}
+      <meta name="robots" content={salon3Pagedata?.metaRobots} />
+      <meta name="keywords" content={salon3Pagedata?.metaKeywords} />
+      <link rel="canonical" href={salon3Pagedata?.metaLink} />
+      <title>{salon3Pagedata?.titePage}</title>
     </Helmet>
-    <ContainerPage data={gamme_chaude}
+    <ContainerPage data={salon3}
       handleAddProduct={handleAddProduct}
       commande={commande}
       setProducts={setProducts}
     />
   </>);
 }
-export const PokeCreation = ({ commande, setProducts, handleAddProduct }) => {
+export const Gsalon4 = ({ commande, setProducts, handleAddProduct }) => {
   return (<>
     <Helmet>
-      <meta name="title" content={poke_creationPagedata?.metaTitle} data-react-helmet="true" />
-      <meta name="description" content={poke_creationPagedata?.metaDescription} data-react-helmet="true" />
-      <meta property="og:title" content={poke_creationPagedata?.metaOgTitle} data-react-helmet="true" />
-      <meta property="og:description" content={poke_creationPagedata?.metaOgDescription} data-react-helmet="true" />
-      {/* <meta property="og:image" content={poke_creationPagedata?.metaOgImage} data-react-helmet="true" /> */}
-      <meta name="robots" content={poke_creationPagedata?.metaRobots} />
-      <meta name="keywords" content={poke_creationPagedata?.metaKeywords} />
-      <link rel="canonical" href={poke_creationPagedata?.metaLink} />
-      <title>{poke_creationPagedata?.titePage}</title>
+      <meta name="title" content={salon4Pagedata?.metaTitle} data-react-helmet="true" />
+      <meta name="description" content={salon4Pagedata?.metaDescription} data-react-helmet="true" />
+      <meta property="og:title" content={salon4Pagedata?.metaOgTitle} data-react-helmet="true" />
+      <meta property="og:description" content={salon4Pagedata?.metaOgDescription} data-react-helmet="true" />
+      {/* <meta property="og:image" content={salon4Pagedata?.metaOgImage} data-react-helmet="true" /> */}
+      <meta name="robots" content={salon4Pagedata?.metaRobots} />
+      <meta name="keywords" content={salon4Pagedata?.metaKeywords} />
+      <link rel="canonical" href={salon4Pagedata?.metaLink} />
+      <title>{salon4Pagedata?.titePage}</title>
     </Helmet>
-    <ContainerPage data={poke_creation}
+    <ContainerPage data={salon4}
       handleAddProduct={handleAddProduct}
       commande={commande}
       setProducts={setProducts}
     />
   </>);
 }
-export const Sides = ({ commande, setProducts, handleAddProduct }) => {
+export const Gsalon5 = ({ commande, setProducts, handleAddProduct }) => {
   return (<>
     <Helmet>
-      <meta name="title" content={sidesPagedata?.metaTitle} data-react-helmet="true" />
-      <meta name="description" content={sidesPagedata?.metaDescription} data-react-helmet="true" />
-      <meta property="og:title" content={sidesPagedata?.metaOgTitle} data-react-helmet="true" />
-      <meta property="og:description" content={sidesPagedata?.metaOgDescription} data-react-helmet="true" />
-      {/* <meta property="og:image" content={sidesPagedata?.metaOgImage} data-react-helmet="true" /> */}
-      <meta name="robots" content={sidesPagedata?.metaRobots} />
-      <meta name="keywords" content={sidesPagedata?.metaKeywords} />
-      <link rel="canonical" href={sidesPagedata?.metaLink} />
-      <title>{sidesPagedata?.titePage}</title>
+      <meta name="title" content={salon5Pagedata?.metaTitle} data-react-helmet="true" />
+      <meta name="description" content={salon5Pagedata?.metaDescription} data-react-helmet="true" />
+      <meta property="og:title" content={salon5Pagedata?.metaOgTitle} data-react-helmet="true" />
+      <meta property="og:description" content={salon5Pagedata?.metaOgDescription} data-react-helmet="true" />
+      {/* <meta property="og:image" content={salonPagedata?.metaOgImage} data-react-helmet="true" /> */}
+      <meta name="robots" content={salon5Pagedata?.metaRobots} />
+      <meta name="keywords" content={salon5Pagedata?.metaKeywords} />
+      <link rel="canonical" href={salon5Pagedata?.metaLink} />
+      <title>{salon5Pagedata?.titePage}</title>
     </Helmet>
     <ContainerPage
       handleAddProduct={handleAddProduct}
-      data={sides} 
+      data={salon5} 
       commande={commande}
       setProducts={setProducts}
     />
   </>);
 }
-export const HealtyBowls = ({ commande, setProducts, handleAddProduct }) => {
+export const Psalon1 = ({ commande, setProducts, handleAddProduct }) => {
   return (<>
     <Helmet>
-      <meta name="title" content={healty_bowlsPagedata?.metaTitle} data-react-helmet="true" />
-      <meta name="description" content={healty_bowlsPagedata?.metaDescription} data-react-helmet="true" />
-      <meta property="og:title" content={healty_bowlsPagedata?.metaOgTitle} data-react-helmet="true" />
-      <meta property="og:description" content={healty_bowlsPagedata?.metaOgDescription} data-react-helmet="true" />
-      {/* <meta property="og:image" content={healty_bowlsPagedata?.metaOgImage} data-react-helmet="true" /> */}
-      <meta name="robots" content={healty_bowlsPagedata?.metaRobots} />
-      <meta name="keywords" content={healty_bowlsPagedata?.metaKeywords} />
-      <link rel="canonical" href={healty_bowlsPagedata?.metaLink} />
-      <title>{healty_bowlsPagedata?.titePage}</title>
+      <meta name="title" content={salon6Pagedata?.metaTitle} data-react-helmet="true" />
+      <meta name="description" content={salon6Pagedata?.metaDescription} data-react-helmet="true" />
+      <meta property="og:title" content={salon6Pagedata?.metaOgTitle} data-react-helmet="true" />
+      <meta property="og:description" content={salon6Pagedata?.metaOgDescription} data-react-helmet="true" />
+      {/* <meta property="og:image" content={salon6Pagedata?.metaOgImage} data-react-helmet="true" /> */}
+      <meta name="robots" content={salon6Pagedata?.metaRobots} />
+      <meta name="keywords" content={salon6Pagedata?.metaKeywords} />
+      <link rel="canonical" href={salon6Pagedata?.metaLink} />
+      <title>{salon6Pagedata?.titePage}</title>
     </Helmet>
     <ContainerPage handleAddProduct={handleAddProduct}
-      data={healty_bowls} commande={commande}
+      data={salon6} 
+      commande={commande}
       setProducts={setProducts}
     />
   </>);
 }
-export const Boissons = ({ commande, setProducts, handleAddProduct }) => {
+export const Psalon2 = ({ commande, setProducts, handleAddProduct }) => {
   return (<>
     <Helmet>
-      <meta name="title" content={boissonsPagedata?.metaTitle} data-react-helmet="true" />
-      <meta name="description" content={boissonsPagedata?.metaDescription} data-react-helmet="true" />
-      <meta property="og:title" content={boissonsPagedata?.metaOgTitle} data-react-helmet="true" />
-      <meta property="og:description" content={boissonsPagedata?.metaOgDescription} data-react-helmet="true" />
-      {/* <meta property="og:image" content={boissonsPagedata?.metaOgImage} data-react-helmet="true" /> */}
-      <meta name="robots" content={boissonsPagedata?.metaRobots} />
-      <meta name="keywords" content={boissonsPagedata?.metaKeywords} />
-      <link rel="canonical" href={boissonsPagedata?.metaLink} />
-      <title>{boissonsPagedata?.titePage}</title>
+      <meta name="title" content={salon7Pagedata?.metaTitle} data-react-helmet="true" />
+      <meta name="description" content={salon7Pagedata?.metaDescription} data-react-helmet="true" />
+      <meta property="og:title" content={salon7Pagedata?.metaOgTitle} data-react-helmet="true" />
+      <meta property="og:description" content={salon7Pagedata?.metaOgDescription} data-react-helmet="true" />
+      {/* <meta property="og:image" content={salonPagedata?.metaOgImage} data-react-helmet="true" /> */}
+      <meta name="robots" content={salon7Pagedata?.metaRobots} />
+      <meta name="keywords" content={salon7Pagedata?.metaKeywords} />
+      <link rel="canonical" href={salon7Pagedata?.metaLink} />
+      <title>{salon7Pagedata?.titePage}</title>
     </Helmet>
-    <ContainerPage data={boissons} handleAddProduct={handleAddProduct} commande={commande}
+    <ContainerPage data={salon7} handleAddProduct={handleAddProduct} commande={commande}
       setProducts={setProducts} />
   </>);
 }
-export const BoissonsChaude = ({ commande, setProducts, handleAddProduct }) => {
+export const Psalon3 = ({ commande, setProducts, handleAddProduct }) => {
   return (<>
     <Helmet>
-      <meta name="title" content={boissons_chaudePagedata?.metaTitle} data-react-helmet="true" />
-      <meta name="description" content={boissons_chaudePagedata?.metaDescription} data-react-helmet="true" />
-      <meta property="og:title" content={boissons_chaudePagedata?.metaOgTitle} data-react-helmet="true" />
-      <meta property="og:description" content={boissons_chaudePagedata?.metaOgDescription} data-react-helmet="true" />
-      {/* <meta property="og:image" content={boissons_chaudePagedata?.metaOgImage} data-react-helmet="true" /> */}
-      <meta name="robots" content={boissons_chaudePagedata?.metaRobots} />
-      <meta name="keywords" content={boissons_chaudePagedata?.metaKeywords} />
-      <link rel="canonical" href={boissons_chaudePagedata?.metaLink} />
-      <title>{boissons_chaudePagedata?.titePage}</title>
+      <meta name="title" content={salon8Pagedata?.metaTitle} data-react-helmet="true" />
+      <meta name="description" content={salon8Pagedata?.metaDescription} data-react-helmet="true" />
+      <meta property="og:title" content={salon8Pagedata?.metaOgTitle} data-react-helmet="true" />
+      <meta property="og:description" content={salon8Pagedata?.metaOgDescription} data-react-helmet="true" />
+      {/* <meta property="og:image" content={salon8Pagedata?.metaOgImage} data-react-helmet="true" /> */}
+      <meta name="robots" content={salon8Pagedata?.metaRobots} />
+      <meta name="keywords" content={salon8Pagedata?.metaKeywords} />
+      <link rel="canonical" href={salon8Pagedata?.metaLink} />
+      <title>{salon8Pagedata?.titePage}</title>
     </Helmet>
-    <ContainerPage data={boissons_chaude} handleAddProduct={handleAddProduct} commande={commande}
+    <ContainerPage data={salon8} handleAddProduct={handleAddProduct} commande={commande}
       setProducts={setProducts} />
   </>);
 }
-export const BoissonsTea = ({ commande, setProducts, handleAddProduct }) => {
+export const Psalon4 = ({ commande, setProducts, handleAddProduct }) => {
   return (<>
     <Helmet>
-      <meta name="title" content={boissons_teaPagedata?.metaTitle} data-react-helmet="true" />
-      <meta name="description" content={boissons_teaPagedata?.metaDescription} data-react-helmet="true" />
-      <meta property="og:title" content={boissons_teaPagedata?.metaOgTitle} data-react-helmet="true" />
-      <meta property="og:description" content={boissons_teaPagedata?.metaOgDescription} data-react-helmet="true" />
-      {/* <meta property="og:image" content={boissons_teaPagedata?.metaOgImage} data-react-helmet="true" /> */}
-      <meta name="robots" content={boissons_teaPagedata?.metaRobots} />
-      <meta name="keywords" content={boissons_teaPagedata?.metaKeywords} />
-      <link rel="canonical" href={boissons_teaPagedata?.metaLink} />
-      <title>{boissons_teaPagedata?.titePage}</title>
+      <meta name="title" content={salon9Pagedata?.metaTitle} data-react-helmet="true" />
+      <meta name="description" content={salon9Pagedata?.metaDescription} data-react-helmet="true" />
+      <meta property="og:title" content={salon9Pagedata?.metaOgTitle} data-react-helmet="true" />
+      <meta property="og:description" content={salon9Pagedata?.metaOgDescription} data-react-helmet="true" />
+      {/* <meta property="og:image" content={salon9Pagedata?.metaOgImage} data-react-helmet="true" /> */}
+      <meta name="robots" content={salon9Pagedata?.metaRobots} />
+      <meta name="keywords" content={salon9Pagedata?.metaKeywords} />
+      <link rel="canonical" href={salon9Pagedata?.metaLink} />
+      <title>{salon9Pagedata?.titePage}</title>
     </Helmet>
-    <ContainerPage data={boissons_tea} handleAddProduct={handleAddProduct} commande={commande}
+    <ContainerPage data={salon9} handleAddProduct={handleAddProduct} commande={commande}
+      setProducts={setProducts} />
+  </>);
+}
+export const Psalon5 = ({ commande, setProducts, handleAddProduct }) => {
+  return (<>
+    <Helmet>
+      <meta name="title" content={salon10Pagedata?.metaTitle} data-react-helmet="true" />
+      <meta name="description" content={salon10Pagedata?.metaDescription} data-react-helmet="true" />
+      <meta property="og:title" content={salon10Pagedata?.metaOgTitle} data-react-helmet="true" />
+      <meta property="og:description" content={salon10Pagedata?.metaOgDescription} data-react-helmet="true" />
+      {/* <meta property="og:image" content={salon9Pagedata?.metaOgImage} data-react-helmet="true" /> */}
+      <meta name="robots" content={salon10Pagedata?.metaRobots} />
+      <meta name="keywords" content={salon10Pagedata?.metaKeywords} />
+      <link rel="canonical" href={salon10Pagedata?.metaLink} />
+      <title>{salon10Pagedata?.titePage}</title>
+    </Helmet>
+    <ContainerPage data={salon10} handleAddProduct={handleAddProduct} commande={commande}
+      setProducts={setProducts} />
+  </>);
+}
+export const Salonindiv = ({ commande, setProducts, handleAddProduct }) => {
+  return (<>
+    <Helmet>
+      <meta name="title" content={salon11Pagedata?.metaTitle} data-react-helmet="true" />
+      <meta name="description" content={salon11Pagedata?.metaDescription} data-react-helmet="true" />
+      <meta property="og:title" content={salon11Pagedata?.metaOgTitle} data-react-helmet="true" />
+      <meta property="og:description" content={salon11Pagedata?.metaOgDescription} data-react-helmet="true" />
+      {/* <meta property="og:image" content={salon9Pagedata?.metaOgImage} data-react-helmet="true" /> */}
+      <meta name="robots" content={salon11Pagedata?.metaRobots} />
+      <meta name="keywords" content={salon11Pagedata?.metaKeywords} />
+      <link rel="canonical" href={salon11Pagedata?.metaLink} />
+      <title>{salon11Pagedata?.titePage}</title>
+    </Helmet>
+    <ContainerPage data={salon11} handleAddProduct={handleAddProduct} commande={commande}
       setProducts={setProducts} />
   </>);
 }

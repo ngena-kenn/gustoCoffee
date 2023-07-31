@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.be6ce055.css",
+    "main.js": "/static/js/main.1dbf4fdb.js",
+    "static/media/Video.mp4": "/static/media/Video.24ad8873587d8f74973f.mp4",
+    "static/media/videoAcc.mp4": "/static/media/videoAcc.b993b11ea0b97d184409.mp4",
+    "static/media/fontFinal.png": "/static/media/fontFinal.3c8e8799dfdc7ff3f94d.png",
+    "static/media/actualité4.PNG": "/static/media/actualité4.dcd3f7137cb9b7c6de6c.PNG",
+    "static/media/actualité5.PNG": "/static/media/actualité5.b8098f78bf4876efa764.PNG",
+    "static/media/actualité6.PNG": "/static/media/actualité6.bfdc390d72afa9086c97.PNG",
+    "static/media/actualité2.PNG": "/static/media/actualité2.0bbd57138bd79dd4498e.PNG",
+    "static/media/actualité3.PNG": "/static/media/actualité3.07730c9bc41efeabb6bf.PNG",
+    "static/media/forfaitdecouverte.png": "/static/media/forfaitdecouverte.0b49b18df22b0c108095.png",
+    "static/media/forfaitbaritas.png": "/static/media/forfaitbaritas.beb337fff3f2548d8527.png",
+    "static/media/slider1.png": "/static/media/slider1.eddafaa6b7bc5dd3c6af.png",
+    "static/media/produit3.jpg": "/static/media/produit3.c6cd4f08011ca3bea4dd.jpg",
+    "static/media/actualité1.PNG": "/static/media/actualité1.e0899f09ef812280471a.PNG",
+    "static/media/produit2.jpeg": "/static/media/produit2.209669a2d466c875e0bd.jpeg",
+    "static/media/produit1.jpg": "/static/media/produit1.43c26797ed1eaf4f54a2.jpg",
+    "static/media/slider3.jpg": "/static/media/slider3.c45ad9d6a6f922b4c437.jpg",
+    "static/media/slider2.jpg": "/static/media/slider2.0e6f77b31559ad8c7012.jpg",
+    "static/media/logo.png": "/static/media/logo.e5637622cd8c91fda050.png",
+    "index.html": "/index.html",
+    "main.be6ce055.css.map": "/static/css/main.be6ce055.css.map",
+    "main.1dbf4fdb.js.map": "/static/js/main.1dbf4fdb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.be6ce055.css",
+    "static/js/main.1dbf4fdb.js"
+  ]
+}

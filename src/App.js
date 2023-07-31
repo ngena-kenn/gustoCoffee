@@ -1,19 +1,21 @@
 import './css/page.css';
-import './body/commande/style.css'
+import './css/style.css';
 import React, { useEffect, useState } from 'react';
 import Navigation from './body/Navigation';
-import Restaurant from './body/Restaurant'
+import Nos_Espaces from './body/Nos_Espaces'
 import { Routes, Route } from "react-router-dom";
 import { useLocation } from 'react-router'
 import {
-  Dessert, Formule, GammeChaude, HealtyBowls, PokeCreation, Sides, Boissons, BoissonsChaude,
-  BoissonsTea
+  Gsalon1, Gsalon2, Gsalon3, Gsalon4, Gsalon5, Psalon1, Psalon2, Psalon3,
+  Psalon4, Psalon5, Salonindiv
 } from './components/global/globalPage';
 import Footer from './components/Footer/footer';
 import FormDialog from './components/dialog';
 import ViewProduct from './components/viewProduct/viewProduct';
-import Login from './body/commande/Authentification';
-import Apropos from './body/Tarifs';
+import SuccessPay from './components/Reservation/sucessPay';
+import Login from './body/commande/signIn';
+import Inscript from './body/commande/signUp';
+import Tarifs from './components/tarif/tarifs';
 import Franchise from './body/Franchise';
 import Actualite from './body/Actualite'
 import Acceuil from './components/acceuil/acceuil';
@@ -103,42 +105,49 @@ const App = () => {
       <Alert severity="success">Si vous créez un compte vous aurez un cadeau de plus </Alert>
       <Routes>
         <Route path="/login" element={<Login />} />
+        <Route path="/inscript" element={<Inscript />} />
         <Route path="/" element={<Acceuil />} />
         <Route path="/home" element={<Acceuil />} />
-        <Route path="/espaces" element={<Restaurant />}/>
+        <Route path="/espaces" element={<Nos_Espaces />}/>
           
         
         <Route path="/espaces/grand_salon/GS1" element={
-            <Dessert handleAddProduct={handleAddProduct} setProducts={setProducts} commande={setcommande} />}
+            <Gsalon1 handleAddProduct={handleAddProduct} setProducts={setProducts} commande={setcommande} />}
         />
         
-        <Route path="/espaces/petit_salon" element={
-          <Formule handleAddProduct={handleAddProduct} setProducts={setProducts} commande={setcommande} />}
+        <Route path="/espaces/grand_salon/GS2" element={
+          <Gsalon2 handleAddProduct={handleAddProduct} setProducts={setProducts} commande={setcommande} />}
         />
-        <Route path="/home/gamme_chaude" element={
-          <GammeChaude handleAddProduct={handleAddProduct} setProducts={setProducts} commande={setcommande} />}
+        <Route path="/espaces/grand_salon/GS3" element={
+          <Gsalon3 handleAddProduct={handleAddProduct} setProducts={setProducts} commande={setcommande} />}
         />
-        <Route path="/home/poke_creation" element={
-          <PokeCreation handleAddProduct={handleAddProduct} setProducts={setProducts} commande={setcommande} />}
+        <Route path="/espaces/grand_salon/GS4" element={
+          <Gsalon4 handleAddProduct={handleAddProduct} setProducts={setProducts} commande={setcommande} />}
         />
-        <Route path="/home/sides" element={
-          <Sides handleAddProduct={handleAddProduct} setProducts={setProducts} commande={setcommande} />}
+        <Route path="/espaces/grand_salon/GS5" element={
+          <Gsalon5 handleAddProduct={handleAddProduct} setProducts={setProducts} commande={setcommande} />}
         />
-        <Route path="/home/healty_bowls" element={
-          <HealtyBowls handleAddProduct={handleAddProduct} setProducts={setProducts} commande={setcommande} />}
+        <Route path="/espaces/petit_salon/PS1" element={
+          <Psalon1 handleAddProduct={handleAddProduct} setProducts={setProducts} commande={setcommande} />}
         />
-        <Route path="/home/boissons" element={
-          <Boissons handleAddProduct={handleAddProduct} setProducts={setProducts} commande={commande} />}
+        <Route path="/espaces/petit_salon/PS2" element={
+          <Psalon2 handleAddProduct={handleAddProduct} setProducts={setProducts} commande={setcommande} />}
         />
-        <Route path="/home/boissons_chaudes" element={
-          <BoissonsChaude handleAddProduct={handleAddProduct} setProducts={setProducts} commande={commande} />}
+        <Route path="/espaces/petit_salon/PS3" element={
+          <Psalon3 handleAddProduct={handleAddProduct} setProducts={setProducts} commande={setcommande} />}
         />
-        <Route path="/home/bubble_tea" element={
-          <BoissonsTea handleAddProduct={handleAddProduct} setProducts={setProducts} commande={commande} />}
+        <Route path="/espaces/petit_salon/PS4" element={
+          <Psalon4 handleAddProduct={handleAddProduct} setProducts={setProducts} commande={setcommande} />}
         />
-        <Route path="/a_propos" element={<Apropos />} />
+        <Route path="/espaces/petit_salon/PS5" element={
+          <Psalon5 handleAddProduct={handleAddProduct} setProducts={setProducts} commande={setcommande} />}
+        />
+        <Route path="/espaces/petit_salon/EI" element={
+          <Salonindiv handleAddProduct={handleAddProduct} setProducts={setProducts} commande={setcommande} />}
+        />
+        <Route path="/a_propos" element={<Tarifs />} />
         <Route path="/franchise" element={<Franchise title={'NOTRE FRANCHISE'} />} />
-        <Route path="/actualite" element={<Actualite />} />
+        <Route path="/successpay" element={<SuccessPay />} />
         <Route path="*" element={<Acceuil />} />
 
       </Routes>

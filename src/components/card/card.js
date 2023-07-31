@@ -22,7 +22,7 @@ const CustomizeCard = ({id, image, image1, image2, title, description, price, co
             {description}
           </Typography>
         </CardContent>
-      <Carousel autoPlay interval={1000} infiniteLoop showIndicators={false}showStatus={false} showThumbs={false}>
+      <Carousel autoPlay interval={2000} infiniteLoop showIndicators={false}showStatus={false} showThumbs={false}>
         <CardMedia component="img" height="222" image={image} />
         <CardMedia component="img" height="222" image={image1}/>
         <CardMedia component="img"height="222" image={image2} />

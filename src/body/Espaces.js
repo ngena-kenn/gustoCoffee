@@ -1,6 +1,6 @@
 import React  from "react";
 import '../css/page.scss';
-import '../components/containerPage/containerPage.scss'
+import '../css/containerPage.scss'
 import MenuItem from './Espace';
 import menuItems from '../utils/data';
 

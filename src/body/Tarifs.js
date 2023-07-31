@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import '../css/page.css';
-import '../components/acceuil/acceuil.scss';
+import '../css/acceuil.scss';
 import { Link} from 'react-router-dom';
 
 class A_propos extends Component {

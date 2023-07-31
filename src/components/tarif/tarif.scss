@@ -1,0 +1,125 @@
+.text_left{
+    margin: 50px;
+    width: 250px;
+    width:50%;
+    width:calc(50% - ( ( 4% ) * 0.5 ) );
+    margin-right: 4%;
+    margin-top:50px;
+    margin-bottom:20px;
+    background-position: left top;
+    min-height: 296.4px; 
+    text-align: right;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  .text_right{
+    color: #fff;
+    font-size: 1.5rem;
+  }
+
+.hover-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    .original-content, .hover-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250%;
+    height: 250%;
+    transition: 1s;
+    backface-visibility: hidden;
+    //transition: opacity 0.3s ease-in-out;
+    //transition: width 2s, height 2s, transform 2s;
+    
+  }
+  .original-content {
+    opacity: 1;
+    bottom: 7em;
+    margin-top: 0px !important;
+    width: 250% !important;
+    height: 250% !important;
+  }
+  .hover-content {
+    opacity: 0;
+    transform: rotateY(180deg);
+   
+  }
+  &:hover .original-content {
+    opacity: 0; 
+    transform: rotateY(-180deg);
+  }
+  &:hover .hover-content {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+  .left{
+    left:20em;
+  }
+  .bg-color{
+    background-color: #fff;
+  }
+  .left-2{
+    left: 2.5em;
+  }
+  
+  }
+
+.section-2{
+  bottom: 10em;
+  background-color:#592C28;
+  background-position: center;
+  background-size: cover;
+  height: 35em;
+  width: 95em;
+
+}
+.section-3{
+  background-color:#F2E8DF;
+  background-position: center;
+  background-size: cover;
+  height: 35em;
+  .center{
+    margin: 70px;
+    width: 20em;
+  }
+  .mgt{
+    margin: 0px;
+  }
+  .formulair-send{
+    form { 
+      margin: 50px;
+      padding-top: 40px;
+      width:  17em;
+      label{
+        font-size: 25px;
+        text-align: center;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        margin-left: 35%;
+    }
+    input{
+      width: 100%;
+      height: 3em;
+    }
+    textarea{
+      width: 100%;
+      height: 7em;
+    }
+    .nav-item {
+      color:white;
+      background: rgb(174, 104, 47) ;
+      border: 2px solid white ;
+      font-size: 25px;
+      width: 100%;
+          &:hover {
+            color:  rgb(174, 104, 47);
+            background:white ;
+            box-shadow: 6px 6px 6px gray;
+            border: 1px solid rgb(174, 104, 47) ;
+      }
+  }
+  }
+  }
+}

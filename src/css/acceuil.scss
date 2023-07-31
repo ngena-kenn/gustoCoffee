@@ -1,0 +1,205 @@
+@import './thems.scss';
+body{
+  background : url('../image/fontFinal.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+ 
+  
+}
+
+.left-block {
+    @include sm {
+        flex-direction: column;
+    }
+}
+.titre {
+    text-align: center;
+    font-size: 40px;
+    padding-top: 10px;
+  }
+  
+.produit1{
+    
+    background : url('../image/produit1.jpg');
+    background-size: cover;
+    /* min-width: 400px; */
+    height: 200px;
+    width: 250px;
+    
+    margin-right:40px;
+    min-height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 25px;
+    
+  }
+.produit2{
+    background: url('../image/produit2.jpeg');
+    background-size: cover;
+    /* min-width: 400px; */
+    height: 200px;
+    width: 250px;
+    margin-right:40px;
+    min-height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 25px;
+  }
+.produit3{
+    background : url('../image/produit3.jpg');
+    background-size: cover;
+    /* min-width: 400px; */
+    height: 200px;
+    width: 250px;
+    min-height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 25px;
+  }
+  
+  .forfait1{
+    background : url('../image/forfaitdecouverte.png');
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+    width: 400px;
+    margin: 40px;
+   
+  }
+  .forfait2{
+    background : url('../image/forfaitbaritas.png');
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+    width: 400px;
+    margin: 40px;
+    
+  }
+  
+@media (max-width: 500px) {
+    .valeur2 {
+      height: 300px;
+    width: 250px;
+    }
+
+  }
+  .forme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    flex-wrap: wrap;
+  }
+  .forme .aligne {
+    margin-top: 30px;
+    /* margin-left: 30px; */
+  }
+  
+.link{
+    color: white;
+    background: rgb(192, 159, 118);
+    background-position: center;
+    font-size: 20px;
+    padding: 7px;
+    margin-left:70px;
+    text-decoration: none;
+    border-radius: 15px / 10px; 
+    &:hover{
+        background:white;
+        color: rgb(192, 159, 118);
+        box-shadow: 6px 6px 6px rgb(250, 196, 137) ;
+    }
+    
+}
+.left{
+    margin-left:9em !important;
+}
+.text_produit{
+  
+}
+.text1 {
+    background-position: center;
+    font-size: 30px;
+    color: black;
+    margin-bottom: 120px;
+  }
+  .textdeco{
+    text-align: center;
+    display: block;
+    padding: 10px;
+    padding-top: 20px;
+    font-family: "Times New Roman", Times, serif;
+  }
+.text2 {
+    font-size: 30px;
+
+  }
+.text3 {
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    color:rgb(95, 43, 3);
+
+    
+  }
+.text4 {
+    font-size: 15px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: oblique;
+
+  }
+.carousel{
+    position: relative;
+    .overlay{
+        background-size: cover;
+        height: 400Px ;
+    }
+  }
+.aligne-center {
+    margin: 50px;
+    width: 250px;
+  }
+.overlayVid{
+    width : 60%;
+    position:absolute;
+    top: 53%;
+    transform: translateY(-50%);
+    left : 20%;
+    padding : 0.4rem 1.5rem;
+    text-align: center;
+    color : white;
+    background: rgba(79, 40, 5, 0.423) ;
+    .overlay_title{
+      margin: 0.8rem 0 1rem 0;
+      font-family: 'Times New Roman', Times, serif;
+      font-style: italic;
+      
+    }
+    p{
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 17px;
+      font-style: italic;
+    }
+
+  }
+  .titre {
+    text-align: center;
+    font-size: 50px;
+    padding-top: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    color:rgb(95, 43, 3);
+  }
+  .text_produit{
+    left : 20%;
+    padding-top:2em;
+    text-align: center;
+    color : white;
+    background-position: center;
+    font-size: 30px;
+    font-family:'Times New Roman', Times, serif ;
+  }
+.forme .align{
+  padding-bottom:50px;
+}
+  
