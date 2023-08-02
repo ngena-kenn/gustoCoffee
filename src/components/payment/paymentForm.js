@@ -8,6 +8,7 @@ import { DateRange } from "react-date-range";
 
 
 
+
 const CARD_OPTIONS = {
 	iconStyle: "solid",
 	style: {
@@ -33,10 +34,23 @@ export default function PaymentForm({price, date}) {
     const [success, setSuccess ] = useState(false)
     const stripe = useStripe()
     const elements = useElements()
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState('');
+    const [values, setValues] =useState({
+        name:'',
+        email:'',
+        date,
+        price
+   
+    }) 
+    // let start = date[0].startDate;
+     //let end = date[0].endDate;
+     //let dat = start +"-"+ end ;
+ 
+    const handleInput = (e) =>{
+        setValues(prev =>({...prev,[e.target.name]: [e.target.value]}))
+    }
     const dates = date;
     const navigate = useNavigate();
+
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -44,6 +58,9 @@ export default function PaymentForm({price, date}) {
             type: "card",
             card: elements.getElement(CardElement)
         })
+
+        
+
     
         
     if(!error) {
@@ -56,16 +73,13 @@ export default function PaymentForm({price, date}) {
             })
 
             if(response.data.success) {
-
-                // créé un objet reservation
-                        // récupérer 
-
-                // envoi de l'objet dans un requête POST
-
-               // const reservation 
+               
+                axios.post('http://localhost:4000/reservationlist', values)
+                .then(res => console.log(res))
+                .catch(err => console.log(err));
                 console.log("Successful payment")
                 setSuccess(true)
-                navigate('/successpay')
+                //navigate('/successpay')
             }
 
         } catch (error) {
@@ -80,30 +94,30 @@ export default function PaymentForm({price, date}) {
         <>
         {!success ? 
       
-        <form onSubmit={handleSubmit} style={{width: '30rem', height: '40rem', display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
+        <form onSubmit={handleSubmit} style={{width: '30rem', height: '40rem', display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingTop:"3rem"}}>
+            <div className='mb-3'>
             <input
           placeholder="Enter your Name"
-          name="user_name"
-          value={name}
-          onChange={(e)=>setName(e.target.value)}
+          name="name"
+          onChange={handleInput}
           required
           type="text"
           className="form-control" 
-          id="name" 
-          label="Nom" variant="outlined"
         ></input>
+        </div>
+        <div className='mb-3'>
         <input
           placeholder="Enter your email"
-          value={email}
           name="email"
           required
           type="email"
-          onChange={(e)=>setEmail(e.target.value)}
+          onChange={handleInput}
           className="form-control"
         ></input>
+        </div>
         <div className="lsItem">
               <label>Check-in Date</label>
-              <span>{`${format(
+              <span name="date" onChange={handleInput}>{`${format(
                 dates[0].startDate,
                 "MM/dd/yyyy"
               )} to ${format(dates[0].endDate, "MM/dd/yyyy")}`}</span>

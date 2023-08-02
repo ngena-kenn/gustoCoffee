@@ -13,16 +13,13 @@ import image12 from "../image/sl6e.png";
 import image13 from "../image/sl6F.png"
 import image14 from "../image/SL4A.png";
 import image15 from "../image/SL4C.png";
-import image16 from "../image/SL4E.png";
 import image17 from "../image/SL4G.png";
-import image18 from "../image/SL4M.png";
 import image19 from "../image/SL4F.png";
 import image20 from "../image/SL4B.png";
 import image21 from "../image/SL4D.png";
 import image22 from "../image/SL4E.png";
 import image23 from "../image/SL4H.png";
 import image24 from "../image/SL4J.png";
-import image25 from "../image/SL4K.png";
 import image26 from "../image/SL4M.png";
 import image27 from "../image/SL1A.png";
 import image28 from "../image/SL1B.png";

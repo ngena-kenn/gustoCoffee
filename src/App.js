@@ -14,6 +14,7 @@ import FormDialog from './components/dialog';
 import ViewProduct from './components/viewProduct/viewProduct';
 import SuccessPay from './components/Reservation/sucessPay';
 import Login from './body/commande/signIn';
+import Myaccount from './body/commande/Myaccount';
 import Inscript from './body/commande/signUp';
 import Tarifs from './components/tarif/tarifs';
 import Franchise from './body/Franchise';
@@ -21,6 +22,7 @@ import Actualite from './body/Actualite'
 import Acceuil from './components/acceuil/acceuil';
 import Swal from 'sweetalert2'
 import Alert from '../node_modules/@mui/material/Alert';
+
 
 const App = () => {
   const [firstConnexion, setfirstConnexion] = useState(false)
@@ -104,8 +106,9 @@ const App = () => {
         viewProduct={viewProduct} setViewProduct={setViewProduct} />
       <Alert severity="success">Si vous créez un compte vous aurez un cadeau de plus </Alert>
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route path="/connect" element={<Login />} />
         <Route path="/inscript" element={<Inscript />} />
+        <Route path="/my-account" element={<Myaccount />} />
         <Route path="/" element={<Acceuil />} />
         <Route path="/home" element={<Acceuil />} />
         <Route path="/espaces" element={<Nos_Espaces />}/>

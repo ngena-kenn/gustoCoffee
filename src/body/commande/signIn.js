@@ -1,7 +1,8 @@
 import { getAuth , signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 import { app } from "../../firebaseconfig";
-import SignOut from "./signOut"
+import SignOut from "./signOut";
+
 
 
 const SignIn = () => {

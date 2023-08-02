@@ -2,7 +2,7 @@ import { getAuth , createUserWithEmailAndPassword } from "firebase/auth";
 import React, { useState, useRef} from "react";
 import { app } from "../../firebaseconfig";
 import {useNavigate} from "react-router-dom";
-import emailjs from '@emailjs/browser';
+
 
 const SignUp = () => {
  // const [email, setEmail] = useState("");
@@ -29,28 +29,18 @@ const SignUp = () => {
       inputs.current.push(el)
     }
   }
-  const sendEmail = (e) => {
-    e.preventDefault();
-    console.log('form ', formRef.current);
-    emailjs.sendForm('service_f0np3b7', 'template_dse3izh', formRef.current
-      , '6Jj0FamXApTqAa_Ck')
-      .then((result) => {
-        console.log(result.text);
-      }, (error) => {
-        console.log(error.text);
-      });
-  }
+
 
   const signUp = (email, pwd) => createUserWithEmailAndPassword(auth, email, pwd)
   
   const handleForm = async (e) => {
     e.preventDefault()
 
-    if((inputs.current[1].value.length || inputs.current[2].value.length) < 6) {
+    if((inputs.current[2].value.length || inputs.current[3].value.length) < 6) {
       setValidation("6 characters min")
       return;
     }
-    else if(inputs.current[1].value !== inputs.current[2].value) {
+    else if(inputs.current[2].value !== inputs.current[3].value) {
       setValidation("Passwords do not match")
       return;
     }
@@ -58,8 +48,8 @@ const SignUp = () => {
     try {
 
       const cred = await signUp(
-        inputs.current[0].value,
-        inputs.current[1].value
+        inputs.current[1].value,
+        inputs.current[2].value
       )
       // formRef.current.reset();
       setValidation("")
@@ -118,7 +108,7 @@ const SignUp = () => {
           className="form-control"
         ></input>
         <p className="text-danger mt-1">{validation}</p>
-        <button type="submit" onSubmit={sendEmail} >Sign Up</button>
+        <button type="submit">Sign Up</button>
       </form>
     </div>
   );

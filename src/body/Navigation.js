@@ -8,6 +8,7 @@ import Badge from '@mui/material/Badge';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 
+
 const Navigation = ({ commande, setcommande, countProduct, setViewProduct, cmd, validateCommande }) => {
  const navigate = useNavigate()
 
@@ -72,7 +73,7 @@ const Navigation = ({ commande, setcommande, countProduct, setViewProduct, cmd, 
               <li class="nav-item">
                 <div style={{ paddingLeft: 10, paddingBottom: 10}}>
                   <Button onClick={() => {
-                    navigate('/login')
+                    navigate('/connect')
                   }} variant='outlined' color='success'  
                   >Connexion</Button>
                 </div>
@@ -83,6 +84,13 @@ const Navigation = ({ commande, setcommande, countProduct, setViewProduct, cmd, 
                     navigate('/inscript')
                   }} variant='outlined' color='success'  
                   >Inscription</Button>
+                </div>
+              </li>
+              <li class="nav-item logo-reseau-socio">
+              <div style={{ paddingLeft: 10, paddingBottom: 10}}>
+                <Link to="/my-account" class="nav-link" >
+                <i class="fa fa-user" aria-hidden="true"></i>
+                &nbsp;Mon Compte</Link>
                 </div>
               </li>
             </ul>
