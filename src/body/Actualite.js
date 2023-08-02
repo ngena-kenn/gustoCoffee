@@ -19,10 +19,10 @@ import { Link } from 'react-router-dom';
           <div class ="encadrement" >
         <div class="card mb-3"  >
         <div class="card-body" >
-  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  <p class="card-text"><small class="text-muted">Dernière mise à jour il y a 3 minutes</small></p>
     
-    <h1 class="card-title">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</h1>
-    <p class="card-text">Coworking allows workers to take their schedules and goals into their own hands to fit an ever-changing, chaotic global society. Read on to learn how remote workers and businesses of all sizes can take advantage of these benefits and more.</p>
+    <h1 class="card-title">Il s'agit d'une carte plus large avec un texte de support ci-dessous comme introduction naturelle à du contenu supplémentaire. Ce contenu est un peu plus long.</h1>
+    <p class="card-text">Le coworking permet aux travailleurs de prendre en main leurs horaires et leurs objectifs pour s'adapter à une société mondiale chaotique en constante évolution. Lisez la suite pour savoir comment les télétravailleurs et les entreprises de toutes tailles peuvent profiter de ces avantages et bien plus encore.</p>
   </div>
           
         </div>
@@ -41,10 +41,10 @@ import { Link } from 'react-router-dom';
           <div class="card mb-3">
   <img src={benefitsofcoworking} class="card-img-top" alt="..."></img>
   <div class="card-body">
-  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  <p class="card-text"><small class="text-muted">Dernière mise à jour il y a 3 minutes</small></p>
     
-    <h2 class="card-title">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</h2>
-    <p class="card-text">This is a wider card </p>
+    <h2 class="card-title">Il s'agit d'une carte plus large avec un texte de support ci-dessous comme introduction naturelle à du contenu supplémentaire. Ce contenu est un peu plus long.</h2>
+    <p class="card-text">Ceci est une carte plus large </p>
   </div>
 </div>
 
@@ -53,10 +53,10 @@ import { Link } from 'react-router-dom';
           <div class="card mb-3">
   <img src={benefitsofcoworking} class="card-img-top" alt="..."></img>
   <div class="card-body">
-  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  <p class="card-text"><small class="text-muted">Dernière mise à jour il y a 3 minutes</small></p>
     
-    <h2 class="card-title">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</h2>
-    <p class="card-text">This is a wider card </p>
+    <h2 class="card-title">Il s'agit d'une carte plus large avec un texte de support ci-dessous comme introduction naturelle à du contenu supplémentaire. Ce contenu est un peu plus long.</h2>
+    <p class="card-text">Ceci est une carte plus large </p>
   </div>
 </div>
 
@@ -69,7 +69,7 @@ import { Link } from 'react-router-dom';
 <div class="geolocalisation">
 
   <center>
-    <h3>vous etes ici</h3>
+    <h3>NOTRE LOCALISATION</h3>
 
   </center>
 
