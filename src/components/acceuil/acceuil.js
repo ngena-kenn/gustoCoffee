@@ -5,7 +5,7 @@ import CardContent from '@mui/joy/CardContent';
 import Typography from '@mui/joy/Typography';
 import video from '../../image/videoAcc.mp4'
 import '../../css/acceuil.scss'
-import Franchise from '../../body/Franchise';
+import TypeSalon from '../../body/typeSalon';
 import Carousel from '../carousel/Sliders';
 import Tarifs from '../../body/Tarifs';
 import InfoEvent from '../evenement/infoEvent';
@@ -50,7 +50,7 @@ const Acceuil = () => {
         </Card>
         
       </div>
-      <Franchise title={"NOS PRODUITS"} />
+      <TypeSalon title={"NOS PRODUITS"} />
       <Tarifs/>
       <div style={{paddingTop:80 }}></div>
       <Carousel />
