@@ -148,6 +148,8 @@ const App = () => {
         <Route path="/a_propos" element={<Tarifs />} />
         <Route path="/franchise" element={<Franchise title={'NOTRE FRANCHISE'} />} />
         <Route path="/successpay" element={<SuccessPay />} />
+        <Route path="/actualite" element={<Actualite />} />
+
         <Route path="*" element={<Acceuil />} />
 
       </Routes>

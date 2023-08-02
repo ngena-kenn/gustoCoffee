@@ -1,28 +1,27 @@
 import React from "react";
 import '../css/acceuil.scss';
 import { Link} from 'react-router-dom';
+import { color } from "@mui/system";
 
 const  Franchise = ({title}) => {
     return (
-      <div style={{paddingTop: 50}}>
-        <div className="titre">{title} </div>
-        <div className="forme">
-          <div className=" ">
-            <p class="text_produit">Nos salons de <br/> 6 places </p>
-            <div className="produit1 aligne"></div>
-          <Link to='/a_propos' class="link " >Decouvrir</Link>
-          </div>
-          <div className="">
-          <div class="text_produit">Nos salons de <br/> 4 places </div>
-          <div className="produit2 aligne"></div>
-          <Link to='/a_propos' class="link" >Decouvrir</Link>
-          </div>
-          <div className="">
-          <div class="text_produit">Nos places <br/> individuelles </div>
-          <div className="produit3 aligne"></div>
-          <Link to='/a_propos' class="link" >Decouvrir</Link>
-          </div>
-        </div>
+      <div class="cadrenews" >
+       <center> <h1 style={{color: "white"}}>LA COMBINAISON PARFAITE :<br></br>À LA MODE ET AVEC 10 % DE REMISE</h1>
+       <p style={{color: "white"}}>ABONNEZ-VOUS À NOTRE NEWSLETTER</p>
+       </center>
+       <form>
+       <div class="mb-2">
+  <center>
+  <input type="email" class="caseform" id="" placeholder="Email*"></input>
+  
+  <div>
+  <button class="caseform2" id="" >Envoyer</button>
+  </div>
+  
+  </center>
+</div>
+       
+       </form>
       </div>
     )
   }

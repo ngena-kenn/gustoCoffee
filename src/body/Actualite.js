@@ -1,57 +1,93 @@
 import React, { Component } from "react";
 import '../css/page.css';
+import chaude from '../image/image3.png';
+import benefitsofcoworking from '../image/Benefits-of-coworking-hero-1230x820.jpg.webp';
+import { useMemo } from "react";
+import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 import { Link } from 'react-router-dom';
+ import Home from "./maps";
 
-class Actualites extends Component {
+ class Actualites extends Component {
   render() {
     return (
       <div style={{paddingTop: 120}}>
-        <div className="titre" >Actualités</div>
-        <div className="actu_bg"></div>
-        <div className="forme">
-          <div>
-            <div className="actu1 aligne-center"></div>
-            <div className="text2">Le Bol by Arnaud Baptiste 🧑🏻‍🍳</div>
-            <div className="text4">Un tout nouveau bowl aux saveurs françaises, 
-                <br></br>porté par la personnalité et la créativité 
-                du Chef Arnaud Baptiste !</div>
-            <Link className="text" to={'/a_propos'}>EN SAVOIR PLUS</Link>
-          </div>
-          <div>
-            <div className="actu2 aligne-center"></div>
-            <div className="text2">Campagne de Noël 2021 : BE POKE BIO ! 🎄</div>
-            <div className="text4">Notre objectif ? Être le Père Noël 2.0 et<br></br>
-                 créer un mouvement d'amour à travers l'humour 🎅🏻</div>
-            <Link className="text" to={'/a_propos'}>EN SAVOIR PLUS</Link>
-          </div>
-          <div>
-            <div className="actu3 aligne-center"></div>
-            <div className="text2">Départ imminent vers Bali🌺</div>
-            <div className="text4">Poke bio fait une escale à Bali le temps d’un printemps, 
-                <br></br>alors ready pour le décollage ? ✈️ </div>
-            <Link className="text" to={'/a_propos'}>EN SAVOIR PLUS</Link>
-          </div>
-          <div>
-            <div className="actu4 aligne-center"></div>
-            <div className="text2">Poke bio fait son chaud 🔥</div>
-            <div className="text4">Une toute nouvelle gamme pour affronter l'hiver en douceur 😋</div>
-            <Link className="text" to={'/a_propos'}>EN SAVOIR PLUS</Link>
-          </div>
-          <div>
-            <div className="actu5 aligne-center"></div>
-            <div className="text2">LA MARCHE TRÈS ROSE 🎗</div>
-            <div className="text4">La Team Poke bio soutient Octobre Rose !</div>
-            <Link className="text" to={'/a_propos'}>EN SAVOIR PLUS</Link>
-          </div>
-          <div>
-            <div className="actu6 aligne-center"></div>
-            <div className="text2">POKE BIO DANS TON SALON 📺</div>
-            <div className="text4">Patron Incognito sur M6 : immersion dans les coulisses de Poke bio</div>
-            <Link className="text" to={'/a_propos'}>EN SAVOIR PLUS</Link>
-          </div>
+
+        
+
+      <div class="surhaut" >
+        <div class="soushaut"  >
+          <div class ="encadrement" >
+        <div class="card mb-3"  >
+        <div class="card-body" >
+  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    
+    <h1 class="card-title">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</h1>
+    <p class="card-text">Coworking allows workers to take their schedules and goals into their own hands to fit an ever-changing, chaotic global society. Read on to learn how remote workers and businesses of all sizes can take advantage of these benefits and more.</p>
+  </div>
+          
         </div>
+        </div>
+        </div>
+        <div class="soushaut">
+          <div class="imagedessous" > 
+        <img src={benefitsofcoworking} class="img-fluid" alt="..."></img>
+        </div>
+        </div>
+      </div>
+
+      
+      <div class="haut" >
+          <div class="demihaut" >
+          <div class="card mb-3">
+  <img src={benefitsofcoworking} class="card-img-top" alt="..."></img>
+  <div class="card-body">
+  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    
+    <h2 class="card-title">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</h2>
+    <p class="card-text">This is a wider card </p>
+  </div>
+</div>
+
+          </div>
+          <div class="demihaut" >
+          <div class="card mb-3">
+  <img src={benefitsofcoworking} class="card-img-top" alt="..."></img>
+  <div class="card-body">
+  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    
+    <h2 class="card-title">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</h2>
+    <p class="card-text">This is a wider card </p>
+  </div>
+</div>
+
+          </div>
+
+      </div>
+
+
+      
+<div class="geolocalisation">
+
+  <center>
+    <h3>vous etes ici</h3>
+
+  </center>
+
+  <div>
+    <center>
+  <Home/>
+  </center>
+  </div>
+
+</div>
+
+
+
       </div>
     )
   }
 }
+
+
 export default Actualites;
+
