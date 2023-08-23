@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import CardMedia from '@mui/material/CardMedia';
 import CardActionArea from '@mui/material/CardActionArea';
+import Card from "./cards"
 
 
 
@@ -11,6 +12,8 @@ const Espace = ({ item }) => {
   const handleClick = () => {
     setShowSubmenu(!showSubmenu);
   };
+
+ 
  
 
   return (
@@ -19,26 +22,28 @@ const Espace = ({ item }) => {
       onClick={handleClick}
       
     >
+    <div className="container">
+    <div className="position" >
     <CardMedia
       component="img"
       height="200"
+      width="200 !important"
       image={item.image}
       />
       <div className="name_space">
       <a href={item.link}>{item.label}</a>
       </div>
+      </div>
       {showSubmenu && (
-        <ul>
-          {item.submenu.map((submenuItem) => (
-            <li key={submenuItem.id}>
-              <CardActionArea href={submenuItem.path}>
-              <CardMedia component="img" height="170" width="50" image={submenuItem.image} />
-              </CardActionArea>
-              <div className="name_space size_name"><a href={submenuItem.path}>{submenuItem.name}</a></div>
-            </li>
-          ))}
-        </ul>
+        <div >
+           <div className="conteneur">
+            <Card 
+              items={item}  
+            />
+          </div>
+        </div>
       )}
+    </div>
     </li>
     </>
     

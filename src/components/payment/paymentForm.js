@@ -5,6 +5,7 @@ import '../../css/payment.scss';
 import { useNavigate } from "react-router-dom";
 import { format } from "date-fns";
 import { DateRange } from "react-date-range";
+import { useCart } from 'react-use-cart';
 
 
 
@@ -29,7 +30,7 @@ const CARD_OPTIONS = {
 	}
 }
 
-export default function PaymentForm({price, date}) {
+export default function PaymentForm({price, date, article}) {
 
     const [success, setSuccess ] = useState(false)
     const stripe = useStripe()
@@ -38,13 +39,21 @@ export default function PaymentForm({price, date}) {
         name:'',
         email:'',
         date,
-        price
+        price,
+        article
+        
    
     }) 
-    // let start = date[0].startDate;
-     //let end = date[0].endDate;
-     //let dat = start +"-"+ end ;
- 
+    //  let start = date[0].startDate;
+    //  let end = date[0].endDate;
+    //  const dat = start +"-"+ end ;
+    //  const jour = dat.toString();
+    
+    const { emptyCart } = useCart();
+
+    
+
+   
     const handleInput = (e) =>{
         setValues(prev =>({...prev,[e.target.name]: [e.target.value]}))
     }
@@ -79,7 +88,7 @@ export default function PaymentForm({price, date}) {
                 .catch(err => console.log(err));
                 console.log("Successful payment")
                 setSuccess(true)
-                //navigate('/successpay')
+                
             }
 
         } catch (error) {
@@ -116,11 +125,9 @@ export default function PaymentForm({price, date}) {
         ></input>
         </div>
         <div className="lsItem">
-              <label>Check-in Date</label>
-              <span name="date" onChange={handleInput}>{`${format(
-                dates[0].startDate,
-                "MM/dd/yyyy"
-              )} to ${format(dates[0].endDate, "MM/dd/yyyy")}`}</span>
+              <label>Check Date</label>
+              <label>{article}</label>
+              <span name="date" onChange={handleInput}>{dates}</span>
             </div>
             <fieldset className="FormGroup">
                 <div className="FormRow" >
@@ -129,13 +136,18 @@ export default function PaymentForm({price, date}) {
             </fieldset>
             <div className="forme">
             <button class="nav-item" >Pay</button> 
-            <button onClick={() => {
+            <button class="nav-item" onClick={() => {
             window.location.reload()}}>Annuler</button>
             </div>
         </form>
         :
        <div>
-           <h2>You just bought a sweet spatula congrats this is the best decision of you're life</h2>
+           <h2>merci de votre reservation vous allez recevoir un mail de confirmation</h2>
+           <button variant='outlined' color='success'  onClick={() => { 
+             emptyCart();
+            window.location.reload();
+            navigate('/espaces')
+          }}>revenir</button>
        </div> 
         }
             

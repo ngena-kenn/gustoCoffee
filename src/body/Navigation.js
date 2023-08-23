@@ -1,16 +1,45 @@
 import logo from '../image/logo.png';
+import {getAuth , onAuthStateChanged, signOut } from "firebase/auth";
+import { app } from "../firebaseconfig";
 import { Link, useNavigate } from 'react-router-dom';
-import React, {useContext} from "react";
+import React, {useContext, useEffect, useState } from "react";
 import '../css/page.css';
 import '../css/page.scss';
 import { Button } from '@mui/material';
 import Badge from '@mui/material/Badge';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { useCart } from "react-use-cart";
 
 
 
 const Navigation = ({ commande, setcommande, countProduct, setViewProduct, cmd, validateCommande }) => {
  const navigate = useNavigate()
+ const { isEmpty, totalItems, totalUniqueItems} = useCart();
+ const [authUser, setAuthUser] = useState(null);
+ const auth = getAuth(app);
+
+ useEffect(() => {
+   const listen = onAuthStateChanged(auth, (user) => {
+     if (user) {
+       setAuthUser(user);
+     } else {
+       setAuthUser(null);
+     }
+   });
+
+   return () => {
+     listen();
+   };
+ }, []);
+
+ const userSignOut = () => {
+  signOut(auth)
+    .then(() => {
+      console.log("sign out successful");
+    })
+    .catch((error) => console.log(error));
+};
+
 
   return (
     <>
@@ -48,7 +77,7 @@ const Navigation = ({ commande, setcommande, countProduct, setViewProduct, cmd, 
                 <div onClick={() => {
                   setViewProduct(prev => !prev)
                 }}>
-                  <Badge badgeContent={countProduct} style={{ cursor: "pointer", padding: '10px', marginRight: 20, }} color="success">
+                  <Badge style={{ cursor: "pointer", padding: '10px', marginRight: 20, }} color="success" badgeContent={totalUniqueItems}>
                     <ShoppingCartIcon color="action" />
                   </Badge>
                 </div>
@@ -71,12 +100,22 @@ const Navigation = ({ commande, setcommande, countProduct, setViewProduct, cmd, 
                 </div>
               </li> */}
               <li class="nav-item">
-                <div style={{ paddingLeft: 10, paddingBottom: 10}}>
+              {authUser ? (
+          <>
+          <div style={{ paddingLeft: 10, paddingBottom: 10}}>
+                <Link to="/my-account" class="nav-link" >
+                <i class="fa fa-user" aria-hidden="true"></i>
+                &nbsp;{`${authUser.email}`}</Link>
+                </div>
+         </>
+      ) : (
+        <div style={{ paddingLeft: 10, paddingBottom: 10}}>
                   <Button onClick={() => {
                     navigate('/connect')
                   }} variant='outlined' color='success'  
                   >Connexion</Button>
                 </div>
+      )}      
               </li>
               <li class="nav-item">
                 <div style={{ paddingLeft: 10, paddingBottom: 10}}>
@@ -87,11 +126,7 @@ const Navigation = ({ commande, setcommande, countProduct, setViewProduct, cmd, 
                 </div>
               </li>
               <li class="nav-item logo-reseau-socio">
-              <div style={{ paddingLeft: 10, paddingBottom: 10}}>
-                <Link to="/my-account" class="nav-link" >
-                <i class="fa fa-user" aria-hidden="true"></i>
-                &nbsp;Mon Compte</Link>
-                </div>
+              
               </li>
             </ul>
           </div>

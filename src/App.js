@@ -2,13 +2,9 @@ import './css/page.css';
 import './css/style.css';
 import React, { useEffect, useState } from 'react';
 import Navigation from './body/Navigation';
-import Nos_Espaces from './body/Nos_Espaces'
+import Nos_Espaces from './body/Espaces'
 import { Routes, Route } from "react-router-dom";
 import { useLocation } from 'react-router'
-import {
-  Gsalon1, Gsalon2, Gsalon3, Gsalon4, Gsalon5, Psalon1, Psalon2, Psalon3,
-  Psalon4, Psalon5, Salonindiv
-} from './components/global/globalPage';
 import Footer from './components/Footer/footer';
 import FormDialog from './components/dialog';
 import ViewProduct from './components/viewProduct/viewProduct';
@@ -84,7 +80,13 @@ const App = () => {
   }
 
   const getCountProduct = () => {
-    return Object.keys(prodducts).length
+    if (prodducts !== undefined && prodducts !== null) {
+      const keys = Object.keys(prodducts).length;
+      console.log(keys);
+    } else {
+      console.log("data is undefined or null.");
+    }
+   // return Object.keys(prodducts).length
   }
  
 
@@ -112,42 +114,6 @@ const App = () => {
         <Route path="/" element={<Acceuil />} />
         <Route path="/home" element={<Acceuil />} />
         <Route path="/espaces" element={<Nos_Espaces />}/>
-          
-        
-        <Route path="/espaces/grand_salon/GS1" element={
-            <Gsalon1 handleAddProduct={handleAddProduct} setProducts={setProducts} commande={setcommande} />}
-        />
-        
-        <Route path="/espaces/grand_salon/GS2" element={
-          <Gsalon2 handleAddProduct={handleAddProduct} setProducts={setProducts} commande={setcommande} />}
-        />
-        <Route path="/espaces/grand_salon/GS3" element={
-          <Gsalon3 handleAddProduct={handleAddProduct} setProducts={setProducts} commande={setcommande} />}
-        />
-        <Route path="/espaces/grand_salon/GS4" element={
-          <Gsalon4 handleAddProduct={handleAddProduct} setProducts={setProducts} commande={setcommande} />}
-        />
-        <Route path="/espaces/grand_salon/GS5" element={
-          <Gsalon5 handleAddProduct={handleAddProduct} setProducts={setProducts} commande={setcommande} />}
-        />
-        <Route path="/espaces/petit_salon/PS1" element={
-          <Psalon1 handleAddProduct={handleAddProduct} setProducts={setProducts} commande={setcommande} />}
-        />
-        <Route path="/espaces/petit_salon/PS2" element={
-          <Psalon2 handleAddProduct={handleAddProduct} setProducts={setProducts} commande={setcommande} />}
-        />
-        <Route path="/espaces/petit_salon/PS3" element={
-          <Psalon3 handleAddProduct={handleAddProduct} setProducts={setProducts} commande={setcommande} />}
-        />
-        <Route path="/espaces/petit_salon/PS4" element={
-          <Psalon4 handleAddProduct={handleAddProduct} setProducts={setProducts} commande={setcommande} />}
-        />
-        <Route path="/espaces/petit_salon/PS5" element={
-          <Psalon5 handleAddProduct={handleAddProduct} setProducts={setProducts} commande={setcommande} />}
-        />
-        <Route path="/espaces/petit_salon/EI" element={
-          <Salonindiv handleAddProduct={handleAddProduct} setProducts={setProducts} commande={setcommande} />}
-        />
         <Route path="/a_propos" element={<Tarifs />} />
         <Route path="/franchise" element={<Franchise title={'NOTRE FRANCHISE'} />} />
         <Route path="/successpay" element={<SuccessPay />} />

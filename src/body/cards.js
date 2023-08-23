@@ -7,46 +7,70 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import { Badge, CardActionArea, CardActions } from '@mui/material';
 import LocalGroceryStoreOutlinedIcon from '@mui/icons-material/LocalGroceryStoreOutlined';
+import { useCart } from 'react-use-cart';
+import Button from '@mui/material/Button';
 
-const CustomizeCard = ({id, image, image1, image2, title, description, price, commande,setProducts, handleAddProduct }) => {
-  const [count, setcount] = useState(0)
+
+const Cards = ({items}) => {
+  const [count, setCount] = useState(0);
+  const { addItem } = useCart();
+  const addToCart = (data) =>{
+    addItem(data);  
+}
+
 
   return (
+    <>
+    {items.submenu.map((submenuItem) => (
+    <div className='grid'>
+    <div className='grille'>
     <Card sx={{ maxWidth: 345 }} className={'grid-item'}>
       <CardActionArea>
       <CardContent style={{ height: '165px' }}>
           <Typography gutterBottom variant="h5" component="div">
-            {title}
+            {submenuItem.title} 
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {description}
+            {submenuItem.description}
           </Typography>
         </CardContent>
       <Carousel autoPlay interval={2000} infiniteLoop showIndicators={false}showStatus={false} showThumbs={false}>
-        <CardMedia component="img" height="222" image={image} />
-        <CardMedia component="img" height="222" image={image1}/>
-        <CardMedia component="img"height="222" image={image2} />
+        <CardMedia component="img" height="222" image={submenuItem.picture} />
+        <CardMedia component="img" height="222" image={submenuItem.picture1}/>
+        <CardMedia component="img"height="222" image={submenuItem.picture2} />
       </Carousel>
       </CardActionArea>
       <CardActions style={{ height: '40px', position: 'absolute', bottom: 15, width: '100%', justifyContent: 'center' }}>
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-around', width: '100%'}}>
         <div className='price'>
-          {price}
+          {submenuItem.price}
         </div>
-        {commande &&  <div onClick={() => {
-            setProducts((prev) => ([...prev, {product: title, price: price}]))
+        <Button 
+           >
+                  <Badge  onClick={()=>{addToCart(submenuItem)}} badgeContent={count} style={{ cursor: "pointer" }} color="success">
+                   <LocalGroceryStoreOutlinedIcon />
+                   </Badge>
+        </Button>
+      
+        {/* {commande &&  <div onClick={() => {
+            setProducts((prev) => ([...prev, {product: submenuItem.title, price: submenuItem.price}]))
             setcount((prev) => prev+1)
             handleAddProduct()
           }}>
+
             <Badge badgeContent={count} style={{ cursor: "pointer" }} color="success">
             <LocalGroceryStoreOutlinedIcon />
 
             </Badge>
-          </div>}
+          </div>} */}
         </div>
       </CardActions>
     </Card>
+    </div>
+  </div>
+   ))}
+  </>
   )
 }
 
-export default CustomizeCard
+export default Cards;

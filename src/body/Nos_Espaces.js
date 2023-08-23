@@ -1,4 +1,4 @@
-import React  from "react";
+import React,{useState}  from "react";
 import '../css/page.scss';
 import Card from '@mui/material/Card';
 import CardCover from '@mui/joy/CardCover';
@@ -10,7 +10,9 @@ import { Link} from 'react-router-dom';
 
 
 
+
 const SideBar=()=>{
+
 
  
   return (
@@ -48,10 +50,8 @@ const SideBar=()=>{
               <p>Trouvez votre bureau parmi nos offres et bénéficiez d'un accompagnement personnalisé. Découvrez tous les bureaux clés en main et trouvez le bureau idéal pour vos équipes. </p>
               <Link to='/a_propos' class="link" style={{ marginLeft: 30, }} >Decouvrir</Link>
         </div>
-        
         </section>
-        
-    </div>
+    </div> 
     </div>
     </section>
   );

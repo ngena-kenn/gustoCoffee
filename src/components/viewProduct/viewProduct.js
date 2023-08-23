@@ -14,12 +14,12 @@ import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { format } from "date-fns";
 import { DateRange } from "react-date-range";
+import { useCart } from 'react-use-cart';
+
 
 
 const ViewProduct = (props) => {
   const [showItem, setShowItem] = useState(false);
-  console.log("open ", props.products);
-  const cmdPresent = props?.products?.length > 0
   const [openDate, setOpenDate] = useState(true);
   const [dates, setDates] = useState([
     {
@@ -33,20 +33,44 @@ const ViewProduct = (props) => {
     const end = dates[0].endDate;
     const resultTime = end - start ;
     const resultDays = resultTime / (1000 * 3600 * 24) + 1;
-  
-  let total = 0
+    
+    const jour1 = format(dates[0].startDate, "MM/dd/yyyy").toLocaleString()
+    const jour2 = format(dates[0].endDate, "MM/dd/yyyy").toLocaleString()
+    const jours = jour1 +"-"+ jour2 ;
+    const jourfinal = jours.toString()
 
-  const produits = props.products?.map((value, index) => {
-  total += parseFloat(value?.price) * resultDays
-  return (<div key={index} >
-    <div tyle={{display: 'flex', flexDirection: 'column'}}>
-      <div style={{display: 'flex', justifyContent: 'space-between', padding: 5}}>
-        <p>{value?.product}</p>
-        <p>{value?.price}</p>
-      </div>
-      <Divider variant='fullWidth'/>
-    </div>
-  </div>)
+  let total = 0
+  let article = ""
+  const {isEmpty, items, cartTotal, updateItemQuantity, removeItem, emptyCart} = useCart();
+  const cmdPresence = items.length > 0
+
+  const produit = items.map((item, index) => {
+  total += parseFloat(item.price) * resultDays
+  article += `${item.title}`;
+  return (
+          <tr key={index}>
+              <td>
+                  <div style={{ background: 'white', height: '8rem', overflow: 'hidden', display: 'flex',
+                  justifyContent: 'center', alignItems: 'center' }}>
+                      <div style={{ padding: '.5rem'}}>
+                          <img src={item.image} style={{ width: '4rem'}} alt={item.title} />
+                      </div>
+                  </div>
+              </td>
+              <td>
+                  <h6 style={{ whiteSpace: 'nowrap', width: '14rem', overflow: 'hidden', textOverFlow: 'ellipsis'}}>
+                      {item.title}
+                  </h6>
+              </td>
+              <td>Rs. {item.price}</td>
+              <td>
+                <Button onClick={()=> updateItemQuantity(item.id, item.quantity - 1)} className="ms-2">-</Button>
+                <Button onClick={()=> updateItemQuantity(item.id, item.quantity + 1)} className="ms-2">+</Button>
+                <Button variant="danger" onClick={()=> removeItem(item.id)} className="ms-2">Remove Item</Button>
+              </td>
+              <Divider variant='fullWidth'/>
+          </tr>
+    )
   } 
   )
   return (
@@ -58,7 +82,7 @@ const ViewProduct = (props) => {
         props.setViewProduct((prev) => !prev)
        }} style={{ height: '300px', width: '500rem !important', paddingTop: 15 }}
     >
-				<StripeContainer prop1={total *100} prop2={dates}/>
+				<StripeContainer prop1={total *100} prop2={jourfinal} prop3={article}/>
         </Dialog>
 			) :(
     <div>
@@ -71,7 +95,18 @@ const ViewProduct = (props) => {
          }}
       >
         <DialogTitle color='green'>Liste des produits commandés</DialogTitle>
-        <DialogContent style={{ height: '300px', width: '500px', paddingTop: 15}}>
+        <div  className="container py-4 mt-5">
+            <div className="row justify-content-center">
+                <table responsive="sm" striped bordered hover className="mb-5">
+                    <tbody>
+                    {cmdPresence? produit : <div style={{fontSize: 30, textAlign: 'center'}}>
+              Vous n'avez pas encore fait de commandes
+             </div>}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {/* <DialogContent style={{ height: '300px', width: '500px', paddingTop: 15}}>
           <DialogContentText>
           </DialogContentText>
             <div style={{width: '100%', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
@@ -80,7 +115,7 @@ const ViewProduct = (props) => {
               Vous n'avez pas encore fait de commandes
              </div>  }
             </div>
-        </DialogContent>
+        </DialogContent> */}
         <div className="headerSearchItem" style={{display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
         <FontAwesomeIcon icon={faCalendarDays} className="headerIcon" />
         <span
@@ -104,15 +139,16 @@ const ViewProduct = (props) => {
             <div style={{display: 'flex', padding: '5px 25px', justifyContent: 'space-between'}}>
               <p>Total</p>
               <p>{total.toFixed(2)} €</p>
+              <p>{article}</p>
             </div>
         <DialogActions>
-          <Button variant='outlined' color='success' disabled={!cmdPresent} onClick={() => {
+          <Button variant='outlined' color='success' onClick={() => {
             props.confirmCommande()
            // props.setViewProduct((prev) => !prev)
             setShowItem(true)
           }}>Confirmer</Button>
-          <Button variant='outlined' color='success' disabled={!cmdPresent} onClick={() => {
-            props.cancelCommande() 
+          <Button variant='outlined' color='success'  onClick={() => { 
+            emptyCart()
             window.location.reload();
           }}>Annuler</Button>      
         </DialogActions>
