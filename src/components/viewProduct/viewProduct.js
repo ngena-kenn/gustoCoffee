@@ -81,6 +81,7 @@ const ViewProduct = (props) => {
       onClose={() => {
         props.setViewProduct((prev) => !prev)
        }} style={{ height: '300px', width: '500rem !important', paddingTop: 15 }}
+       className="payment"
     >
 				<StripeContainer prop1={total *100} prop2={jourfinal} prop3={article}/>
         </Dialog>
@@ -93,6 +94,7 @@ const ViewProduct = (props) => {
         onClose={() => {
           props.setViewProduct((prev) => !prev)
          }}
+         className="liste"
       >
         <DialogTitle color='green'>Liste des produits commandés</DialogTitle>
         <div  className="container py-4 mt-5">
@@ -139,7 +141,6 @@ const ViewProduct = (props) => {
             <div style={{display: 'flex', padding: '5px 25px', justifyContent: 'space-between'}}>
               <p>Total</p>
               <p>{total.toFixed(2)} €</p>
-              <p>{article}</p>
             </div>
         <DialogActions>
           <Button variant='outlined' color='success' onClick={() => {

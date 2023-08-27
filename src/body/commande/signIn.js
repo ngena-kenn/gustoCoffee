@@ -2,6 +2,9 @@ import { getAuth , signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 import { app } from "../../firebaseconfig";
 import SignOut from "./signOut";
+import "../../css/page.scss";
+import {useNavigate} from "react-router-dom";
+
 
 
 
@@ -9,6 +12,7 @@ const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const auth = getAuth(app);
+  const navigate = useNavigate();
   
 
   const signIn = (e) => {
@@ -23,9 +27,10 @@ const SignIn = () => {
   };
 
   return (
-    <div className="sign-in-container">
-      <form onSubmit={signIn}>
-        <h1>Log In to your Account</h1>
+  
+    <div  className="container">
+      <form className="registration-form" onSubmit={signIn}>
+        <h1>CONNECTE TOI </h1>
         <input
           type="email"
           placeholder="Enter your email"
@@ -38,11 +43,8 @@ const SignIn = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         ></input>
-        <button type="submit">Log In</button>
+        <button type="submit">Connexion</button>
       </form>
-      <div>
-        <SignOut/>
-      </div>
     </div>
   );
 };

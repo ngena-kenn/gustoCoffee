@@ -75,7 +75,7 @@ export default function PaymentForm({price, date, article}) {
     if(!error) {
         try {
             const {id} = paymentMethod
-            const response = await axios.post(`${process.env.REACT_APP_SERVER_URL}/payment`, {
+            const response = await axios.post(`/payment`, {
                 amount: price ,
                 id,
 
@@ -83,7 +83,7 @@ export default function PaymentForm({price, date, article}) {
 
             if(response.data.success) {
                
-                axios.post(`${process.env.REACT_APP_SERVER_URL}/reservationlist`, values)
+                axios.post(`/reservationlist`, values)
                 .then(res => console.log(res))
                 .catch(err => console.log(err));
                 console.log("Successful payment")
@@ -103,7 +103,7 @@ export default function PaymentForm({price, date, article}) {
         <>
         {!success ? 
       
-        <form onSubmit={handleSubmit} style={{width: '30rem', height: '40rem', display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingTop:"3rem"}}>
+        <form onSubmit={handleSubmit} style={{width: '30rem', height: '40rem', display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingTop:"2rem"}}>
             <div className='mb-3'>
             <input
           placeholder="Enter your Name"

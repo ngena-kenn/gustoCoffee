@@ -70,9 +70,9 @@ const SignUp = () => {
   }
 
   return (
-    <div className="sign-in-container">
-      <form ref={formRef} onSubmit={handleForm}>
-        <h1>Create Account</h1>
+    <div className="container">
+      <form className="registration-form" ref={formRef} onSubmit={handleForm}>
+        <h1>CREER TON COMPTE</h1>
         <input
           placeholder="Enter your Name"
           ref={addInputs}
