@@ -32,7 +32,7 @@ const MyAccount = () => {
         const listen = onAuthStateChanged(auth, (user) => {
           if (user) {
             setAuthUser(user);
-            axios.post(`/reservationuser`, {
+            axios.post(`${process.env.REACT_APP_SERVER_URL}/reservationuser`, {
                 email: user.email,
              })
                 .then((res) =>{
@@ -131,7 +131,7 @@ const email = emailstat()
                             <Tab.Pane eventKey="my-orders">
                                 <Heading heading="My Orders" size="h3" />
                                 
-                               {values?.map(item => (
+                               {values.map(item => (
                                 <OrderCard 
                                     orderDate={item.date}
                                     orderId={item.price}  

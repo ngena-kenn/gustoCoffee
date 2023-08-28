@@ -75,7 +75,7 @@ export default function PaymentForm({price, date, article}) {
     if(!error) {
         try {
             const {id} = paymentMethod
-            const response = await axios.post(`/payment`, {
+            const response = await axios.post(`${process.env.REACT_APP_SERVER_URL}/payment`, {
                 amount: price ,
                 id,
 
@@ -83,7 +83,7 @@ export default function PaymentForm({price, date, article}) {
 
             if(response.data.success) {
                
-                axios.post(`/reservationlist`, values)
+                axios.post(`${process.env.REACT_APP_SERVER_URL}/reservationlist`, values)
                 .then(res => console.log(res))
                 .catch(err => console.log(err));
                 console.log("Successful payment")
