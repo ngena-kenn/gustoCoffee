@@ -2,6 +2,7 @@ import { getAuth , createUserWithEmailAndPassword } from "firebase/auth";
 import React, { useState, useRef} from "react";
 import { app } from "../../firebaseconfig";
 import {useNavigate} from "react-router-dom";
+import emailjs from '@emailjs/browser';
 
 
 const SignUp = () => {
@@ -51,6 +52,13 @@ const SignUp = () => {
         inputs.current[1].value,
         inputs.current[2].value
       )
+      
+      emailjs.sendForm('service_ggnvs77', 'template_pg0cnfe', addInputs , 'q-876_psFwv_ORXjP')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
       // formRef.current.reset();
       setValidation("")
       navigate("/home")
@@ -108,7 +116,7 @@ const SignUp = () => {
           className="form-control"
         ></input>
         <p className="text-danger mt-1">{validation}</p>
-        <button type="submit">Sign Up</button>
+        <button type="submit">inscription</button>
       </form>
     </div>
   );

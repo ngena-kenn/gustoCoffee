@@ -1,4 +1,4 @@
-import { useState }from 'react'
+import React,{useEffect, useState }from 'react'
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -15,6 +15,7 @@ import "react-date-range/dist/theme/default.css"; // theme css file
 import { format } from "date-fns";
 import { DateRange } from "react-date-range";
 import { useCart } from 'react-use-cart';
+import axios from "axios"
 
 
 
@@ -28,6 +29,21 @@ const ViewProduct = (props) => {
       key: "selection",
     },
   ]);
+
+  const [values, setValues] = useState([{article:'', date:'', }, ]) 
+
+
+    useEffect(() => {
+      axios.post(`${process.env.REACT_APP_SERVER_URL}/listesale`)
+        .then(response => {
+          setValues(response.data); 
+        })
+        .catch(error => {
+          console.error('Erreur lors de la récupération des données:', error);
+        });
+    }, []); 
+   
+    
     
     const start = dates[0].startDate;
     const end = dates[0].endDate;
@@ -81,7 +97,7 @@ const ViewProduct = (props) => {
       onClose={() => {
         props.setViewProduct((prev) => !prev)
        }} style={{ height: '300px', width: '500rem !important', paddingTop: 15 }}
-       className="payment"
+       className="payment "
     >
 				<StripeContainer prop1={total *100} prop2={jourfinal} prop3={article}/>
         </Dialog>
@@ -90,13 +106,20 @@ const ViewProduct = (props) => {
       <Dialog
         //style={{min-height: 'calc(100% - 4rem)', max-height:'1px !important' margin-top:"15rem"}}
         open={props.viewProduct}
-        className="dialog"
+        className="dialog liste"
         onClose={() => {
           props.setViewProduct((prev) => !prev)
          }}
-         className="liste"
+
       >
-        <DialogTitle color='green'>Liste des produits commandés</DialogTitle>
+        <div className="container  mt-2">
+        <DialogTitle className="labellist">voir la liste des sale reserver<br/> sous peine d'avoir une annulation si<br/> vous reserver une sale deja prise</DialogTitle>
+        <select className="checklist" value="option">
+        <option disabled value="option" >voir la liste</option>
+        {values.map(item => (
+        <option disabled ><div>{item.article}</div>  <div>{item.date}</div></option>))}
+      </select>
+      </div>
         <div  className="container py-4 mt-5">
             <div className="row justify-content-center">
                 <table responsive="sm" striped bordered hover className="mb-5">

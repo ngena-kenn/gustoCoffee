@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { format } from "date-fns";
 import { DateRange } from "react-date-range";
 import { useCart } from 'react-use-cart';
+import emailjs from '@emailjs/browser';
 
 
 
@@ -51,6 +52,8 @@ export default function PaymentForm({price, date, article}) {
     
     const { emptyCart } = useCart();
 
+    // ${process.env.REACT_APP_SERVER_URL}
+
     
 
    
@@ -60,7 +63,7 @@ export default function PaymentForm({price, date, article}) {
     const dates = date;
     const navigate = useNavigate();
 
-
+    
     const handleSubmit = async (e) => {
         e.preventDefault()
         const {error, paymentMethod} = await stripe.createPaymentMethod({
@@ -88,6 +91,13 @@ export default function PaymentForm({price, date, article}) {
                 .catch(err => console.log(err));
                 console.log("Successful payment")
                 setSuccess(true)
+
+                emailjs.sendForm('service_ggnvs77', 'template_z52u53i', values , 'q-876_psFwv_ORXjP')
+                .then((result) => {
+                    console.log(result.text);
+                }, (error) => {
+                    console.log(error.text);
+                });
                 
             }
 
@@ -125,8 +135,8 @@ export default function PaymentForm({price, date, article}) {
         ></input>
         </div>
         <div className="lsItem">
-              <label>Check Date</label>
               <label>{article}</label>
+              <label> du </label>
               <span name="date" onChange={handleInput}>{dates}</span>
             </div>
             <fieldset className="FormGroup">
