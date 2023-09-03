@@ -127,6 +127,31 @@
 }
 
 }
+.cadrenews{
+  background: url('../image/fontAcc5.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 15% 20%;
+  .registration-form {
+    margin-left: 25%;
+    width: 10rem;
+    input {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      color: antiquewhite;
+    }
+    label{
+      font-size: 25px;
+      color: white ;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+  }
+  
+}
 
 
 

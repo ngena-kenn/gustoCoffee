@@ -98,14 +98,10 @@ body{
   height: 60vh;
 }
 
-.cadrenews{
-  background-color: #AE682F;
-  padding: 15% 20%;
-}
+
 .caseform{
   padding: 2% 20%;
   border-radius: 10px;
-  
   margin-top: 5%;
   font-weight: 900;
   text-align: center;
@@ -153,24 +149,7 @@ body{
 
 
 
-.actu1 {
-  background: url(../image/actualité6.PNG);
-  background-size: cover;
-  height: 400px;
-  width: 350px;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 25px / 20px;
-}
-.actu2 {
-  background: url(../image/actualité5.PNG);
-  background-size: cover;
-  height: 400px;
-  width: 350px;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 25px / 20px;
-}
+
 .actu3 {
   background: url(../image/actualité4.PNG);
   background-size: cover;
@@ -180,15 +159,7 @@ body{
   background-repeat: no-repeat;
   border-radius: 25px / 20px;
 }
-.actu4 {
-  background: url(../image/actualité3.PNG);
-  background-size: cover;
-  width: 350px;
-  height: 400px;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 25px / 20px;
-}
+
 .actu5 {
   background: url(../image/actualité2.PNG);
   background-size: cover;

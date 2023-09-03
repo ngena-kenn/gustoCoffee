@@ -78,11 +78,11 @@ const ViewProduct = (props) => {
                       {item.title}
                   </h6>
               </td>
-              <td>Rs. {item.price}</td>
+              <td>prix {item.price}</td>
               <td>
-                <Button onClick={()=> updateItemQuantity(item.id, item.quantity - 1)} className="ms-2">-</Button>
-                <Button onClick={()=> updateItemQuantity(item.id, item.quantity + 1)} className="ms-2">+</Button>
-                <Button variant="danger" onClick={()=> removeItem(item.id)} className="ms-2">Remove Item</Button>
+                {/*<Button onClick={()=> updateItemQuantity(item.id, item.quantity - 1)} className="ms-2">-</Button>
+                <Button onClick={()=> updateItemQuantity(item.id, item.quantity + 1)} className="ms-2">+</Button>*/}
+                <Button variant="danger" onClick={()=> removeItem(item.id)} className="ms-2">supprimer</Button>
               </td>
               <Divider variant='fullWidth'/>
           </tr>
@@ -113,7 +113,7 @@ const ViewProduct = (props) => {
 
       >
         <div className="container  mt-2">
-        <DialogTitle className="labellist">voir la liste des sale reserver<br/> sous peine d'avoir une annulation si<br/> vous reserver une sale deja prise</DialogTitle>
+        <DialogTitle className="labellist">Vérifiez la liste des salles réservées<br/>sous peine d'annulation si vous réservez<br/>une salle déjà prise.</DialogTitle>
         <select className="checklist" value="option">
         <option disabled value="option" >voir la liste</option>
         {values.map(item => (

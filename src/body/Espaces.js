@@ -22,7 +22,7 @@ const SideBar=({})=>{
   
   return (
    <>
-   <section className="body_espace">
+   <section className="col-20  body_espace">
     <div className="container">
     <div className="sidebar">
     {menuItems.map((item) => (
@@ -54,7 +54,7 @@ const SideBar=({})=>{
         <section>
         <div className="infoVid"> 
               <h2 className="title_Info">GUSTO COFFEE Coworking</h2>
-              <p>Trouvez votre bureau parmi nos offres et bénéficiez d'un accompagnement personnalisé. Découvrez tous les bureaux clés en main et trouvez le bureau idéal pour vos équipes. </p>
+              <p>Trouvez votre bureau parmi nos offres et bénéficiez d'un accompagnement personnalisé. Découvrez tous les bureaux clés en main en téléchargant notre application pour mobile. </p>
               <Link to='/a_propos' class="link" style={{ marginLeft: 30, }} >Decouvrir</Link>
         </div>
         </section>

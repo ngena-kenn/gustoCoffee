@@ -2,7 +2,7 @@
   "name": "gustoCoworking",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://7bf2-94-239-112-244.ngrok-free.app",
+  "proxy": "https://fa3c-94-228-185-34.ngrok-free.app",
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
     "@emotion/react": "^11.10.5",

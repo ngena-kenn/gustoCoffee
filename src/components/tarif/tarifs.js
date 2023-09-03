@@ -1,9 +1,26 @@
-import React, { Component } from "react";
+import React, { Component, useState  } from "react";
 import './tarif.scss'
 import { Link} from 'react-router-dom';
+import Dialog from '@mui/material/Dialog';
 
-class A_propos extends Component {
-  render() {
+const A_propos = () =>  {
+ 
+
+    const [success, setSuccess ] = useState(false)
+
+    const handleClick = () => {
+      setSuccess(!success);
+    };
+    
+    const message = () => {
+  
+      return(
+        <Dialog> 
+        le choix de forfait s'effectue après la reservation, vous aurez l'oportunité de les découvrir surplace
+        </Dialog>
+      )
+    }
+    
     return (
         <main>
             <section>
@@ -41,7 +58,7 @@ class A_propos extends Component {
 
                       <p>Chaque café est préparé à la minute, devant vos yeux. Et puis,
                         <br></br> c'est bien meilleur quand tout est fraîchement préparé !</p></div>
-                        <Link to='/a_propos' class="link left" >Decouvrir</Link>
+                        <Link to='/a_propos'  class="link left" >Decouvrir</Link>
                   </div>
         </div>
         <div className="forme hover-container">
@@ -91,6 +108,5 @@ class A_propos extends Component {
       </main>
 
     )
-  }
 }
 export default A_propos;

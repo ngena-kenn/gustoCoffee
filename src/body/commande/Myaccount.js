@@ -84,7 +84,7 @@ const email = emailstat()
 
     return (
         <Container className="py-5 mt-5">
-            <Heading heading="My Account" />
+            <Heading heading="Mon compte" />
             <Tab.Container defaultActiveKey="my-orders">
                 <Row className="justify-content-evenly mt-4 p-1">
                      <Col sm={3} className=" p-2 rounded h-100 mb-3 user-menu">
@@ -108,18 +108,18 @@ const email = emailstat()
                         <Nav variant="pills" className="flex-column">
                             <Nav.Item className="mb-3">
                                 <Nav.Link eventKey="my-orders">
-                                    My Orders
+                                    Mes reservations
                                     <FaClipboardList size="1.4rem" />
                                 </Nav.Link>
                                 <Nav.Link eventKey="account-details">
-                                    Account Details
+                                     Details du compte
                                     <FaUser size="1.4rem" />
                                 </Nav.Link>
                                 <Nav.Link eventKey="address">
                                     Address
                                 </Nav.Link>
                                 <Nav.Link eventKey="wallet">
-                                    Wallet
+                                    paramètres
                                     <GiWallet size="1.4rem" />
                                 </Nav.Link>
                                 <button onClick={userSignOut}>Déconnexion</button>
@@ -129,7 +129,7 @@ const email = emailstat()
                      <Col sm={8} className="p-2 rounded">
                         <Tab.Content>
                             <Tab.Pane eventKey="my-orders">
-                                <Heading heading="My Orders" size="h3" />
+                                <Heading heading="Historique" size="h3" />
                                 
                                {values.map(item => (
                                 <OrderCard 
@@ -141,13 +141,13 @@ const email = emailstat()
                                 />))}
                             </Tab.Pane>
                             <Tab.Pane eventKey="account-details">
-                                <Heading heading="Account details" size="h3" />
+                                <Heading heading="Details" size="h3" />
                             </Tab.Pane>
                             <Tab.Pane eventKey="address">
                                 <Heading heading="Address" size="h3" />
                             </Tab.Pane>
                             <Tab.Pane eventKey="wallet">
-                                <Heading heading="Wallet" size="h3" />
+                                <Heading heading="paramètres" size="h3" />
                             </Tab.Pane>
                         </Tab.Content>
                      </Col>

@@ -31,6 +31,18 @@ const SignUp = () => {
     }
   }
 
+  
+  const sendEmail = (e) => {
+    e.preventDefault()
+    console.log('form ', formRef.current );
+    emailjs.send('service_ggnvs77', 'template_pg0cnfe', formRef.current , 'q-876_psFwv_ORXjP')
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+  };
+
 
   const signUp = (email, pwd) => createUserWithEmailAndPassword(auth, email, pwd)
   
@@ -52,16 +64,11 @@ const SignUp = () => {
         inputs.current[1].value,
         inputs.current[2].value
       )
-      
-      emailjs.sendForm('service_ggnvs77', 'template_pg0cnfe', addInputs , 'q-876_psFwv_ORXjP')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
+      sendEmail()
+   
       // formRef.current.reset();
       setValidation("")
-      navigate("/home")
+      navigate("/connect")
 
     } catch (err) {
 
@@ -82,7 +89,7 @@ const SignUp = () => {
       <form className="registration-form" ref={formRef} onSubmit={handleForm}>
         <h1>CREER TON COMPTE</h1>
         <input
-          placeholder="Enter your Name"
+          placeholder="Entrez votre nom"
           ref={addInputs}
           name="user_name"
           required
@@ -92,7 +99,7 @@ const SignUp = () => {
           label="Nom" variant="outlined"
         ></input>
         <input
-          placeholder="Enter your email"
+          placeholder="Entrez votre email"
           ref={addInputs}
           name="email"
           required
@@ -101,7 +108,7 @@ const SignUp = () => {
         ></input>
         <input
           type="password"
-          placeholder="Enter your password"
+          placeholder="Mot de passe"
           ref={addInputs}
           name="pwd"
           required
@@ -109,14 +116,14 @@ const SignUp = () => {
         ></input>
         <input
           type="password"
-          placeholder="Repeat your password"
+          placeholder="verifiez votre mot de passe"
           ref={addInputs}
           name="pwd"
           required
           className="form-control"
         ></input>
         <p className="text-danger mt-1">{validation}</p>
-        <button type="submit">inscription</button>
+        <button  value="Send" type="submit">inscription</button>
       </form>
     </div>
   );

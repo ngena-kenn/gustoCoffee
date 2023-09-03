@@ -1,10 +1,12 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import '../css/page.css';
 import '../css/acceuil.scss';
 import { Link} from 'react-router-dom';
 
-class A_propos extends Component {
-  render() {
+const A_propos = () => {
+  
+ 
+
     return (
       <div>
         <div className="titre" style={{padding:40}}>NOS FORFAITS</div>
@@ -49,6 +51,5 @@ class A_propos extends Component {
       </div>
 
     )
-  }
 }
 export default A_propos;

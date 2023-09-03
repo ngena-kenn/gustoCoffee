@@ -20,6 +20,7 @@ const SignIn = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log(userCredential);
+        navigate("/my-account")
       })
       .catch((error) => {
         console.log(error);
