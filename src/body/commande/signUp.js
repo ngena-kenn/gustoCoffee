@@ -34,8 +34,9 @@ const SignUp = () => {
   
   const sendEmail = (e) => {
     e.preventDefault()
-    console.log('form ', formRef.current );
-    emailjs.send('service_ggnvs77', 'template_pg0cnfe', formRef.current , 'q-876_psFwv_ORXjP')
+    const data ={name:inputs.current[0].value.toString(), email:inputs.current[1].value.toString()}
+    console.log('form ', data );
+    emailjs.send('service_ggnvs77', 'template_pg0cnfe', data , 'q-876_psFwv_ORXjP')
       .then((result) => {
         console.log(result.text);
       }, (error) => {
@@ -64,11 +65,10 @@ const SignUp = () => {
         inputs.current[1].value,
         inputs.current[2].value
       )
-      sendEmail()
-   
+      //sendEmail()
       // formRef.current.reset();
       setValidation("")
-      navigate("/connect")
+      navigate("/my-account")
 
     } catch (err) {
 

@@ -36,12 +36,10 @@ const MyAccount = () => {
                 email: user.email,
              })
                 .then((res) =>{
-                    if(res.data.message){
-                        setValues(res.data.message)
-                    }else{
-                        console.log(res.data)
+                    if(res.data){
                         setValues(res.data)
-
+                    }else{
+                        console.log("faille")
                     }
                 })
           } else {
@@ -131,7 +129,7 @@ const email = emailstat()
                             <Tab.Pane eventKey="my-orders">
                                 <Heading heading="Historique" size="h3" />
                                 
-                               {values.map(item => (
+                               {values?.map(item => (
                                 <OrderCard 
                                     orderDate={item.date}
                                     orderId={item.price}  

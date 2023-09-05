@@ -6,21 +6,18 @@ import Dialog from '@mui/material/Dialog';
 const A_propos = () =>  {
  
 
-    const [success, setSuccess ] = useState(false)
+  const [popupVisible, setPopupVisible] = useState(false);
 
-    const handleClick = () => {
-      setSuccess(!success);
-    };
+  const showPopup = () => {
+    setPopupVisible(true);
+  };
+
+  const hidePopup = () => {
+    setPopupVisible(false);
+  };
     
-    const message = () => {
-  
-      return(
-        <Dialog> 
-        le choix de forfait s'effectue après la reservation, vous aurez l'oportunité de les découvrir surplace
-        </Dialog>
-      )
-    }
     
+
     return (
         <main>
             <section>
@@ -49,7 +46,15 @@ const A_propos = () =>  {
                   <div className="align hover-content bg-color left-2">
                     <div className="text2 textdeco">FORFAIT DECOUVERTE</div>
                     <div className="text3 textdeco">Venez savourez les plaisir de Gusto Coffee</div>
-                    <div className="text4 textdeco">
+                    {popupVisible && (<div className="popup">
+          
+          <Dialog  open={popupVisible} onClose={hidePopup} >
+          <div className="text2 textdeco">
+          le choix de forfait s'effectura après la reservation, <br></br> vous  les découvrirez directement sur site <br></br>et vous aurez l'occasion  de fair votre choix!</div>
+            <button class="popup" onClick={hidePopup}>Fermer</button>
+          </Dialog>
+          
+        </div>) }<div className="text4 textdeco">
                       <p>Nous sélectionnons des produits frais et de qualité pour vous
                         <br></br>proposer les meilleurs cafes ! Notre poisson est livré</p>
 
@@ -58,7 +63,8 @@ const A_propos = () =>  {
 
                       <p>Chaque café est préparé à la minute, devant vos yeux. Et puis,
                         <br></br> c'est bien meilleur quand tout est fraîchement préparé !</p></div>
-                        <Link to='/a_propos'  class="link left" >Decouvrir</Link>
+                       
+                        <Link onClick={showPopup} class="link left" >Decouvrir</Link>
                   </div>
         </div>
         <div className="forme hover-container">
@@ -77,7 +83,7 @@ const A_propos = () =>  {
               <p>Nous mettons un point d'honneur à utiliser tous les produits
                 <br></br>afin de ne rien gaspiller
                 </p></div>
-                <Link to='/a_propos' class="link left" >Decouvrir</Link>
+                <Link onClick={showPopup} class="link left" >Decouvrir</Link>
           </div>
           
         </div>

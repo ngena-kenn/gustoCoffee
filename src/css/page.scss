@@ -152,7 +152,38 @@
   }
   
 }
+.text-block {
+  padding: 2px;
+  h2 {
+    font-size: 70px;
+    background: rgba(95, 43, 3, 0.500);
+    margin-bottom: 1px;
+    
+    width : 50%;
+    padding : 2px;
+    text-align: center;
+    color : white;
+    font-family: 'Times New Roman', Times, serif;
+    transform: translateY(-20%);
+  }
 
+  p {
+    font-size: 25px;
+    color:white;
+    width : 50%;
+    font-family:italic;
+    
+  }
+  .localiser{
+    margin: 3rem;
+  }
+}
+.coverEvent{
+  background : url('../image/FontCoffee.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 
   
