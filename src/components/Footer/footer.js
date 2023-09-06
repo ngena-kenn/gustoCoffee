@@ -21,11 +21,11 @@ const Footer = () => {
                     </p>
                     <br/>
                     <ul class="networks list-inline">
-                        <li class="list-inline-item logo-reseau-socio"><a target="_blank" href="https://www.facebook.com"><i class="fab fa-facebook"></i></a></li>
-                        <li class="list-inline-item logo-reseau-socio"><a target="_blank" href="https://twitter.com"><i class="fab fa-twitter"></i></a></li>
-                        <li class="list-inline-item logo-reseau-socio"><a target="_blank" href="https://www.youtube.com"><i class="fab fa-youtube"></i></a></li>
-                        <li class="list-inline-item logo-reseau-socio"><a target="_blank" href="http://instagram.com"><i class="fab fa-instagram"></i></a></li>
-                        <li class="list-inline-item logo-reseau-socio"><a target="_blank" href="https://www.tiktok.com"><i class="fab fa-tiktok "></i></a></li>
+                        <li class="list-inline-item logo-reseau-socio"><a target="_blank" href="https://www.facebook.com/profile.php?id=61551042325030"><i class="fab fa-facebook"></i></a></li>
+                        <li class="list-inline-item logo-reseau-socio"><a target="_blank" href="https://twitter.com/gustocoffeef2i?t=ClooKH1EEZNa6GN0w8QgUg&s=09"><i class="fab fa-twitter"></i></a></li>
+                        <li class="list-inline-item logo-reseau-socio"><a target="_blank" href="https://www.tiktok.com/@gustocoffee_tm?_t=8fSVlNyfmAT&_r=1"><i class="fab fa-youtube"></i></a></li>
+                        <li class="list-inline-item logo-reseau-socio"><a target="_blank" href="https://instagram.com/gustocoffee?igshid=MzRlODBiNWFlZA=="><i class="fab fa-instagram"></i></a></li>
+                        <li class="list-inline-item logo-reseau-socio"><a target="_blank" href="https://www.tiktok.com/@gustocoffee_tm?_t=8fSVlNyfmAT&_r=1"><i class="fab fa-tiktok "></i></a></li>
                     </ul>
                 </div>
 

@@ -1,13 +1,24 @@
-import React , { useRef } from "react";
+import React , { useRef, useState  } from "react";
 import '../css/acceuil.scss';
 import { Link} from 'react-router-dom';
 import { color } from "@mui/system";
 import emailjs from '@emailjs/browser';
+import Dialog from '@mui/material/Dialog';
 
 
 const  Franchise = ({title}) => {
 
   const form = useRef();
+  const [popupVisible, setPopupVisible] = useState(false);
+
+  const showPopup = () => {
+    setPopupVisible(true);
+  };
+
+  const hidePopup = () => {
+    setPopupVisible(false);
+  };
+    
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -15,6 +26,7 @@ const  Franchise = ({title}) => {
     emailjs.sendForm('service_ggnvs77', 'template_pg0cnfe', form.current , 'q-876_psFwv_ORXjP')
       .then((result) => {
         console.log(result.text);
+        setPopupVisible(true);
       }, (error) => {
         console.log(error.text);
       });
@@ -33,6 +45,15 @@ const  Franchise = ({title}) => {
       <div>
         <button type="submit" value="Send" class="caseform2" id="" >Envoyer</button>
         </div>
+        {popupVisible && (<div className="">
+          
+          <Dialog  open={popupVisible} onClose={hidePopup} >
+          <div className="text2 textdeco">
+          Vous venez de vous inscrir a nos NEWSLETTER,<br></br> vous recevrez les mails de nos activités et de nos status</div>
+            <button class="popup" onClick={hidePopup}>Fermer</button>
+          </Dialog>
+          
+        </div>) }
     </form>
       </div>
     )
