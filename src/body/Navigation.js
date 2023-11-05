@@ -74,31 +74,15 @@ const Navigation = ({ commande, setcommande, countProduct, setViewProduct, cmd, 
                 <Link to='/franchise' class="nav-link">Franchise</Link>
               </li>
               <li class="nav-item">
+                {authUser ? (
                 <div onClick={() => {
                   setViewProduct(prev => !prev)
                 }}>
                   <Badge style={{ cursor: "pointer", padding: '10px', marginRight: 20, }} color="success" badgeContent={totalUniqueItems}>
                     <ShoppingCartIcon color="action" />
                   </Badge>
-                </div>
+                </div>):(<></>)}
               </li>
-             {/* <li class="nav-item" style={{paddingBottom: 10}}>
-                <div style={{paddingLeft: 10,}}>
-                  <Button variant='outlined' color='success' disabled={cmd} onClick={() => {
-                    commande ? validateCommande() :
-                      setcommande()
-                  }}
-                  >{commande ? 'Valider' : 'Commander'} </Button>
-                </div>
-              </li>
-               <li class="nav-item">
-                <div style={{paddingLeft: 10, paddingBottom: 10}}>
-                  <Button onClick={() => {
-                    navigate('/connect')
-                  }} variant='outlined' color='success'  
-                  >Connexion </Button>
-                </div>
-              </li> */}
               <li class="nav-item">
               {authUser ? (
           <>
