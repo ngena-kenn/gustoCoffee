@@ -17,7 +17,7 @@ describe('MyAccount Component', () => {
 
       it(' "Déconnexion" button', () => {
         cy.get('button').contains('Déconnexion').click();
-        cy.url().should('include', '/home'); // Assurez-vous que l'utilisateur est redirigé vers la page d'accueil
+        cy.url().should('include', '/home'); 
       });
 
       it('display user information', () => {

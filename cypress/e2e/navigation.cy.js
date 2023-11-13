@@ -30,7 +30,7 @@ describe('Navigation Component', () => {
       // Cliquez sur le panier pour afficher les articles du panier
       cy.get('.MuiBadge-badge').click();
       cy.contains('Shopping Cart').should('be.visible');
-      // Vous pouvez ajouter plus d'actions pour tester le panier
+     
     });
   });
   

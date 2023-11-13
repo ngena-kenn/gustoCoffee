@@ -1,6 +1,6 @@
   describe('Test du formulaire d\'inscription', () => {
     it('Inscription réussie', () => {
-      cy.visit('/inscript'); // Remplacez l'URL par celle de votre application
+      cy.visit('/inscript'); 
   
       // Saisie des données
       cy.get('input[name="user_name"]').type('John Doe');
@@ -12,13 +12,13 @@
       cy.get('form').submit();
   
       // Vérification du résultat
-      cy.url().should('eq', '/my-account'); // Assurez-vous de vérifier que vous êtes redirigé après l'inscription
+      cy.url().should('eq', '/my-account'); 
     });
   
     it('Gestion des erreurs d\'inscription', () => {
-      cy.visit('/inscript'); // Remplacez l'URL par celle de votre application
+      cy.visit('/inscript'); 
   
-      // Ne saisissez pas de données ou des données incorrectes dans les champs
+     
       cy.get('input[name="user_name"]').type(' ');
       cy.get('input[name="email"]').type('email-invalide');
       //cy.get('input[name="pwd"]').type('motdepasse');

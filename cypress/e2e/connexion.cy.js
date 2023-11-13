@@ -1,14 +1,14 @@
-// form.spec.js
+
 describe('Test du formulaire de connexion', () => {
   it('Doit soumettre le formulaire avec succès', () => {
     // Visitez la page qui contient le formulaire
-    cy.visit('/connect'); // Remplacez l'URL par celle de votre application
+    cy.visit('/connect'); 
 
-    // Saisissez un email et un mot de passe dans les champs
+    
     cy.get('input[type="email"]').type('ngenakenn@yahoo.com');
     cy.get('input[type="password"]').type('Tiomo.2002');
 
-    // Soumettez le formulaire en cliquant sur le bouton "Connexion"
+    
     cy.get('.registration-form > button').click();
 
     // Vérifiez que le formulaire a été soumis avec succès (par exemple, en vérifiant que l'utilisateur est connecté)
