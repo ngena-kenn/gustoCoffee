@@ -12,8 +12,6 @@ import image11 from "../image/SL4M.png";
 import image12 from "../image/SL4F.png";
 import image13 from "../image/SL1D.jpg";
 import image14 from "../image/SL1B.png";
-
-
 import image15 from "../image/SL4C.png";
 import image17 from "../image/SL4G.png";
 import image19 from "../image/SL4F.png";
@@ -31,7 +29,7 @@ const menuItems = [
     {
       image: image1,
       id: 1,
-      label: "Salon de 6 places",
+      label: "Voir les salons de 6 places",
       submenu: [
         {
           picture: image1, 
@@ -93,7 +91,7 @@ const menuItems = [
     {
       image:image12,
       id: 2,
-      label: "Salon de 4 places",
+      label: "Voir les salons de 4 places",
       submenu: [
         {
           picture: image14, 
@@ -156,7 +154,7 @@ const menuItems = [
     {
         image:image13,
         id: 3,
-        label: "espace individuel",
+        label: "Voir les espaces individuels",
         submenu: [
           {
             picture: image27, 

@@ -62,7 +62,7 @@ const Navigation = ({ commande, setcommande, countProduct, setViewProduct, cmd, 
                 <Link to='./home' class="nav-link active">Accueil</Link>
               </li>
               <li class="nav-item">
-                <Link to='/espaces' class="nav-link">Espaces</Link>
+                <Link to='/espaces' class="nav-link">Reservation</Link>
               </li>
               <li class="nav-item">
                 <Link  to='/a_propos' class="nav-link" >Tarifs</Link>
