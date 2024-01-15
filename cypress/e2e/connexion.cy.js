@@ -1,9 +1,10 @@
+const logger = require('./log');
 
 describe('Test du formulaire de connexion', () => {
   it('Doit soumettre le formulaire avec succès', () => {
     // Visitez la page qui contient le formulaire
     cy.visit('/connect'); 
-
+    logger.info('Début du test');
     
     cy.get('input[type="email"]').type('ngenakenn@yahoo.com');
     cy.get('input[type="password"]').type('Tiomo.2002');
@@ -23,6 +24,7 @@ describe('Test du formulaire de connexion', () => {
     cy.get('input[type="password"]').type(' ');
     cy.get('.registration-form > button').click();
     cy.get('input[type="email"]').type('erreur');
+    logger.info('Test terminé');
     //cy.url().should('eq', '/connect');
   });
 });

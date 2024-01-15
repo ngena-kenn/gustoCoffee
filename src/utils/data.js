@@ -29,7 +29,7 @@ const menuItems = [
     {
       image: image1,
       id: 1,
-      label: "Voir les salons de 6 places",
+      label: "salons de 6 places",
       submenu: [
         {
           picture: image1, 
@@ -91,7 +91,7 @@ const menuItems = [
     {
       image:image12,
       id: 2,
-      label: "Voir les salons de 4 places",
+      label: "salons de 4 places",
       submenu: [
         {
           picture: image14, 
@@ -154,7 +154,7 @@ const menuItems = [
     {
         image:image13,
         id: 3,
-        label: "Voir les espaces individuels",
+        label: "espaces individuels",
         submenu: [
           {
             picture: image27, 

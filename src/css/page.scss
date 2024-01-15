@@ -18,6 +18,7 @@
         color: #333;
         text-decoration: none;
         cursor: pointer;
+       
       }
       li {
         margin-bottom: 10px;
@@ -79,6 +80,7 @@
   padding: 1px;
   font-family: 'Times New Roman', Times, serif;
   color:rgb(95, 43, 3);
+  margin-left: -7rem;
 }
 .size_name{
   font-size: 30px !important;
@@ -183,6 +185,28 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.voir-plus-btn {
+  background-color: rgb(174, 104, 47);
+  color: white;
+  padding: 10px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  text-wrap: nowrap;
+}
+
+.voir-plus-btn:hover {
+  background-color: darkred;
+}
+.ajustement{
+  padding: 0rem;
+  top: -5rem;
+  left: 4rem;
 }
 
 

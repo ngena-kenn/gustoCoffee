@@ -30,10 +30,14 @@ const Espace = ({ item }) => {
       width="200 !important"
       image={item.image}
       />
+      <div className="container ajustement">
       <div className="name_space">
-      <a href={item.link}>{item.label}</a>
+      <a href={item.link}>{item.label}</a> 
       </div>
+      <div>
+      <button class="voir-plus-btn">Voir plus</button>
       </div>
+      </div></div>
       {showSubmenu && (
         <div >
            <div className="conteneur">

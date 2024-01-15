@@ -28,9 +28,11 @@ const App = () => {
   const [prodducts, setProducts] = useState([])
   const [cmd, setcmd] = useState(false)
   const { pathname } = useLocation();
+  const logger = require('./log');
 
   const handleAddProduct = () => {
     console.log(prodducts);
+  
     console.log(Object.keys(prodducts).length);
   }
   const handledestroyProduct =()=> {
