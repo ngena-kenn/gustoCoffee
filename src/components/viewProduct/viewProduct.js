@@ -47,9 +47,11 @@ const ViewProduct = (props) => {
     
     const start = dates[0].startDate;
     const end = dates[0].endDate;
+    console.log("start", start);
+    console.log("end", end);
     const resultTime = end - start ;
     const resultDays = resultTime / (1000 * 3600 * 24) + 1;
-    
+    console.log("resultat", resultDays);
     const jour1 = format(dates[0].startDate, "MM/dd/yyyy").toLocaleString()
     const jour2 = format(dates[0].endDate, "MM/dd/yyyy").toLocaleString()
     const jours = jour1 +"-"+ jour2 ;
@@ -63,6 +65,9 @@ const ViewProduct = (props) => {
   const produit = items.map((item, index) => {
   total += parseFloat(item.price) * resultDays
   article += `${item.title}`;
+  console.log("total", total);
+  console.log("date", openDate);
+  console.log("submenu", showItem)
   return (
           <tr key={index}>
               <td>
