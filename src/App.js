@@ -14,6 +14,7 @@ import Myaccount from './body/commande/Myaccount';
 import Inscript from './body/commande/signUp';
 import Tarifs from './components/tarif/tarifs';
 import Franchise from './body/Franchise';
+import Mentions from './body/mentions';
 import Actualite from './body/Actualite'
 import Acceuil from './components/acceuil/acceuil';
 import Swal from 'sweetalert2'
@@ -116,6 +117,7 @@ const App = () => {
         <Route path="/franchise" element={<Franchise title={'NOTRE FRANCHISE'} />} />
         <Route path="/successpay" element={<SuccessPay />} />
         <Route path="/actualite" element={<Actualite />} />
+        <Route path="/mentions" element={<Mentions />} />
 
         <Route path="*" element={<Acceuil />} />
 

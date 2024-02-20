@@ -2,6 +2,7 @@
 import  '../../css/footer.scss'
 import logo from '../../image/logo.png'
 import React, {Component} from 'react'
+import { Link} from 'react-router-dom';
 
 const Footer = () => {
 
@@ -37,7 +38,7 @@ const Footer = () => {
                         <li><a>Adhérer à Gusto Coffee</a></li>
                         <li><a>Gusto Coffee en région</a></li>
                         <li><a>Ressources et presse</a></li>
-                        <li><a>Mentions légales et CGU</a></li>
+                        <li><Link to='/mentions'>Mentions légales et CGU</Link></li>
                         <li><a>Politique de confidentialité et cookies</a></li>
                     </ul>
                 </div>

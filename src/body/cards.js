@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {useState, useEffect } from 'react'
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -9,14 +9,39 @@ import { Badge, CardActionArea, CardActions } from '@mui/material';
 import LocalGroceryStoreOutlinedIcon from '@mui/icons-material/LocalGroceryStoreOutlined';
 import { useCart } from 'react-use-cart';
 import Button from '@mui/material/Button';
+import {getAuth , onAuthStateChanged} from "firebase/auth";
+import { app } from "../firebaseconfig";
+import { useNavigate } from 'react-router-dom';
 
 
-const Cards = ({items}) => {
+
+
+const Cards = ({items }) => {
   const [count, setCount] = useState(0);
   const { addItem } = useCart();
   const addToCart = (data) =>{
     addItem(data);  
 }
+const navigate = useNavigate()
+const [authUser, setAuthUser] = useState(null);
+const auth = getAuth(app);
+
+
+ useEffect(() => {
+   const listen = onAuthStateChanged(auth, (user) => {
+     if (user) {
+       setAuthUser(user);
+     } else {
+       setAuthUser(null);
+     }
+   });
+
+   return () => {
+     listen();
+   };
+ }, []);
+
+
 
 
   return (
@@ -43,32 +68,26 @@ const Cards = ({items}) => {
       <CardActions style={{ height: '40px', position: 'absolute', bottom: 15, width: '100%', justifyContent: 'center' }}>
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-around', width: '100%'}}>
         <div className='price'>
-          {submenuItem.price}
+          {submenuItem.price} /jour
         </div>
-        <Button 
+        {authUser ? (<Button 
            >
                   <Badge  onClick={()=>{addToCart(submenuItem)}} badgeContent={count} style={{ cursor: "pointer" }} color="success">
                    <LocalGroceryStoreOutlinedIcon />
                    </Badge>
-        </Button>
+        </Button>):(<Button  class="voir-plus-btn" onClick={() => {
+                    navigate('/connect')
+                  }} variant='outlined' color='success'  
+                  >réserver</Button>)}
       
-        {/* {commande &&  <div onClick={() => {
-            setProducts((prev) => ([...prev, {product: submenuItem.title, price: submenuItem.price}]))
-            setcount((prev) => prev+1)
-            handleAddProduct()
-          }}>
-
-            <Badge badgeContent={count} style={{ cursor: "pointer" }} color="success">
-            <LocalGroceryStoreOutlinedIcon />
-
-            </Badge>
-          </div>} */}
+        
         </div>
       </CardActions>
     </Card>
     </div>
   </div>
    ))}
+   
   </>
   )
 }

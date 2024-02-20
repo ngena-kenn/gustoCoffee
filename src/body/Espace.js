@@ -11,8 +11,11 @@ const Espace = ({ item }) => {
 
   const handleClick = () => {
     setShowSubmenu(!showSubmenu);
+    setButtonText((prevText) => (prevText === 'Voir plus' ? 'Cacher' : 'Voir plus'));
   };
+  const [buttonText, setButtonText] = useState('Voir plus');
 
+  
  
  
 
@@ -30,12 +33,12 @@ const Espace = ({ item }) => {
       width="200 !important"
       image={item.image}
       />
-      <div className="container ajustement">
+      <div className="ajustement">
       <div className="name_space">
       <a href={item.link}>{item.label}</a> 
       </div>
       <div>
-      <button class="voir-plus-btn">Voir plus</button>
+      <button class="voir-plus-btn">{buttonText}</button>
       </div>
       </div></div>
       {showSubmenu && (

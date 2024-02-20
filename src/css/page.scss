@@ -1,12 +1,15 @@
 .sidebar {
-    width: 500px;
+    width: 430px;
     height: 100%;
     background-color: #f0f0f0;
     padding: 100px;
+    padding-top: 0px;
+    margin-top: -60px;
     ul {
         list-style-type: none;
         padding: 0;
         margin: 0;
+        padding-bottom: 3px;
 
         ul {
             display: block;
@@ -31,7 +34,7 @@
   .infoVid{
     width : 65%;
     position:absolute;
-    top: 38em;
+    top: 47em;
     left : 30%;
     padding : 2rem 1.5rem;
     text-align: center;
@@ -80,7 +83,15 @@
   padding: 1px;
   font-family: 'Times New Roman', Times, serif;
   color:rgb(95, 43, 3);
-  margin-left: -7rem;
+  margin-left: -5rem;
+}
+.titretypes{
+  text-align: center;
+  font-size: 40px;
+  padding: 1px;
+  font-family: 'Times New Roman', Times, serif;
+  color:rgb(95, 43, 3);
+  margin-left: -3rem;
 }
 .size_name{
   font-size: 30px !important;
@@ -208,6 +219,55 @@
   top: -5rem;
   left: 4rem;
 }
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+.new-info{
+  background-color: antiquewhite !important;
+  .card-title{
+      font-size: 40px;
+      font-family: 'Times New Roman', Times, serif;
+
+  }
+}
+
+/* Styles pour le composant MentionsCGU */
+
+.mentions-cgu-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 80px;
+  background-color:#F2E8DF;
+  h1 {
+    color: #333;
+  }
+  
+  h2 {
+    color: #555;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+  }
+  
+  p {
+    color: #666;
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+
+
 
 
   

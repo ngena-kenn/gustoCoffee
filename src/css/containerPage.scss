@@ -40,15 +40,17 @@
   .conteneur{
     display: grid;
     grid-template-columns: 200px 200px ;
-    margin-left: 20rem;
-    gap: 13rem;
-    margin-top: 1px !important;
+    margin-left: 12rem;
+    gap: 0rem 13rem;
+    margin-top: -136px !important;
   }
 }
 .position{
   height:200px;
   .css-o69gx8-MuiCardMedia-root {
-    width: 14rem !important;
+    width: 20rem !important;
+    margin-left: -79px;
+    margin-top: -60px;
   }
 }
 
