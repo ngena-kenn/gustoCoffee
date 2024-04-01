@@ -7,6 +7,7 @@ import Card from '@mui/material/Card';
 import CardCover from '@mui/joy/CardCover';
 import '../css/containerPage.scss'
 import { Link} from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
 
 
 
@@ -18,20 +19,22 @@ const SideBar=({})=>{
   const handleChange = () => {
     setShowSubmenu(!showSubmenu);
   };
+
+  const isMobile = useMediaQuery({ maxWidth: 767 });
   
   return (
    <>
    <section className="col-20  body_espace">
     <div className="container">
     <div className="sidebar">
-    <div className="titretypes" style={{}}>DECOUVREZ NOS TYPES DE SALON PLUS BAS</div>
+    <div className="titretypes" style={{}}>DECOUVREZ NOS TYPES DE SALON</div>
     {menuItems.map((item) => (
       <ul onClick={handleChange} >
           <MenuItem key={item.id} item={item} />
       </ul>
        ))}
       </div>
-      {showSubmenu && (
+      { !isMobile && showSubmenu && (
     <div style={{  position: 'relative' }} >
     <Card className="new-info" component="li" sx={{  position: 'relative',  left:100, top:50 }} >
     <div class="soushaut">

@@ -9,6 +9,7 @@ import { Button } from '@mui/material';
 import Badge from '@mui/material/Badge';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useCart } from "react-use-cart";
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 
 
 
@@ -43,20 +44,15 @@ const Navigation = ({ commande, setcommande, countProduct, setViewProduct, cmd, 
 
   return (
     <>
-      <nav style={{
-      boxShadow: '0 0 5px rgba(0, 0, 0, 0.753)', position: 'fixed', justifyContent: 'center',
-      width: '100%', zIndex: 99999, top: 0, backgroundColor: 'white', marginBottom: 50
-    }} class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid" >
-          <div className="navbar-brand"  style={{padding: 0}}>
+      <Navbar style={{ boxShadow: '0 0 5px rgba(0, 0, 0, 0.753)', position: 'fixed', justifyContent: 'center', width: '100%', zIndex: 99999, top: 0, backgroundColor: 'white', marginBottom: 50 }} expand="lg">
+          <Navbar.Brand  style={{padding: 0}}>
             <Link to={"/home"}>
               <img src={logo} className="logo" alt="logo" />
             </Link>
-          </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" style={{justifyContent: 'center'}} id="navbarNavDropdown">
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
+          <Nav style={{justifyContent: 'center'}}>
             <ul class="navbar-nav">
               <li class="nav-item">
                 <Link to='./home' class="nav-link active">Accueil</Link>
@@ -65,7 +61,7 @@ const Navigation = ({ commande, setcommande, countProduct, setViewProduct, cmd, 
                 <Link to='/espaces' class="nav-link">Reservation</Link>
               </li>
               <li class="nav-item">
-                <Link  to='/a_propos' class="nav-link" >Tarifs</Link>
+                <Link  to='/a_propos' class="nav-link">Tarifs</Link>
               </li>
               <li class="nav-item">
                 <Link to='/actualite' class="nav-link">Evenements</Link>
@@ -113,9 +109,9 @@ const Navigation = ({ commande, setcommande, countProduct, setViewProduct, cmd, 
               
               </li>
             </ul>
-          </div>
-        </div>
-      </nav>
+          </Nav>
+          </Navbar.Collapse>
+        </Navbar>
      
     </>
   );

@@ -44,6 +44,14 @@
     gap: 0rem 13rem;
     margin-top: -136px !important;
   }
+ 
+}
+@media (max-width: 768px) { 
+  .body_espace{
+    .conteneur{
+      grid-template-columns: 200px;
+    }
+  }
 }
 .position{
   height:200px;

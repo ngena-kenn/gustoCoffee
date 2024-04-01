@@ -31,7 +31,7 @@ const SignIn = () => {
   
     <div  className="container">
       <form className="registration-form" onSubmit={signIn}>
-        <h1>CONNECTE TOI </h1>
+        <h1>CONNECTEZ VOUS </h1>
         <input
           type="email"
           placeholder="Enter your email"
