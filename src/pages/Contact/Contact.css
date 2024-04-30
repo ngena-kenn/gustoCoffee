@@ -1,0 +1,82 @@
+.contact-form{
+   max-width: none !important;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   padding: 1% 2%;
+   max-width: 2300px;
+   background: url('../../assets/fontAcc5.webp');
+}
+.contact_left{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    gap: 50px;
+}
+.contact_form{
+   margin-top: 100px;
+   width: 30%;
+}
+.contact_form .contat_form_label{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.contact_form-input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #BAA89B;
+    border-radius: 10px;
+    padding: 0 10px;
+    outline: none;
+}
+
+.contact_form_submit{
+    margin-top: 20px;
+    width: 100%;
+    height: 40px;
+    border: none;
+    color: white;
+    background-color: var(--main-brown-color);
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+textarea{
+    width: 100%;
+    height: 100px;
+    border: 1px solid #BAA89B;
+    border-radius: 10px;
+    padding: 10px;
+    outline: none;
+}
+
+@media (max-width: 1075px) {
+    .contact{
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+    .contact_img{
+        display: none;
+    }
+    .contact_form{
+        width: 70%;
+        margin-top: 0px;
+     }
+     .contact_left{
+        width: auto;
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 425px) {
+     .contact_left h1{
+        font-size: 3rem;
+    }
+}

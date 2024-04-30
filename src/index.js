@@ -1,31 +1,35 @@
-
-
 import React from 'react';
-import { HelmetProvider } from 'react-helmet-async';
-import {BrowserRouter} from "react-router-dom";
 import ReactDOM from 'react-dom/client';
+import './index.css';
 import App from './App';
-import './css/page.css';
-import './css/style.css';
-import { CartProvider } from 'react-use-cart';
-import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import authReducer from './store/auth/authReducer';
+import profileReducer from './store/profile/profileReducer';
+import reservationReducer from './store/reservation/reservationReducer';
+import { configureStore} from '@reduxjs/toolkit';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer} from 'react-toastify';
+import userReservationsReducer from './store/userReservation/userReservationSlice';
 
-
+const store = configureStore({
+  reducer: {
+    auth: authReducer,
+    profile: profileReducer,
+    reservation: reservationReducer,
+    forfaits: reservationReducer,
+    userReservations: userReservationsReducer,
+  },
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-<HelmetProvider >
- <CartProvider>
+  <Provider store={store}>
   <BrowserRouter>
-      <App />
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
   </BrowserRouter>
-  </CartProvider>
-</HelmetProvider>
+  <ToastContainer />
+  </Provider>
 );
-
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://cra.link/PWA
-serviceWorkerRegistration.register();
-

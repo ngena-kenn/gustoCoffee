@@ -1,0 +1,18 @@
+.emplacement{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.emplacement_places{
+    width: 80%;
+}
+
+@media screen and (max-width: 768px) {
+    .emplacement h1{
+       font-size: 3rem;
+    }
+}

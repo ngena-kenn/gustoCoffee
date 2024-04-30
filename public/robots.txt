@@ -1,3 +1,10 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Disallow: /admin
+Disallow: /mentions-legales
+Disallow: /conditions-generales-utilisation
+Disallow: /conditions-vente
+Disallow: /politique-de-confidentialite
+
+Sitemap : https://f2i-devo21-gk-lf-de.vercel.app/sitemaps.xml
+

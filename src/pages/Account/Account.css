@@ -1,0 +1,78 @@
+.account{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.account_profile{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    margin-top: 50px;
+}
+
+.account_profile-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.account_profile-info-btn{
+    display: flex;
+    gap: 20px;
+}
+
+.account_profile-info-btn .account_profile-btn-img{
+    cursor: pointer;
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid #836349FF;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    color: #836349FF;
+    border-radius: 12px; 
+}
+
+.account_profile-info-btn .account_profile-btn-delete{
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    color: rgb(32, 32, 32);
+}
+
+.form_account {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    width: 500px;
+}
+
+.account_form{
+    display: flex;
+    flex-direction: column;
+}
+
+.account_form-label{
+    font-weight: bold;
+}
+
+.account_form input {
+    background-color: rgb(224, 224, 224);
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    width: 500px;
+}
+
+.account_form-submit{
+    border: none;
+    cursor: pointer;
+    background-color: #836349FF; 
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}

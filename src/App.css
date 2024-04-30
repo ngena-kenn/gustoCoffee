@@ -1,3 +1,31 @@
-body {
-  margin: 0;
-}
+@import url("./layouts/Navbar/Navbar.css");
+@import url("./layouts/Footer/Footer.css");
+@import url("./pages/Home/Home.css");
+@import url("./pages/SignIn/SignIn.css");
+@import url("./pages/Signup/SignUp.css");
+@import url("./pages/Contact/Contact.css");
+@import url("./pages/Reserver/Reserver.css");
+@import url("./pages/Account/Account.css");
+@import url("./pages/Emplacement/Emplacement.css");
+@import url("./pages/ResetPassword/MaterialUi.css");
+
+
+@import url("./pages/tarif/tarif.scss");
+@import url("./pages/Home/acceuil.scss");
+@import url("./layouts/css/style.css");
+@import url("./layouts/css/page.css");
+@import url("./layouts/css/page.scss");
+
+@import url("./components/HeroSection/HeroSection.css");
+@import url("./components/SectionColumns/SectionColumns.css");
+@import url("./components/CardInfo/CardInfo.css");
+@import url("./components/ListProduits/ListProduits.css");
+@import url("./components/ListeSalons/ListeSalons.css");
+@import url("./components/Forfaits/Forfaits.css");
+@import url("./components/SelectDateTime/SelectDateTime.css");
+
+
+
+:root {
+    --main-brown-color: #836349FF;
+  }
