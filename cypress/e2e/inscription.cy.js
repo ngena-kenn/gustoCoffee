@@ -1,6 +1,6 @@
   describe('Test du formulaire d\'inscription', () => {
     it('Inscription réussie', () => {
-      cy.visit('/inscript'); 
+      cy.visit('/inscription'); 
   
       // Saisie des données
       cy.get('input[name="user_name"]').type('John Doe');
@@ -12,11 +12,11 @@
       cy.get('form').submit();
   
       // Vérification du résultat
-      cy.url().should('eq', '/my-account'); 
+      cy.url().should('eq', '/mes-reservations'); 
     });
   
     it('Gestion des erreurs d\'inscription', () => {
-      cy.visit('/inscript'); 
+      cy.visit('/inscription'); 
   
      
       cy.get('input[name="user_name"]').type(' ');

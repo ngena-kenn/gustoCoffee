@@ -1,6 +1,6 @@
 describe('Test du formulaire d\'inscription à la newsletter', () => {
     it('Inscription à la newsletter réussie', () => {
-      cy.visit('/franchise'); // Remplacez l'URL par celle de votre application
+      cy.visit('/concept'); // Remplacez l'URL par celle de votre application
   
       // Saisie des données
       cy.get('input[name="name"]').type('John Doe');
@@ -19,7 +19,7 @@ describe('Test du formulaire d\'inscription à la newsletter', () => {
     });
   
     it('Gestion des erreurs d\'inscription à la newsletter', () => {
-      cy.visit('/franchise'); // Remplacez l'URL par celle de votre application
+      cy.visit('/concept'); // Remplacez l'URL par celle de votre application
   
       // Ne saisissez pas de données ou des données incorrectes dans les champs
       cy.get('input[name="name"]').type('');

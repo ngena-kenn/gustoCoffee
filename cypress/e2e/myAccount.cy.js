@@ -1,6 +1,6 @@
 describe('MyAccount Component', () => {
     it('Should render MyAccount component after login', () => {
-      cy.visit('/my-account'); // Assurez-vous que l'URL est correcte
+      cy.visit('/mon-compte'); // Assurez-vous que l'URL est correcte
       cy.login(); // Si vous avez une fonction de connexion, appelez-la ici
       cy.get('.user-menu').should('be.visible');
     });
@@ -17,7 +17,7 @@ describe('MyAccount Component', () => {
 
       it(' "Déconnexion" button', () => {
         cy.get('button').contains('Déconnexion').click();
-        cy.url().should('include', '/home'); 
+        cy.url().should('include', '/'); 
       });
 
       it('display user information', () => {

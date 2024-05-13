@@ -32,13 +32,12 @@ nav img {
 
 .nav_navigation {
   display: flex;
-  gap: 20px;
-  margin-left: 50px;
+  margin-left: 7px;
 }
 
 .nav_navigation li {
   list-style: none;
-  margin: 0 10px;
+  margin: 0 1px;
 }
 
 .nav_navigation li a {
